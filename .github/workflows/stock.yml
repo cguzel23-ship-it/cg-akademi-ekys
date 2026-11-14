@@ -19,7 +19,9 @@ jobs:
             [ -s "stock/$name.mp4" ] && continue
             curl -sL -A "$UA" --max-time 300 -o "stock/$name.mp4" -w "$name %{http_code} %{content_type} %{size_download} %{url_effective}\n" "$url" || echo "FAIL $name"
             file "stock/$name.mp4"
-            file "stock/$name.mp4" | grep -qiE "MP4|ISO Media" || rm -f "stock/$name.mp4"
+            if file "stock/$name.mp4" | grep -qiE "MP4|ISO Media"; then
+              ffmpeg -v error -y -i "stock/$name.mp4" -an -vf "scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,fps=24" -c:v libx264 -preset veryfast -crf 22 -pix_fmt yuv420p -movflags +faststart "stock/t.mp4" && mv "stock/t.mp4" "stock/$name.mp4"
+            else rm -f "stock/$name.mp4"; fi
           done < stock.tsv
           ls -la stock
           git config user.name zd-bot; git config user.email zd-bot@users.noreply.github.com
