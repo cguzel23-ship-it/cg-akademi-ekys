@@ -1,0 +1,28 @@
+name: zd-gorsel
+on:
+  push:
+    branches: [zd-gorseller]
+    paths: ['prompts.tsv']
+permissions:
+  contents: write
+jobs:
+  gen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: generate
+        run: |
+          mkdir -p imgs
+          while IFS=$'\t' read -r name prompt; do
+            [ -z "$name" ] && continue
+            [ -s "imgs/$name.jpg" ] && continue
+            enc=$(python3 -c "import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1]))" "$prompt")
+            for i in 1 2 3; do
+              curl -sL --max-time 120 -o "imgs/$name.jpg" "https://image.pollinations.ai/prompt/$enc?width=720&height=1280&nologo=true&model=flux&seed=$RANDOM" && [ $(stat -c%s "imgs/$name.jpg") -gt 10000 ] && break
+              sleep 5
+            done
+          done < prompts.tsv
+      - name: commit
+        run: |
+          git config user.name zd-bot; git config user.email zd-bot@users.noreply.github.com
+          git add imgs; git commit -m "gorseller" || exit 0; git push
