@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
       - run: |
           mkdir -p stock
           cat > one.sh <<'SH'
@@ -19,7 +20,7 @@ jobs:
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
           curl -sL -A "$UA" --max-time 300 -o "/tmp/$name.raw" "$url" || { echo "FAIL $name"; exit 0; }
           if file "/tmp/$name.raw" | grep -qiE "MP4|ISO Media|QuickTime"; then
-            ffmpeg -v error -y -ss 1 -t 16 -i "/tmp/$name.raw" -an -vf "scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,fps=24" -c:v libx264 -preset veryfast -crf 27 -pix_fmt yuv420p -movflags +faststart "stock/$name.mp4" && echo "OK $name" || echo "FFFAIL $name"
+            ffmpeg -nostdin -v error -y -ss 1 -t 16 -i "/tmp/$name.raw" -an -vf "scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,fps=24" -c:v libx264 -preset veryfast -crf 27 -pix_fmt yuv420p -movflags +faststart "stock/$name.mp4" && echo "OK $name" || echo "FFFAIL $name"
           else echo "NOTVIDEO $name"; fi
           rm -f "/tmp/$name.raw"
           SH
