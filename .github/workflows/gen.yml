@@ -3,26 +3,49 @@ on:
   push:
     branches: [zd-gorseller]
     paths: ['prompts.tsv']
+  workflow_dispatch:
 permissions:
   contents: write
+concurrency: zdgen
 jobs:
   gen:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5]
     steps:
       - uses: actions/checkout@v4
       - name: generate
         run: |
-          mkdir -p imgs
+          mkdir -p out
+          n=0
           while IFS=$'\t' read -r name prompt; do
             [ -z "$name" ] && continue
+            n=$((n+1)); [ $(( (n-1) % 6 )) -ne ${{ matrix.shard }} ] && continue
             [ -s "imgs/$name.jpg" ] && continue
             enc=$(python3 -c "import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1]))" "$prompt")
-            for i in 1 2 3; do
-              curl -sL --max-time 120 -o "imgs/$name.jpg" "https://image.pollinations.ai/prompt/$enc?width=720&height=1280&nologo=true&model=flux&seed=$RANDOM" && [ $(stat -c%s "imgs/$name.jpg") -gt 10000 ] && break
-              sleep 5
+            for i in 1 2 3 4; do
+              curl -sL --max-time 150 -o "out/$name.jpg" "https://image.pollinations.ai/prompt/$enc?width=720&height=1280&nologo=true&model=flux&seed=$RANDOM"
+              if file "out/$name.jpg" | grep -q JPEG; then break; fi
+              rm -f "out/$name.jpg"; sleep 47
             done
+            sleep 47
           done < prompts.tsv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: imgs-${{ matrix.shard }}
+          path: out
+          if-no-files-found: ignore
+  commit:
+    needs: gen
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: art
       - name: commit
         run: |
+          mkdir -p imgs; find art -name '*.jpg' -exec cp {} imgs/ \;
           git config user.name zd-bot; git config user.email zd-bot@users.noreply.github.com
-          git add imgs; git commit -m "gorseller" || exit 0; git push
+          git add imgs; git commit -m "gorseller" || exit 0; git pull --rebase -q; git push
