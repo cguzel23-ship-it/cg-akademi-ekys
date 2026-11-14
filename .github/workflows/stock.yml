@@ -1,0 +1,26 @@
+name: zd-stok
+on:
+  push:
+    branches: [zd-gorseller]
+    paths: ['stock.tsv']
+permissions:
+  contents: write
+concurrency: zdstock
+jobs:
+  dl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p stock
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
+          while IFS=$'\t' read -r name url; do
+            [ -z "$name" ] && continue
+            [ -s "stock/$name.mp4" ] && continue
+            curl -sL -A "$UA" --max-time 300 -o "stock/$name.mp4" -w "$name %{http_code} %{content_type} %{size_download} %{url_effective}\n" "$url" || echo "FAIL $name"
+            file "stock/$name.mp4"
+            file "stock/$name.mp4" | grep -qiE "MP4|ISO Media" || rm -f "stock/$name.mp4"
+          done < stock.tsv
+          ls -la stock
+          git config user.name zd-bot; git config user.email zd-bot@users.noreply.github.com
+          git add stock; git commit -m "stok" || exit 0; git pull --rebase -q; git push
