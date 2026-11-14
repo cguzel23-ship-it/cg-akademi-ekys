@@ -23,9 +23,10 @@ jobs:
             [ -z "$name" ] && continue
             n=$((n+1)); [ $(( (n-1) % 6 )) -ne ${{ matrix.shard }} ] && continue
             [ -s "imgs/$name.jpg" ] && continue
+            W=720; H=1280; case "$name" in g*) W=1280; H=720;; esac
             enc=$(python3 -c "import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1]))" "$prompt")
             for i in 1 2 3 4; do
-              curl -sL --max-time 150 -o "out/$name.jpg" "https://image.pollinations.ai/prompt/$enc?width=720&height=1280&nologo=true&model=flux&seed=$RANDOM"
+              curl -sL --max-time 150 -o "out/$name.jpg" "https://image.pollinations.ai/prompt/$enc?width=$W&height=$H&nologo=true&model=flux&seed=$RANDOM"
               if file "out/$name.jpg" | grep -q JPEG; then break; fi
               rm -f "out/$name.jpg"; sleep 47
             done
