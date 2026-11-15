@@ -15,16 +15,15 @@ BAR = 132  # sinema bandı
 # (metin, çekimler[(klip, başlangıç)], görsel yazı stili, yazı)
 SEG = [
   ("Gece… Herkes uyuyor. Ama bazı sorular uyumaz.", [("kanal_gece1", 0.5), ("samanyolu1", 0.5)], 'quote', ["Bazı sorular", "uyumaz."]),
-  ("Nemrut'un zirvesindeki dev başları kim, neden yaptı?", [("heykel1", 0.0), ("antik1", 0.5)], 'q', ["Nemrut'un dev başlarını", "kim yaptı?"]),
-  ("Rüyalar geleceği gösterir mi?", [("samanyolu2", 3.0)], 'q', ["Rüyalar geleceği", "gösterir mi?"]),
-  ("Bir insanın aklı, bir imparatorluğu nasıl dize getirir?", [("roma1", 2.0)], 'q', ["Bir akıl, bir imparatorluğu", "dize getirebilir mi?"]),
+  ("Tarihin karanlıkta kalan sayfaları…", [("heykel1", 0.0), ("antik1", 0.5)], 'word', ["Karanlıkta kalan sayfalar", "TARİH"]),
+  ("Evrenin hâlâ çözülemeyen sırları…", [("samanyolu2", 3.0), ("teleskop1", 0.5)], 'word', ["Çözülemeyen sırlar", "BİLİM · UZAY"]),
+  ("Zihnimizin bize her gün oynadığı oyunlar…", [("cam1", 0.5)], 'word', ["Bize oynanan oyunlar", "ZİHİN"]),
+  ("Ve binlerce yıllık bilgeliğin sesi.", [("kutuphane1", 0.3), ("akropol1", 1.0)], 'word', ["Binlerce yıllık ses", "FELSEFE"]),
   ("Ben Zihin Dedektifi. Önce söylentiyi dinlerim… sonra bilime sorarım.", [("AVATAR", 0)], 'avatar', ["ZİHİN DEDEKTİFİ", "Önce söylenti… sonra bilim."]),
-  ("Bu kanalda seni üç dosya bekliyor:", [("kitap_mum1", 1.0)], 'quote', ["Seni üç dosya", "bekliyor."]),
-  ("Bilimin hâlâ çözemediği gizemler.", [("teleskop1", 0.5), ("v_stars", 2.0)], 'file', ["DOSYA 01", "GİZEMLER", "Bilimin hâlâ çözemediği sorular"]),
-  ("Kafandaki yanlış bilgilerin gerçek yüzü.", [("cam1", 0.5), ("v_data", 2.0)], 'file', ["DOSYA 02", "KAFANDAKİ DOSYALAR", "Yanlış bilinenlerin gerçek yüzü"]),
-  ("Ve her akşam, ışıkları kısıp dinleyeceğin sakin hikâyeler: Stoacılar, Spinoza, kayıp şehirler…", [("mum1", 0.5), ("akropol1", 1.0), ("yildiz1", 2.0)], 'file', ["DOSYA 03", "UYURKEN DİNLE", "Stoacılar · Spinoza · Kayıp şehirler"]),
+  ("Her soru bir dosya. Ve her dosyanın sonunda gerçek var.", [("yazi1", 1.0)], 'quote', ["Her soru bir dosya.", "Her dosyanın sonunda gerçek."]),
+  ("Kimi zaman bir belgesel, kimi zaman kısa bir cevap… kimi zaman da ışıkları kısıp dinleyeceğin sakin bir hikâye.", [("v_stars", 2.0), ("mum1", 0.5), ("yildiz1", 2.0)], 'file', ["HER GÜN YENİ DOSYA", "BELGESEL · KISA · UYKU", "Gizem, tarih, bilim, zihin, felsefe"]),
   ("Uyanıkken izle. Uyurken dinle.", [("deniz_gunbatimi1", 1.0)], 'quote', ["Uyanıkken izle.", "Uyurken dinle."]),
-  ("Abone ol… Dosya her akşam açılıyor.", [("END", 0)], 'end', ["ZİHİN DEDEKTİFİ", "Abone ol · Dosya her akşam açılıyor"]),
+  ("Abone ol… Yeni dosya her gün açılıyor.", [("END", 0)], 'end', ["ZİHİN DEDEKTİFİ", "Abone ol · Her gün yeni dosya"]),
 ]
 TTS_TEXT = ' ... '.join(s[0] for s in SEG)
 
@@ -56,6 +55,11 @@ def text_png(style, lines, path):
         f1 = font('Poppins-Light.ttf', 64); f2 = font('Poppins-Bold.ttf', 92)
         spaced(d, (W / 2, H - BAR - 300), lines[0], f1, (235, 235, 235, 255), 2)
         spaced(d, (W / 2, H - BAR - 210), lines[1], f2, (255, 255, 255, 255), 3)
+    elif style == 'word':
+        f1 = font('Poppins-Light.ttf', 50); f2 = font('Poppins-Bold.ttf', 150)
+        spaced(d, (W / 2, H / 2 - 150), lines[0], f1, (230, 230, 230, 255), 4)
+        spaced(d, (W / 2, H / 2 - 80), lines[1], f2, (255, 255, 255, 255), 24)
+        d.rectangle([W / 2 - 70, H / 2 + 125, W / 2 + 70, H / 2 + 129], fill=ACC + (255,))
     elif style == 'file':
         f0 = font('Poppins-Medium.ttf', 46); f1 = font('Poppins-Bold.ttf', 104); f2 = font('Poppins-Light.ttf', 46)
         x0 = 170; y0 = H / 2 - 150
@@ -68,6 +72,10 @@ def text_png(style, lines, path):
         spaced(d, (W / 2, 760), lines[0], f1, (255, 255, 255, 255), 18)
         spaced(d, (W / 2, 875), lines[1], f2, ACC + (255,) if style == 'end' else (225, 225, 225, 255), 3)
     out = shadow_layer(im)
+    if style == 'word':
+        g = Image.new('RGBA', (W, H), (0, 0, 0, 0)); gd = ImageDraw.Draw(g)
+        gd.ellipse([W/2-760, H/2-260, W/2+760, H/2+200], fill=(0, 0, 0, 150)); g = g.filter(ImageFilter.GaussianBlur(90))
+        g.alpha_composite(out); out = g
     if style == 'file':
         g = Image.new('RGBA', (W, H), (0, 0, 0, 0)); gd = ImageDraw.Draw(g)
         for x in range(0, 1300, 4): gd.rectangle([x, 0, x + 4, H], fill=(0, 0, 0, int(190 * (1 - x / 1300) ** 1.4)))
@@ -123,7 +131,7 @@ def render_seg(i, seg, dur):
         need = sd + 0.6
         rate = min(1.0, (cd - ss) / need)  # klip kısa ise yavaşlat
         pan = (k + i) % 2
-        night = ",curves=all='0/0 0.5/0.36 1/0.82',colorbalance=bs=0.10:bm=0.06:rm=-0.05" if clip in ('roma1','antik1','akropol1','heykel1') else ''
+        night = ",curves=all='0/0 0.5/0.36 1/0.82',colorbalance=bs=0.10:bm=0.06:rm=-0.05" if clip in ('roma1','antik1','akropol1','heykel1','kutuphane1') else ''
         vf = (f"setpts=PTS/{rate:.4f},scale=2112:1188,crop={W}:{H}:x='96{'-' if pan else '+'}t*{90/need:.3f}':y='54',"
               f"{GRADE}{night},fps={FPS}")
         sh(['ffmpeg', '-v', 'error', '-y', '-ss', f'{ss}', '-i', f'{S}/{clip}.mp4', '-vf', vf, '-t', f'{need}', '-an',
@@ -148,7 +156,7 @@ def render_seg(i, seg, dur):
 def durations(voice):
     if not voice:
         est = [max(2.6, len(s[0]) / 13.5 + 0.9) for s in SEG]
-        est[0] += 1.5; est[4] += 1.0; est[-1] += 2.5
+        est[0] += 1.5; est[5] += 1.0; est[-1] += 2.5
         return est, None
     # sesteki ≥0.55 sn duraklamaları bul, en uzun len(SEG)-1 tanesini sınır al
     r = subprocess.run(['ffmpeg', '-i', voice, '-af', 'silencedetect=n=-38dB:d=0.55', '-f', 'null', '-'], capture_output=True, text=True).stderr
@@ -181,7 +189,7 @@ def main():
     for p in segs: inputs += ['-i', p]
     for k in range(1, len(segs)):
         off += durs[k - 1]
-        tr = 'fadeblack' if k in (4, 6, 10) else 'fade'
+        tr = 'fadeblack' if k in (5, 6, 9) else 'fade'
         fc += f"{prev}[{k}:v]xfade=transition={tr}:duration=0.5:offset={off:.3f}[x{k}];"; prev = f'[x{k}]'
     total = sum(durs)
     fc += (f"{prev}fade=t=in:st=0:d=1.2,fade=t=out:st={total - 1.2:.2f}:d=1.2,vignette=PI/4.5,noise=alls=7:allf=t,"
@@ -189,8 +197,8 @@ def main():
     sh(['ffmpeg', '-v', 'error', '-y', *inputs, '-filter_complex', fc, '-map', '[v]', '-c:v', 'libx264', '-preset', 'medium', '-crf', '17', f'{D}/video.mp4'])
     sfx()
     starts = [sum(durs[:k]) for k in range(len(durs))]
-    hits = [starts[1], starts[4], starts[6], starts[10]]
-    whs = [starts[k] - 1.1 for k in (6, 7, 8)]
+    hits = [starts[1], starts[5], starts[7], starts[9]]
+    whs = [starts[k] - 1.1 for k in (2, 3, 4)]
     ain = ['-i', '/home/claude/sp/muzik_pad.wav', '-i', f'{D}/hit.wav', '-i', f'{D}/whoosh.wav']
     fc = f"[0:a]aloop=loop=-1:size=2e9,atrim=0:{total},volume=0.55,afade=t=in:d=2,afade=t=out:st={total - 3}:d=3[m];"
     mix = ['[m]']
