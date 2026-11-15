@@ -19,8 +19,10 @@ jobs:
           [ -s "stock/$name.mp4" ] && exit 0
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
           curl -sL -A "$UA" --max-time 300 -o "/tmp/$name.raw" "$url" || { echo "FAIL $name"; exit 0; }
+          VF="scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,fps=24"
+          case "$name" in v_*) VF="scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30";; esac
           if file "/tmp/$name.raw" | grep -qiE "MP4|ISO Media|QuickTime"; then
-            ffmpeg -nostdin -v error -y -ss 1 -t 16 -i "/tmp/$name.raw" -an -vf "scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,fps=24" -c:v libx264 -preset veryfast -crf 27 -pix_fmt yuv420p -movflags +faststart "stock/$name.mp4" && echo "OK $name" || echo "FFFAIL $name"
+            ffmpeg -nostdin -v error -y -ss 1 -t 16 -i "/tmp/$name.raw" -an -vf "$VF" -c:v libx264 -preset veryfast -crf 27 -pix_fmt yuv420p -movflags +faststart "stock/$name.mp4" && echo "OK $name" || echo "FFFAIL $name"
           else echo "NOTVIDEO $name"; fi
           rm -f "/tmp/$name.raw"
           SH
