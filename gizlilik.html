@@ -3,58 +3,69 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Gizlilik Politikası · CG Akademi EKYS</title>
+<title>Gizlilik Politikası · CG Akademi</title>
+<meta name="theme-color" content="#15181D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
-  :root{--navy:#13294B;--gold:#B8892F;--fir:#17807E;--bg:#EDF2F1;--text:#14233A;--muted:#5C6977}
-  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Georgia,"Times New Roman",serif}
-  header{background:var(--navy);color:#fff;padding:28px 16px;border-bottom:4px solid var(--gold)}
-  header h1{margin:0;font-size:26px} header p{margin:6px 0 0;color:#D9B86A;font-style:italic}
-  main{max-width:720px;margin:0 auto;padding:24px 16px 48px}
-  h2{color:var(--navy);font-size:20px;margin:28px 0 8px;border-bottom:1px solid #D5E0DE;padding-bottom:4px}
+  :root{--bg:#15181D;--deep:#121418;--card:#1C2027;--border:rgba(255,255,255,.06);--heading:#E6E8EB;--text:#C8CCD2;--muted:#979CA5;--accent:#86B5C8;--ink:#15181D}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent)}
+  header{background:var(--deep);border-bottom:1px solid var(--border)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 16px}
+  .nav{display:flex;align-items:center;gap:10px;height:64px;text-decoration:none}
+  .logo{width:38px;height:38px;border-radius:11px;background:var(--accent);color:var(--ink);display:grid;place-items:center;font:700 16px "Space Grotesk",sans-serif}
+  .nav b{color:var(--heading);font:700 18px "Space Grotesk",sans-serif}
+  h1,h2{font-family:"Space Grotesk",Inter,sans-serif;color:var(--heading);letter-spacing:-.01em}
+  h1{font-size:34px;margin:36px 0 4px}
+  .date{color:var(--accent);font:500 13px "JetBrains Mono",monospace}
+  h2{font-size:21px;margin:30px 0 8px}
+  .box{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:6px 20px;margin-top:20px}
   ul{padding-left:20px} li{margin:4px 0}
-  .muted{color:var(--muted);font-size:14px}
-  a{color:var(--fir)}
+  footer{color:var(--muted);font-size:14px;border-top:1px solid var(--border);margin-top:40px;padding:22px 0}
 </style>
 </head>
 <body>
-<header>
+<header><div class="wrap"><a class="nav" href="./"><span class="logo">CG</span><b>CG Akademi</b></a></div></header>
+<main class="wrap">
   <h1>Gizlilik Politikası</h1>
-  <p>CG Akademi EKYS</p>
-</header>
-<main>
-  <p class="muted">Son güncelleme: 4 Kasım 2026</p>
+  <div class="date">Son güncelleme: 16 Kasım 2026</div>
+  <p>Bu sayfa, CG Akademi uygulamalarının (<b>CG Akademi EKYS</b> ve <b>CG Akademi YKS</b>) hangi bilgileri nasıl kullandığını açıklar. CG Akademi EKYS, Eğitim Kurumlarına Yönetici Seçme Sınavına; CG Akademi YKS, Yükseköğretim Kurumları Sınavına (TYT-AYT) hazırlananlar için hazırlanmış çalışma uygulamalarıdır.</p>
 
-  <p>CG Akademi EKYS, Eğitim Kurumlarına Yönetici Seçme Sınavına (EKYS) hazırlananlar için hazırlanmış bir çalışma uygulamasıdır. Bu sayfa, uygulamanın hangi bilgileri nasıl kullandığını açıklar.</p>
-
-  <h2>Kısaca</h2>
-  <ul>
-    <li>Uygulama kişisel verilerinizi <strong>hiçbir sunucuya göndermez</strong>.</li>
-    <li>Bilgileriniz yalnızca <strong>kendi cihazınızda</strong> saklanır.</li>
-    <li>Reklam, analiz ya da izleme aracı kullanılmaz.</li>
-    <li>Bilgileriniz üçüncü kişilerle paylaşılmaz ve satılmaz.</li>
-  </ul>
+  <div class="box">
+    <h2>Kısaca</h2>
+    <ul>
+      <li>Uygulamalar kişisel verilerinizi hiçbir sunucuya göndermez.</li>
+      <li>Bilgileriniz yalnızca kendi cihazınızda saklanır.</li>
+      <li>Reklam, analiz ya da izleme aracı kullanılmaz.</li>
+      <li>Bilgileriniz üçüncü kişilerle paylaşılmaz ve satılmaz.</li>
+    </ul>
+  </div>
 
   <h2>Cihazınızda saklanan bilgiler</h2>
-  <p>Uygulamanın çalışması için aşağıdaki bilgiler yalnızca telefonunuzun hafızasında tutulur:</p>
+  <p>Uygulamanın çalışması için aşağıdaki bilgiler yalnızca telefonunuzun (ya da web sürümünde tarayıcınızın) hafızasında tutulur:</p>
   <ul>
-    <li>Çalışma tercihleriniz (hedef sınav yılı, günlük çalışma süresi, çalışma günleri, alan seçimleri),</li>
-    <li>Çözdüğünüz testler, denemeler, cevaplarınız ve puanlarınız,</li>
-    <li>İşaretlediğiniz sorular ve kaldığınız yer,</li>
+    <li>Çalışma tercihleriniz (hedef sınav yılı, günlük çalışma süresi ve soru hedefi, çalışma günleri, alan seçimi, hedef net, görünüm seçimi),</li>
+    <li>Çözdüğünüz testler, denemeler, cevaplarınız, netleriniz ve puanlarınız; kendi girdiğiniz dış denemeler,</li>
+    <li>Konu takibi durumları, günlük görevleriniz, odak (Pomodoro) süreleriniz, işaretlediğiniz sorular ve kaldığınız yer,</li>
     <li>Hesap açmayı seçerseniz: adınız, e-posta adresiniz veya telefon numaranız ve şifrenizin geri çevrilemez özeti (şifrenin kendisi saklanmaz).</li>
   </ul>
-  <p>Bu bilgiler cihazınızdan dışarı çıkmaz. Uygulamayı kaldırdığınızda veya uygulamanın verilerini temizlediğinizde tamamen silinir. Hesap açmak zorunlu değildir; uygulama misafir olarak kullanılabilir.</p>
+  <p>Bu bilgiler cihazınızdan dışarı çıkmaz. Uygulamayı kaldırdığınızda, uygulamanın verilerini ya da tarayıcı verilerini temizlediğinizde tamamen silinir. Hesap açmak zorunlu değildir; uygulamalar misafir olarak kullanılabilir.</p>
 
   <h2>İzinler</h2>
-  <p>Uygulama kamera, konum, rehber, mikrofon gibi izinler istemez. Konu özetini PDF olarak indirme özelliği yalnızca sizin başlattığınız indirme işlemidir.</p>
+  <p>Uygulamalar kamera, konum, rehber, mikrofon gibi izinler istemez. Konu özetini PDF olarak indirme özelliği yalnızca sizin başlattığınız bir indirme işlemidir.</p>
 
   <h2>Çocukların gizliliği</h2>
-  <p>Uygulama yetişkinlere (EKYS adaylarına) yöneliktir ve 13 yaşın altındaki çocuklara yönelik değildir.</p>
+  <p>CG Akademi EKYS yetişkinlere (EKYS adaylarına), CG Akademi YKS lise öğrencileri ve mezunlara yöneliktir; uygulamalar 13 yaşın altındaki çocuklara yönelik değildir. Uygulamalar hiçbir kullanıcıdan cihaz dışına veri toplamaz.</p>
 
   <h2>Değişiklikler</h2>
-  <p>Uygulamaya ileride veri işleyen bir özellik eklenirse bu sayfa güncellenir ve güncelleme tarihi değiştirilir.</p>
+  <p>Uygulamalara ileride veri işleyen bir özellik eklenirse bu sayfa güncellenir ve güncelleme tarihi değiştirilir.</p>
 
-  <h2>İletişim</h2>
+  <h2 id="iletisim">İletişim</h2>
   <p>Sorularınız için: <a href="mailto:cguzel23@gmail.com">cguzel23@gmail.com</a></p>
 </main>
+<footer><div class="wrap">© 2026 CG Akademi · <a href="./">Ana sayfa</a></div></footer>
 </body>
 </html>

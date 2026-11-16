@@ -1,35 +1,189 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>CG Akademi EKYS</title>
-    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
-    <style id="expo-reset">
-      /* These styles make the body full-height */
-      html,
-      body {
-        height: 100%;
-      }
-      /* These styles disable body scrolling if you are using <ScrollView> */
-      body {
-        overflow: hidden;
-      }
-      /* These styles make the root element full-height */
-      #root {
-        display: flex;
-        height: 100%;
-        flex: 1;
-      }
-    </style>
-  <link rel="icon" href="/cg-akademi-ekys/favicon.ico"/></head>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CG Akademi · Sınavlara sade hazırlık</title>
+<meta name="description" content="CG Akademi: YKS (TYT-AYT) ve EKYS için reklamsız, internetsiz çalışan sınav hazırlık uygulamaları. Konu anlatımı, ÖSYM üslubunda özgün sorular, denemeler ve konu takibi.">
+<meta name="theme-color" content="#15181D">
+<link rel="icon" href="ekys/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#15181D;--deep:#121418;--card:#1C2027;--hi:#232831;--border:rgba(255,255,255,.06);--border2:rgba(255,255,255,.12);
+    --heading:#E6E8EB;--text:#C8CCD2;--muted:#979CA5;--ink:#15181D;
+    --accent:#86B5C8;--accentSoft:rgba(134,181,200,.10);--accentLine:rgba(134,181,200,.30);
+    --violet:#9D97C4;--green:#8CC2A2;--amber:#D4B47A;--rose:#CF9E9E;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+  h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;color:var(--heading);letter-spacing:-.01em;margin:0}
+  .mono{font-family:"JetBrains Mono",monospace}
 
-  <body>
-    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
-    <noscript> You need to enable JavaScript to run this app. </noscript>
-    <!-- The root element for your Expo app. -->
-    <div id="root"></div>
-  <script src="/cg-akademi-ekys/_expo/static/js/web/entry-46f990c3c95410bf57de7b044b16cbdb.js" defer></script>
+  header{background:var(--deep);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:5}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px}
+  .logo{width:38px;height:38px;border-radius:11px;background:var(--accent);color:var(--ink);display:grid;place-items:center;font:700 16px "Space Grotesk",sans-serif}
+  .brand b{display:block;color:var(--heading);font:700 18px/1.1 "Space Grotesk",sans-serif}
+  .brand small{display:block;color:var(--accent);font:500 11px "JetBrains Mono",monospace;letter-spacing:1.6px}
+  .links{display:flex;gap:4px}
+  .links a{padding:10px 12px;border-radius:12px;color:var(--text);font-weight:500;font-size:15px}
+  .links a:hover{background:var(--card)}
+
+  .hero{padding:56px 0 40px}
+  .kicker{color:var(--accent);font:500 13px "JetBrains Mono",monospace;letter-spacing:1px}
+  .hero h1{font-size:clamp(32px,6vw,52px);line-height:1.08;margin-top:10px;max-width:760px}
+  .hero p{font-size:18px;color:var(--muted);max-width:640px;margin:16px 0 0}
+  .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 20px;border-radius:14px;font-weight:600;font-size:16px;border:1px solid var(--border2);background:var(--card);color:var(--heading)}
+  .btn:hover{background:var(--hi)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--ink)}
+  .btn.primary:hover{filter:brightness(1.06)}
+
+  section{padding:36px 0}
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:18px}
+  .sec-head h2{font-size:28px}
+  .sec-head span{color:var(--muted);font-size:14px}
+
+  .grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px}
+  .app{display:flex;flex-direction:column;gap:12px;border-left:3px solid var(--c,var(--accent))}
+  .app h3{font-size:24px}
+  .app .sub{color:var(--muted);font-size:15px;margin-top:2px}
+  .badge{align-self:flex-start;font:500 12.5px "JetBrains Mono",monospace;padding:4px 10px;border-radius:10px;border:1px solid var(--accentLine);background:var(--accentSoft);color:var(--accent)}
+  .badge.amber{border-color:rgba(212,180,122,.3);background:rgba(212,180,122,.1);color:#DCC08F}
+  .badge.muted{border-color:var(--border2);background:var(--hi);color:var(--muted)}
+  .stats{display:flex;gap:10px;flex-wrap:wrap}
+  .stat{flex:1;min-width:90px;background:var(--deep);border:1px solid var(--border);border-radius:14px;padding:10px 12px}
+  .stat b{display:block;color:var(--heading);font:700 22px "JetBrains Mono",monospace}
+  .stat small{color:var(--muted);font-size:13px}
+  .app ul{margin:0;padding-left:18px;color:var(--text);font-size:15px}
+  .app li{margin:3px 0}
+  .app .btns{margin-top:auto;padding-top:6px}
+  .soon{opacity:.8}
+
+  .feat{display:flex;gap:14px;align-items:flex-start}
+  .ico{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:19px;border:1px solid;font-weight:700}
+  .feat h3{font-size:18px}
+  .feat p{margin:4px 0 0;color:var(--muted);font-size:15px}
+
+  .shots{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .shots img{width:min(300px,80vw);border-radius:28px;border:1px solid var(--border2);background:var(--deep)}
+
+  .note{color:var(--muted);font-size:14px;margin-top:14px}
+  footer{border-top:1px solid var(--border);background:var(--deep);margin-top:30px}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:22px 16px;color:var(--muted);font-size:14px}
+  .foot a{color:var(--text)} .foot a:hover{color:var(--accent)}
+  @media (max-width:600px){.links a.hide{display:none}.hero{padding:36px 0 24px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="./" aria-label="CG Akademi ana sayfa">
+      <span class="logo">CG</span>
+      <span><b>CG Akademi</b><small>SINAV HAZIRLIK</small></span>
+    </a>
+    <nav class="links" aria-label="Site menüsü">
+      <a href="#uygulamalar">Uygulamalar</a>
+      <a class="hide" href="#ozellikler">Özellikler</a>
+      <a class="hide" href="gizlilik.html">Gizlilik</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div class="kicker">YKS · EKYS · yakında LGS ve KPSS</div>
+    <h1>Sınavlara sade, reklamsız ve odaklı hazırlık.</h1>
+    <p>Konu anlatımı, hızlı tekrar, ÖSYM üslubunda özgün sorular, tahmin denemeleri ve konu takibi tek uygulamada. Hesap açmadan, internet olmadan çalışır.</p>
+    <div class="btns">
+      <a class="btn primary" href="yks/">YKS'yi tarayıcıda aç ›</a>
+      <a class="btn" href="ekys/">EKYS'yi tarayıcıda aç ›</a>
+    </div>
+  </div>
+
+  <section id="uygulamalar">
+    <div class="wrap">
+      <div class="sec-head"><h2>Uygulamalar</h2><span>Hepsi ücretsiz deneme sürümünde</span></div>
+      <div class="grid">
+        <article class="card app" style="--c:#86B5C8">
+          <span class="badge">Web'de açık · Android yakında</span>
+          <div><h3>CG Akademi YKS</h3><div class="sub">TYT ve AYT hazırlık</div></div>
+          <div class="stats">
+            <div class="stat"><b>76</b><small>TYT konusu</small></div>
+            <div class="stat"><b>~2.300</b><small>özgün soru</small></div>
+            <div class="stat"><b>3</b><small>tahmin denemesi</small></div>
+          </div>
+          <ul>
+            <li>2018–2026 TYT sorularından çıkarılan ÖSYM üslubunda ikiz sorular</li>
+            <li>Konu ağırlıkları gerçek soru dağılımından: neye ne kadar çalışmalı</li>
+            <li>Net gelişim grafiği, tahmini puan, Pomodoro odak sayacı</li>
+            <li>AYT: konu takibi açık, anlatım ve testler hazırlanıyor</li>
+          </ul>
+          <div class="btns"><a class="btn primary" href="yks/">Tarayıcıda aç ›</a></div>
+        </article>
+
+        <article class="card app" style="--c:#9D97C4">
+          <span class="badge amber">Google Play · kapalı test</span>
+          <div><h3>CG Akademi EKYS</h3><div class="sub">Eğitim Kurumlarına Yönetici Seçme Sınavı</div></div>
+          <ul>
+            <li>Mevzuat ve eğitim bilimleri konuları sade dille</li>
+            <li>Konu testleri, denemeler ve cevap incelemesi</li>
+            <li>Eksik konu raporu ve yanlış defteri</li>
+            <li>Konu özetlerini PDF olarak indirme</li>
+          </ul>
+          <div class="btns"><a class="btn" href="ekys/">Tarayıcıda aç ›</a></div>
+        </article>
+
+        <article class="card app soon" style="--c:#5C616B">
+          <span class="badge muted">Yakında</span>
+          <div><h3>LGS ve KPSS</h3><div class="sub">Aynı sade yapıyla, sırada</div></div>
+          <ul>
+            <li>LGS: 8. sınıf, MEB müfredatına göre</li>
+            <li>KPSS: Genel Yetenek ve Genel Kültür</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="ozellikler">
+    <div class="wrap">
+      <div class="sec-head"><h2>Neden CG Akademi?</h2></div>
+      <div class="grid">
+        <div class="card feat"><span class="ico" style="color:#86B5C8;border-color:rgba(134,181,200,.35);background:rgba(134,181,200,.1)">✓</span><div><h3>Reklamsız</h3><p>Çalışırken önüne reklam, açılır pencere ya da ücretli kilit çıkmaz.</p></div></div>
+        <div class="card feat"><span class="ico" style="color:#8CC2A2;border-color:rgba(140,194,162,.35);background:rgba(140,194,162,.1)">⌁</span><div><h3>İnternetsiz çalışır</h3><p>İçerik uygulamanın içinde. Bilgilerin yalnızca kendi cihazında tutulur.</p></div></div>
+        <div class="card feat"><span class="ico" style="color:#D4B47A;border-color:rgba(212,180,122,.35);background:rgba(212,180,122,.1)">◎</span><div><h3>ÖSYM üslubu</h3><p>Sorular gerçek sınavlardaki kök, bağlam ve çeldirici mantığıyla, özgün olarak yazıldı.</p></div></div>
+        <div class="card feat"><span class="ico" style="color:#9D97C4;border-color:rgba(157,151,196,.35);background:rgba(157,151,196,.1)">▤</span><div><h3>Konu takibi</h3><p>Her konu Başlanmadı, Çalışılıyor, Bitti. İlerlemeni ders ders gör.</p></div></div>
+        <div class="card feat"><span class="ico" style="color:#CF9E9E;border-color:rgba(207,158,158,.35);background:rgba(207,158,158,.1)">◧</span><div><h3>Deneme ve net</h3><p>Uygulama içi denemeler ve dışarıda girdiğin denemelerle net gelişim grafiği.</p></div></div>
+        <div class="card feat"><span class="ico" style="color:#86B5C8;border-color:rgba(134,181,200,.35);background:rgba(134,181,200,.1)">◷</span><div><h3>Göz yormayan tasarım</h3><p>Sade, koyu ve sakin renkler; tek ekranda her şey, dokununca ilgili sayfa.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><h2>Ekrandan</h2><span>CG Akademi YKS</span></div>
+      <div class="shots">
+        <img src="img/yks-ana.png" alt="YKS uygulamasının ana ekranı: TYT geri sayımı ve sekiz kutucuk" loading="lazy">
+        <img src="img/yks-konular.png" alt="Konu takibi ekranı: TYT/AYT şalteri ve ders ilerlemeleri" loading="lazy">
+      </div>
+      <p class="note">CG Akademi bağımsız bir eğitim girişimidir; ÖSYM ve MEB ile resmî bir bağlantısı yoktur. Sınav tarihleri ve kurallar için her zaman ÖSYM'nin güncel kılavuzuna bakınız.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 CG Akademi</span>
+    <span><a href="gizlilik.html">Gizlilik politikası</a></span>
+  </div>
+</footer>
 </body>
 </html>
