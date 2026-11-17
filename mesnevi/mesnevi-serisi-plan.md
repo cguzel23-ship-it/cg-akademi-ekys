@@ -31,6 +31,6 @@ Ton: tarafsız, saygılı; inanç hükmü verilmez. Menkıbeler "rivayete göre"
 | 19 | Donmuş Ejderha | Yılan avcısı ve nefs; Ömer ve ihtiyar çengi (merhamet) |
 | 20 | Mevlânâ Ne Değildir? | Yanlış atfedilen sözler, Mevlevîliğin sonradan kuruluşu, sema, final |
 
-Metinler: claude/uyku-mesneviNN-metin.md (proje) ve zd-gorseller dalı mesnevi/uyku_mesneviNN.md
+Metinler: GitHub cguzel23-ship-it/cg-akademi-ekys, zd-gorseller dalı mesnevi/uyku_mesnevi01..20.md (raw: https://raw.githubusercontent.com/cguzel23-ship-it/cg-akademi-ekys/zd-gorseller/mesnevi/uyku_mesneviNN.md)
 
 Durum (17 Kas 2026): 20 bölümün metni yazıldı; seslendirme yapılmadı (kullanıcı sonra yapacak).
