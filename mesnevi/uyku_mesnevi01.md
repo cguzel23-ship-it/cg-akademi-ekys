@@ -223,7 +223,26 @@ Kamış, ney oldu. Sessiz bir bitki, insanları ağlatan bir sese dönüştü.
 Mevlânâ'nın bütün kitabı, bu sorunun etrafında dönüyor. Nereden geldik? Nereye gidiyoruz? Ve bu aradaki yolculukta, ayrılığın acısını nasıl bir şarkıya dönüştürebiliriz?
 Bu soruların hepsine cevap vermeyecek. Ama onlarla nasıl yaşanacağını, hikâyelerle gösterecek.
 
-## 17. Kapanış
+## 17. Arşivden: Kamışın ilk ve son sözü
+
+Biraz arşive girelim. Bu bölüm, Zihin Dedektifi'nin dosya dolabından.
+Mesnevî'nin bugün elimizdeki en eski tam nüshası, Konya'da, Mevlânâ Müzesi'nde saklanıyor. Envanterde 51 numarayla kayıtlı. Hicrî 677 yılında, yani 1278'de, Mevlânâ'nın ölümünden yaklaşık beş yıl sonra yazılmış. Kâtibi, Konyalı Muhammed bin Abdullah. Altı defterin tamamı, temiz bir nesih yazısıyla.
+Araştırmacılar, bu nüshanın Mevlânâ'nın sağlığında kontrol edilmiş bir nüshaya dayandığını söyler. Bu nüshaya göre Mesnevî, yirmi beş bin altı yüz küsur beyit.
+Ve 2023'te, vuslatın yedi yüz ellinci yılında, bu nüshanın tıpkıbasımı yapıldı.
+O nüshanın ilk sayfasını açtığında, Farsça olarak şu beyti okursun:
+Bişnev în ney çün şikâyet mîkuned.
+Ez cüdâyîhâ hikâyet mîkuned.
+Dinle bu neyi, nasıl şikâyet ediyor. Ayrılıkları anlatıyor.
+Ve on sekizinci beyitte, Neyname şöyle biter:
+Der neyâbed hâl-i pühte hîç hâm.
+Pes sühan kûtâh bâyed, vesselâm.
+Ham olan, pişmişin halini anlamaz. Öyleyse söz kısa kesilmeli. Vesselam.
+Mevlevîler bu on sekiz beyti o kadar önemser ki, ona Mesnevî'nin Fâtiha'sı derler. Yani açılışı, özü. Bütün Mesnevî'nin bu on sekiz beyitte saklı olduğunu söylerler.
+Ve on sekiz sayısı üzerine de güzel bir yorum yaparlar. Eski ebced hesabında, harflerin her birinin bir sayı değeri vardır. On sekiz, Arapçada diri, canlı anlamına gelen Hay kelimesinin değerine denk gelir. Mevlevîler bunu bir işaret olarak görür. Ney ölü bir kamış değil, diri bir nefes, derler.
+Bu, bir yorum. Mevlânâ'nın kendisinin böyle bir hesap yapıp yapmadığını bilmiyoruz. Ama yedi yüz yıldır, bu on sekiz beyit üzerine yüzlerce şerh yazıldı. Sadece bu on sekiz beyti açıklayan kitaplar, ciltler doldurdu. Bugün bile akademik dergiler, sadece bu beyitlere özel sayılar çıkarıyor.
+On sekiz beyit. Ve yedi yüz yıllık bir yankı.
+
+## 18. Kapanış
 
 Bu gece Mesnevî'nin ilk sayfasını açtık.
 Bir kamışlıkla başladık. Kesilen bir kamışla, ateşle delinen gövdesiyle, içi boşaltılmış bir neyle.
