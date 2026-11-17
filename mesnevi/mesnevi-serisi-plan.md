@@ -1,6 +1,6 @@
 # Uyurken Dinle — Mevlânâ ve Mesnevî Hikâyeleri Serisi (plan, 17 Kas 2026)
 
-Format: 20 bölüm × ~25–30 dk (~18–23 bin karakter), Spinoza/Stoacılık ile aynı tarz (Zihin Dedektifi anlatıcı, konuşma dili, yorumlu anlatım, uyku kapanışı).
+Format: 20 bölüm, yazılan metinler 11,8–21,3 bin karakter (toplam ~293 bin; Riko ~14,4 kr/sn → bölüm başı ~14–25 dk). İstenirse seslendirmeden önce genişletilir, Spinoza/Stoacılık ile aynı tarz (Zihin Dedektifi anlatıcı, konuşma dili, yorumlu anlatım, uyku kapanışı).
 Ses: Gemini TTS "Riko" (seslendirme sonra yapılacak — kullanıcı 17 Kas: "seslendirmeyi sonra yapalım, sen senaryoyu yaz").
 Görüntü: gerçek stok (Pexels/Pixabay): Konya, kamış/ney, mum, kervan, çöl, gül bahçesi, su, gece gökyüzü. Gerçek kişi yüzü yok; telifli sema/müze görüntüsü yok.
 Yayın: 21:30 TR, 1 Aralık 2026'dan itibaren her gün (bölüm n = 1 Ara + n−1; 20. bölüm 20 Ara). Kullanıcı 17 Kas kararı: Şeb-i Arus bölümü 17 Aralık'a (vuslatın yıl dönümü) ithaf edilecek → Düğün Gecesi 17. bölüm oldu.
@@ -32,3 +32,5 @@ Ton: tarafsız, saygılı; inanç hükmü verilmez. Menkıbeler "rivayete göre"
 | 20 | Mevlânâ Ne Değildir? | Yanlış atfedilen sözler, Mevlevîliğin sonradan kuruluşu, sema, final |
 
 Metinler: claude/uyku-mesneviNN-metin.md (proje) ve zd-gorseller dalı mesnevi/uyku_mesneviNN.md
+
+Durum (17 Kas 2026): 20 bölümün metni yazıldı; seslendirme yapılmadı (kullanıcı sonra yapacak).
