@@ -103,8 +103,8 @@ Ertesi sabah, padişah sarayın balkonunda bekledi. Gözü yollardaydı.
 Ve öğleye doğru, bir adam göründü. Uzaktan, yaya geliyordu. Mevlânâ onu şöyle anlatır: Güneşin içinde bir gölge gibi. Hem var, hem yok.
 Padişah, rüyasındaki adamı tanıdı.
 Ve ne yaptı biliyor musun? Saray kapısında beklemedi. Merdivenlerden koşarak indi. Kapıdan çıktı. Yabancıyı kendisi karşıladı.
-Ona sarıldı. Elini öptü. Ve dedi ki: Sen benim aradığımdın. Asıl sevdiğim sensin. O kız ise, bu yolda bir bahaneydi.
-Bu cümleyi aklında tut. Hikâyenin sonunda, ona geri döneceğiz.
+Ona sarıldı. Elini öptü. Ve dedi ki: Asıl sevdiğim sendin, o değil. Ama bu dünyada iş, işten doğar.
+Yani o kız, seni bulmam için bir yoldu. Bu cümleyi aklında tut. Hikâyenin sonunda, ona geri döneceğiz.
 Padişah, yabancıyı içeri aldı. Ona hastanın derdini anlattı. Ve onu hastanın yanına götürdü.
 
 ## 10. Muayene
@@ -215,7 +215,7 @@ Bu açıdan bakınca, hikâyede kimse gerçekten ölmüyor. Sadece bir bağ çö
 ## 19. Asıl sevilen
 
 Padişahın hekime söylediği o cümleyi hatırla.
-Sen benim aradığımdın. Asıl sevdiğim sensin. O kız ise, bu yolda bir bahaneydi.
+Asıl sevdiğim sendin, o değil. Ama bu dünyada iş, işten doğar.
 Bu cümle, bütün hikâyenin anahtarı olabilir.
 Padişah kızı sevdiğini sanıyordu. Ama kızın hastalığı, onu çaresizliğe, çaresizlik duaya, dua da hekime götürdü. Ve hekimle karşılaştığında, asıl aradığının bu olduğunu anladı.
 Mevlânâ'nın hayatını düşün. Şems'le karşılaşmadan önce, o da her şeye sahip gibiydi. Saygı, ilim, öğrenciler. Ama bir şey eksikti. Ve Şems geldiğinde, asıl aradığının o olduğunu anladı.
@@ -226,7 +226,7 @@ Kayıplar, bazen bizi asıl kavuşmamız gerekene götüren yollardır.
 
 ## 20. Edep
 
-Mevlânâ bu hikâyenin ortasında, hekimler başarısız olduktan sonra, bir dua eder. Çok sevilen bir dua:
+Mevlânâ bu hikâyenin ortasında, padişah gaipten gelen hekimle kucaklaştıktan hemen sonra, bir dua eder. Çok sevilen bir dua:
 Tanrı'dan edebe muvaffak olmayı dileyelim. Edepsiz olan, Rabbin lütfundan mahrum kalır.
 Edep, sadece görgü kuralı değil. Daha derin bir şey. Kendi yerini bilmek. Kibirsiz olmak. Başkasına, bilmediğine, hayatın kendisine saygıyla yaklaşmak.
 Hekimler, edepsizdi. Çünkü kendi bilgilerinin yeteceğini sandılar.
@@ -237,19 +237,22 @@ Edep, belki bütün Mesnevî'nin temel kelimelerinden biri.
 ## 21. Hikâyenin öbür hayatları
 
 Bu hikâyenin kökleri, Mevlânâ'dan daha eskiye uzanıyor.
-On ikinci yüzyılda, Nizâmî-i Arûzî adında bir yazar, Çehâr Makâle, yani Dört Makale adında bir kitap yazdı. Bu kitapta, İbn Sînâ hakkında bir hikâye var. Gürgan'da bir prensin, bilinmeyen bir hastalıkla yattığını. İbn Sînâ'nın nabzını tutarak, ona mahallelerin, sokakların, evlerin adlarını saydırdığını. Ve sonunda prensin bir kıza âşık olduğunu bulduğunu.
-Bu hikâyede kimse ölmüyor. Prens, sevdiği kızla evlendiriliyor. Ve iyileşiyor.
+On ikinci yüzyılda, 1155 ile 1157 yılları arasında, Semerkantlı Nizâmî-i Arûzî adında bir yazar, Çehâr Makâle, yani Dört Makale adında bir kitap yazdı. Bu kitapta, İbn Sînâ hakkında bir hikâye var. Gürgan hükümdarı Kâbus'un bir yakınının, bilinmeyen bir hastalıkla yattığını. Hekimlerin bütün çabasına rağmen iyileşmediğini. İbn Sînâ'nın nabzını tutup idrarına baktığını. Sonra Gürgan'ın bütün mahallelerini, sokaklarını, evlerini bilen birini çağırttığını ve ona bu adları tek tek saydırdığını. Bir mahallenin adı geçince nabzın tuhaf bir şekilde çarptığını. Ve sonunda hastanın bir kıza âşık olduğunu bulduğunu.
+Bu hikâyede kimse ölmüyor. Hasta, sevdiğine kavuşturuluyor. Ve iyileşiyor.
 Yani Mevlânâ, muhtemelen bu tür hekim hikâyelerini biliyordu. Ve onlara kendi sonunu ekledi. Kuyumcunun solan güzelliğini. Çünkü onun derdi bir tıp hikâyesi anlatmak değildi. Bir bağın nasıl çözüldüğünü anlatmaktı.
-Batıda da benzer bir hikâye var. Eski Yunan'da, hekim Erasistratos'un, Kral Seleukos'un oğlunun hastalığını aynı yöntemle bulduğu anlatılır. Prens, babasının genç eşine âşıktı. Ve nabız, o kadın odaya girdiğinde hızlanıyordu.
+Batıda da benzer bir hikâye var. Eski Yunan'da, hekim Erasistratos'un, Kral Seleukos'un oğlunun hastalığını aynı yöntemle bulduğu anlatılır. Prens Antiokhos, babasının genç eşine, üvey annesine âşıktı. Ve nabız, o kadın odaya girdiğinde hızlanıyordu.
 Aynı hikâye, Atina'dan Nişabur'a, Nişabur'dan Konya'ya. Yüzyıllar boyunca, hekimler değişiyor, şehirler değişiyor. Ama nabız hep aynı şeyi söylüyor: Kalp, bedenden önce konuşur.
 
 ## 22. Arşivden: Konya nüshası
 
 Şimdi biraz arşive girelim. Bu bölüm, Zihin Dedektifi'nin dosya dolabından.
 Mesnevî'nin bugün elimizdeki en eski ve en güvenilir nüshası, Konya'da, Mevlânâ Müzesi'nde saklanıyor. Hicrî 677 yılında, yani Mevlânâ'nın ölümünden yaklaşık beş yıl sonra, 1278 yılında tamamlanmış bir elyazması.
-Bu nüshayı Konyalı bir kâtip yazmış. Geleneğe göre, Hüsameddin Çelebi'nin huzurunda okunarak düzeltilmiş. Yani Mesnevî'yi kendi eliyle ilk kez yazan adamın gözü önünde.
-İngiliz şarkiyatçı Reynold Nicholson, yirminci yüzyılın başında Mesnevî'nin tenkitli neşrini hazırlarken, en çok bu nüshaya dayandı. Bugün dünyada okunan Mesnevî çevirilerinin büyük kısmı, bu Konya nüshasından geliyor.
-Padişah ve cariye hikâyesi, bu nüshada, birinci defterin hemen başında. Neyname'nin on sekiz beytinin bittiği yerde başlıyor. Ve iki yüzü aşkın beyit sürüyor.
+Müzenin envanterinde 51 numarayla kayıtlı. Altı defterin tamamı, üç yüzü aşkın yaprak. Kâtibi, Muhammed bin Abdullah el-Konevî. Yani Konyalı Muhammed. Temiz, okunaklı bir nesih yazısıyla yazmış.
+Araştırmacılar, bu nüshanın Mevlânâ'nın sağlığında kontrol edilmiş bir nüshaya dayandığını söyler. Yani bu sayfalardaki beyitler, Mevlânâ'nın söylediği şekle en yakın olanlar.
+Bu nüshaya göre Mesnevî, yirmi beş bin altı yüz küsur beyit.
+İngiliz şarkiyatçı Reynold Nicholson, yirminci yüzyılın başında Mesnevî'nin tenkitli neşrini hazırlarken, bu eski Konya nüshasını da temel aldı. Bugün dünyada okunan Mesnevî çevirilerinin büyük kısmı, o neşre dayanıyor.
+Ve yedi yüz elli yıl sonra, 2023'te, Mevlânâ'nın vuslatının yedi yüz ellinci yılında, bu nüshanın tıpkıbasımı yapıldı. Sayfalar yıprandığı için, aslı korunurken, aynısı yeniden basıldı.
+Padişah ve cariye hikâyesi, birinci defterin hemen başında. Neyname'nin on sekiz beytinden ve bir giriş bölümünden sonra, otuz beşinci beyitte başlıyor. Ve iki yüz kırkıncı beyit civarına kadar sürüyor.
 Hikâyenin ilk beyti, Farsça olarak şöyle:
 Bişnevîd ey dûstân în dâstân.
 Hod hakîkat nakd-i hâl-i mâst ân.
@@ -259,19 +262,20 @@ Neyname "dinle" diye başlamıştı. İlk hikâye de "dinleyin" diye başlıyor.
 ## 23. Arşivden: Dört beyit
 
 Bu hikâyeden, aslından dört beyit daha bırakayım. Farsçasını ve kendi sözlerimizle anlamını.
-Birincisi, hekimin teşhisinden sonra:
+Bu beyitlerin yerlerini, Nicholson neşrindeki numaralarıyla veriyorum.
+Birincisi, yüz dokuzuncu beyit. Hekimin teşhisinden sonra:
 Âşıkî peydâst ez zârî-i dil.
 Nîst bîmârî çü bîmârî-i dil.
 Âşıklık, gönlün iniltisinden belli olur. Gönül hastalığı gibi bir hastalık yoktur.
-İkincisi, hemen ardından:
+İkincisi, hemen ardından, yüz onuncu beyit:
 İllet-i âşık zi illethâ cüdâst.
 Aşk usturlâb-ı esrâr-ı Hudâst.
 Âşığın derdi, bütün dertlerden ayrıdır. Aşk, Tanrı'nın sırlarının usturlabıdır.
-Üçüncüsü, kibirli hekimlerden sonra okunan dua:
+Üçüncüsü, yetmiş sekizinci beyit. Padişah gaipten gelen hekimi karşıladıktan hemen sonra okunan dua:
 Ez Hudâ cûyîm tevfîk-i edeb.
-Bî-edeb mahrûm mâned ez lutf-i Rab.
-Tanrı'dan edebe muvaffak olmayı dileyelim. Edepsiz olan, Rabbin lütfundan mahrum kalır.
-Ve dördüncüsü, kuyumcunun güzelliği solduktan sonra:
+Bî-edeb mahrûm geşt ez lutf-i Rab.
+Tanrı'dan edebe muvaffak olmayı dileyelim. Edepsiz olan, Rabbin lütfundan mahrum kaldı.
+Ve dördüncüsü, iki yüz beşinci beyit. Kuyumcunun güzelliği solduktan sonra:
 Aşkhâyî kez pey-i rengî büved.
 Aşk nebved, âkıbet nengî büved.
 Bir renk için olan aşklar, aşk değildir. Sonunda bir utanç olur.
