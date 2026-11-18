@@ -15,57 +15,57 @@
    "agirlik": 30,
    "soru": 24,
    "renk": "#14B8A6",
-   "durum": "yakinda",
-   "liste_url": null,
+   "durum": "yayinda",
+   "liste_url": "https://www.youtube.com/playlist?list=PLDUGpXr_if8g",
    "tanitim": "Sınavın en ağır alanı. Ortak Metin'deki öğrenci profili, erdem-değer-eylem çerçevesi, beceriler, program tasarımı ve öğrenme kanıtları; aynı kavramın farklı listelerde nasıl geçtiğine dikkat ederek.",
    "bolumler": [
     {
      "kod": "E-TM0",
      "baslik": "Giriş: Maarif Modeli alan haritası, Ortak Metin, 24 soru",
-     "yt": null,
-     "durum": "yakinda"
+     "yt": "-FlTca4DrfM",
+     "durum": "yayinda"
     },
     {
      "kod": "E-TM1",
      "baslik": "Temel yaklaşım ve genel amaçlar",
-     "yt": null,
-     "durum": "yakinda"
+     "yt": "rGKb0tNIAos",
+     "durum": "yayinda"
     },
     {
      "kod": "E-TM2",
      "baslik": "Öğrenci profili: yetkin ve erdemli insan",
-     "yt": null,
-     "durum": "yakinda"
+     "yt": "CkZLMvTMZwc",
+     "durum": "yayinda"
     },
     {
      "kod": "E-TM3",
      "baslik": "Erdem-Değer-Eylem I: kavramlar, çatı değerler, 20 değer, gruplar",
-     "yt": null,
-     "durum": "yakinda"
+     "yt": "PgSI5JXBKbE",
+     "durum": "yayinda"
     },
     {
      "kod": "E-TM4",
      "baslik": "Erdem-Değer-Eylem II: programa yansıma, tablolar, gün-haftalar, değer eğitimi köprüsü",
-     "yt": null,
-     "durum": "yakinda"
+     "yt": "oeFPh6yCY9o",
+     "durum": "yayinda"
     },
     {
      "kod": "E-TM5",
      "baslik": "Beceriler çerçevesi ve kavramsal beceriler (KB1–KB3), fiziksel beceriler",
-     "yt": null,
-     "durum": "yakinda"
+     "yt": "FjE2_nOEAK4",
+     "durum": "yayinda"
     },
     {
      "kod": "E-TM6",
      "baslik": "Eğilimler: benlik, sosyal, entelektüel",
-     "yt": null,
-     "durum": "yakinda"
+     "yt": "RifSRctyYec",
+     "durum": "yayinda"
     },
     {
      "kod": "E-TM7",
      "baslik": "Alan becerileri: on alan, SBAB 17, SAB tuzağı",
-     "yt": null,
-     "durum": "yakinda"
+     "yt": "xvnsymQ9Xzo",
+     "durum": "yayinda"
     },
     {
      "kod": "E-TM8",
@@ -125,294 +125,294 @@
    "soru": 16,
    "renk": "#2563EB",
    "durum": "yayinda",
-   "liste_url": "https://www.youtube.com/@cgakademi/playlists",
+   "liste_url": "https://www.youtube.com/playlist?list=PLEjoY1rMWsrA",
    "tanitim": "Anayasa, 657, 1739, 222, MEB teşkilatı, 5018, 5442, 4688, 3071 ve 4483. Kanun dili yerine sade anlatım; her bölümde ÖSYM tarzı bir soru ve kısa özet.",
    "bolumler": [
     {
      "kod": "E-G0",
      "baslik": "Mevzuat haritası: 16 soru, 10 düzenleme, ÖSYM'nin soru tarzı",
      "grup": "Giriş",
-     "yt": null,
+     "yt": "TO1hlHqDRDI",
      "durum": "yayinda"
     },
     {
      "kod": "E-A1",
      "baslik": "Anayasa 1: Başlangıç, Kuvvetler Ayrımı ve Değiştirilemez İlk Dört Madde",
      "grup": "Anayasa",
-     "yt": null,
+     "yt": "2N4kbN652t0",
      "durum": "yayinda"
     },
     {
      "kod": "E-A2",
      "baslik": "Anayasa 2: Egemenlik, Kuvvetler ve Kanun Önünde Eşitlik (md. 5–11)",
      "grup": "Anayasa",
-     "yt": null,
+     "yt": "H6O7KCttsDs",
      "durum": "yayinda"
     },
     {
      "kod": "E-A3",
      "baslik": "Anayasa 3: Temel Hakların Niteliği, Sınırlanması, Durdurulması (md. 12–16)",
      "grup": "Anayasa",
-     "yt": null,
+     "yt": "1LWYuDDy4sU",
      "durum": "yayinda"
     },
     {
      "kod": "E-A4",
      "baslik": "Anayasa 4: Hak Kategorileri, Din Kültürü (md. 24) ve Çocuk Hakları (md. 41)",
      "grup": "Anayasa",
-     "yt": null,
+     "yt": "JtGA7u_9k_4",
      "durum": "yayinda"
     },
     {
      "kod": "E-A5",
      "baslik": "Anayasa 5: Eğitim ve Öğrenim Hakkı ve Ödevi (md. 42) Fıkra Fıkra",
      "grup": "Anayasa",
-     "yt": null,
+     "yt": "Lway82VlFoU",
      "durum": "yayinda"
     },
     {
      "kod": "E-A6",
      "baslik": "Anayasa 6: Kamu Görevlisi – Disiplin Güvencesi, Kanunsuz Emir, Sendika",
      "grup": "Anayasa",
-     "yt": null,
+     "yt": "dulmsqT78-A",
      "durum": "yayinda"
     },
     {
      "kod": "E-A7",
      "baslik": "Anayasa 7: Yasama I – TBMM, Seçimler, YSK, Milletvekilliği (md. 75–85)",
      "grup": "Anayasa",
-     "yt": null,
+     "yt": "g4-6_zSaMdQ",
      "durum": "yayinda"
     },
     {
      "kod": "E-A8",
      "baslik": "Anayasa 8: Yasama II – TBMM'nin Görevleri, Kanun, Denetim (md. 87–98)",
      "grup": "Anayasa",
-     "yt": null,
+     "yt": "I8blU4OBB1k",
      "durum": "yayinda"
     },
     {
      "kod": "E-A9",
      "baslik": "Anayasa 9: Yürütme – Cumhurbaşkanı, CBK, DDK, MGK, OHAL (md. 101–119)",
      "grup": "Anayasa",
-     "yt": null,
+     "yt": "riz1r6ZsoEU",
      "durum": "yayinda"
     },
     {
      "kod": "E-A9B",
      "baslik": "Anayasa 9B: Cumhurbaşkanının Görev ve Yetkileri, Bakanlar, OHAL Kararnameleri",
      "grup": "Anayasa",
-     "yt": null,
+     "yt": "vHbc6SjYP9g",
      "durum": "yayinda"
     },
     {
      "kod": "E-A10",
      "baslik": "Anayasa 10: İdare ve Anayasada Düzenlenen Kurumlar (2025 EKYS'de çıktı)",
      "grup": "Anayasa",
-     "yt": null,
+     "yt": "OcTvQ_uASJQ",
      "durum": "yayinda"
     },
     {
      "kod": "E-A11",
      "baslik": "Anayasa 11: Yargı, Bütçe ve Anayasa Değişikliği – Sayılar ve Çoğunluklar",
      "grup": "Anayasa",
-     "yt": null,
+     "yt": "GtIsTy6JnxI",
      "durum": "yayinda"
     },
     {
      "kod": "E-A12",
      "baslik": "Anayasa Sayılar ve Çoğunluklar Tekrarı – 120, 200, 301, 360, 400",
      "grup": "Anayasa",
-     "yt": null,
+     "yt": "MthW8jf4vjw",
      "durum": "yayinda"
     },
     {
      "kod": "E-D1",
      "baslik": "657 Devlet Memurları Kanunu 1: İlkeler, İstihdam, Ödevler, Kanunsuz Emir",
      "grup": "657 Devlet Memurları Kanunu",
-     "yt": null,
+     "yt": "fvKcxQTNpc0",
      "durum": "yayinda"
     },
     {
      "kod": "E-D2",
      "baslik": "657 Devlet Memurları Kanunu 2: Haklar ve Yasaklar (2022'de çıktı)",
      "grup": "657 Devlet Memurları Kanunu",
-     "yt": null,
+     "yt": "7VIuZSTLu_I",
      "durum": "yayinda"
     },
     {
      "kod": "E-D3",
      "baslik": "657 Devlet Memurları Kanunu 3: Adaylık (7573), İkinci Görev, Çekilme",
      "grup": "657 Devlet Memurları Kanunu",
-     "yt": null,
+     "yt": "uj1FEQjGuC4",
      "durum": "yayinda"
     },
     {
      "kod": "E-D4",
      "baslik": "657 Devlet Memurları Kanunu 4: İzinler (2026 güncel: analık 24 hafta)",
      "grup": "657 Devlet Memurları Kanunu",
-     "yt": null,
+     "yt": "-f24pEkGgkc",
      "durum": "yayinda"
     },
     {
      "kod": "E-D5",
      "baslik": "657 Memurlar Kanunu 5: Disiplin Cezaları ve Devamsızlık (2025'te çıktı)",
      "grup": "657 Devlet Memurları Kanunu",
-     "yt": null,
+     "yt": "hftfJNNpnUY",
      "durum": "yayinda"
     },
     {
      "kod": "E-D6",
      "baslik": "657 Memurlar Kanunu 6: Disiplin Usulü, İtiraz, Zamanaşımı, Uzaklaştırma",
      "grup": "657 Devlet Memurları Kanunu",
-     "yt": null,
+     "yt": "DsG11Y19HDU",
      "durum": "yayinda"
     },
     {
      "kod": "E-D7",
      "baslik": "657 Ek Bölüm: Çalışma Saatleri, Kademe-Derece, Atanma Yasakları, Babaya İzin",
      "grup": "657 Devlet Memurları Kanunu",
-     "yt": null,
+     "yt": "LujqsEQnF4U",
      "durum": "yayinda"
     },
     {
      "kod": "E-M1",
      "baslik": "1739 Millî Eğitim Temel Kanunu – Kapsam, Genel ve Özel Amaçlar",
      "grup": "1739 Millî Eğitim Temel Kanunu",
-     "yt": null,
+     "yt": "VwUIqvf-koc",
      "durum": "yayinda"
     },
     {
      "kod": "E-M2",
      "baslik": "1739 Temel İlkeler I (md. 4–10) – Okul Olaylarıyla, Kodsuz",
      "grup": "1739 Millî Eğitim Temel Kanunu",
-     "yt": null,
+     "yt": "-2_LjtBvmmQ",
      "durum": "yayinda"
     },
     {
      "kod": "E-M3",
      "baslik": "1739 Temel İlkeler II (md. 11–17) ve Olay → İlke Eşleştirme",
      "grup": "1739 Millî Eğitim Temel Kanunu",
-     "yt": null,
+     "yt": "cww6pqir8v4",
      "durum": "yayinda"
     },
     {
      "kod": "E-M4",
      "baslik": "1739 Sistemin Yapısı – Örgün ve Yaygın Eğitim (md. 18–42)",
      "grup": "1739 Millî Eğitim Temel Kanunu",
-     "yt": null,
+     "yt": "RLuMTj46se0",
      "durum": "yayinda"
     },
     {
      "kod": "E-M5",
      "baslik": "1739 Öğretmenlik, Yaz İzni (50/A) ve Devletin Görevi (md. 43–59)",
      "grup": "1739 Millî Eğitim Temel Kanunu",
-     "yt": null,
+     "yt": "eug3KpuN50c",
      "durum": "yayinda"
     },
     {
      "kod": "E-I1",
      "baslik": "222 Kanunu 1: Mecburi İlköğretim, 6–14 Yaş, 72 Ay, Kurumlar",
      "grup": "222 İlköğretim ve Eğitim Kanunu",
-     "yt": null,
+     "yt": "3ijWU6W1F1w",
      "durum": "yayinda"
     },
     {
      "kod": "E-I2",
      "baslik": "222 Kanunu 2: Aile Başkanı, Muhtar Listesi, 15 Gün İzin, 3 Gün Tebliğ",
      "grup": "222 İlköğretim ve Eğitim Kanunu",
-     "yt": null,
+     "yt": "BmYye4l99do",
      "durum": "yayinda"
     },
     {
      "kod": "E-I3",
      "baslik": "222 Kanunu 3: İdari Para Cezası, Çalıştırma Yasağı, 100 Metre, Öğretmen",
      "grup": "222 İlköğretim ve Eğitim Kanunu",
-     "yt": null,
+     "yt": "YuLFkf8B2zE",
      "durum": "yayinda"
     },
     {
      "kod": "E-T1",
      "baslik": "MEB Teşkilatı 1: Görevler ve Merkez Birimleri (2024 ve 2026'da çıktı)",
      "grup": "MEB Teşkilatı (1 sayılı CBK)",
-     "yt": null,
+     "yt": "UftClRv5ir4",
      "durum": "yayinda"
     },
     {
      "kod": "E-T2",
      "baslik": "MEB Teşkilatı 2: Talim ve Terbiye, Şûra, Teftiş, Taşra ve Yurt Dışı",
      "grup": "MEB Teşkilatı (1 sayılı CBK)",
-     "yt": null,
+     "yt": "6gel5h8bC-c",
      "durum": "yayinda"
     },
     {
      "kod": "E-B1",
      "baslik": "5018 Kamu Malî Yönetimi 1: Bütçe Cetvelleri, İlkeler ve Bütçe Takvimi",
      "grup": "5018 Kamu Malî Yönetimi",
-     "yt": null,
+     "yt": "4X2xHwQSeEk",
      "durum": "yayinda"
     },
     {
      "kod": "E-B2",
      "baslik": "5018 Kamu Malî Yönetimi 2: Harcama Yetkilisi, Muhasebe, Denetim, Sayıştay",
      "grup": "5018 Kamu Malî Yönetimi",
-     "yt": null,
+     "yt": "p2fFYfLpg0Q",
      "durum": "yayinda"
     },
     {
      "kod": "E-V1",
      "baslik": "5442 İl İdaresi Kanunu 1: İl, İlçe, Bucak ve Valinin Yetkileri",
      "grup": "5442 İl İdaresi Kanunu",
-     "yt": null,
+     "yt": "k5r4U0RLd-o",
      "durum": "yayinda"
     },
     {
      "kod": "E-V2",
      "baslik": "5442 İl İdaresi Kanunu 2: Kaymakam, Bucak Müdürü, Vali–Kaymakam Farkı",
      "grup": "5442 İl İdaresi Kanunu",
-     "yt": null,
+     "yt": "XWbI0ZNzmsA",
      "durum": "yayinda"
     },
     {
      "kod": "E-V3",
      "baslik": "5442 İl İdaresi Kanunu 3: İl ve İlçe İdare Kurulları, Valilerin Atanması",
      "grup": "5442 İl İdaresi Kanunu",
-     "yt": null,
+     "yt": "sLZdnGLM1FY",
      "durum": "yayinda"
     },
     {
      "kod": "E-S1",
      "baslik": "4688 Sendika Kanunu 1: Kavramlar, Kuruluş, Organlar ve Üyelik",
      "grup": "4688 Sendikalar Kanunu",
-     "yt": null,
+     "yt": "utv9kze8JnE",
      "durum": "yayinda"
     },
     {
      "kod": "E-S2",
      "baslik": "4688 Sendika Kanunu 2: Güvenceler, İşyeri Temsilcisi ve Toplu Sözleşme",
      "grup": "4688 Sendikalar Kanunu",
-     "yt": null,
+     "yt": "Pjwokp_V-ag",
      "durum": "yayinda"
     },
     {
      "kod": "E-H1",
      "baslik": "3071 Dilekçe Hakkı Kanunu – Şartlar, İncelenmeyen Dilekçeler, 30 ve 60 Gün",
      "grup": "3071 Dilekçe ve 4483 Memur Yargılanması",
-     "yt": null,
+     "yt": "z9MUENAvdlA",
      "durum": "yayinda"
     },
     {
      "kod": "E-H2",
      "baslik": "4483 Memurların Yargılanması – Soruşturma İzni, Kaymakam mı Vali mi?",
      "grup": "3071 Dilekçe ve 4483 Memur Yargılanması",
-     "yt": null,
+     "yt": "iqm-tw5vV3s",
      "durum": "yayinda"
     },
     {
      "kod": "E-Y1",
      "baslik": "Yönetici Görevlendirme Yönetmeliği 2026: Sınavdan Göreve Süreç",
      "grup": "Ek bölüm",
-     "yt": null,
+     "yt": "7oGN-O118LM",
      "durum": "yayinda"
     }
    ]

@@ -61,14 +61,12 @@
     return '<span class="status soon">Yakında</span>';
   }
   function renderArea(list, alan) {
-    var html = '', grp = null;
+    var html = '', grp = null, pl = ((alan.liste_url || '').match(/list=([\w-]+)/) || [])[1];
     alan.bolumler.forEach(function (b) {
       if (b.grup && b.grup !== grp) { grp = b.grup; html += '<li class="grp">' + esc(grp) + '</li>'; }
-      var title;
-      if (b.yt) title = '<a class="t" href="https://www.youtube.com/watch?v=' + encodeURIComponent(b.yt) + '" target="_blank" rel="noopener">' + esc(b.baslik) + '</a>';
-      else if (b.durum === 'yayinda' && alan.liste_url) title = '<a class="t" href="' + esc(alan.liste_url) + '" target="_blank" rel="noopener">' + esc(b.baslik) + '</a>';
-      else title = '<span class="t">' + esc(b.baslik) + '</span>';
-      html += '<li><span class="code">' + esc(b.kod) + '</span>' + title + badge(b, alan) + '</li>';
+      var inner = '<span><span class="c">' + esc(b.kod) + '</span><span class="t">' + esc(b.baslik) + '</span></span>';
+      if (b.yt) html += '<li><a class="ep" href="https://www.youtube.com/watch?v=' + encodeURIComponent(b.yt) + (pl ? '&list=' + pl : '') + '" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/' + encodeURIComponent(b.yt) + '/mqdefault.jpg" alt="">' + inner + '<span class="status live">▶ İzle</span></a></li>';
+      else html += '<li><div class="ep"><div class="ph">Yakında</div>' + inner + '<span class="status soon">Yakında</span></div></li>';
     });
     list.innerHTML = html;
     var cnt = document.querySelector('[data-area-count]');
