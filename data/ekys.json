@@ -1,0 +1,742 @@
+{
+ "guncelleme": "2026-11-18",
+ "sinav": {
+  "ad": "2027 MEB-EKYS",
+  "tarih": "2027-02-21T10:00:00+03:00",
+  "soru": 80,
+  "agirlik_kaynagi": "2026 EKYS kılavuzu"
+ },
+ "youtube_listeler": "https://www.youtube.com/@cgakademi/playlists",
+ "alanlar": [
+  {
+   "slug": "maarif-modeli",
+   "ad": "Türkiye Yüzyılı Maarif Modeli",
+   "kisa": "Maarif Modeli",
+   "agirlik": 30,
+   "soru": 24,
+   "renk": "#14B8A6",
+   "durum": "yakinda",
+   "liste_url": null,
+   "tanitim": "Sınavın en ağır alanı. Ortak Metin'deki öğrenci profili, erdem-değer-eylem çerçevesi, beceriler, program tasarımı ve öğrenme kanıtları; aynı kavramın farklı listelerde nasıl geçtiğine dikkat ederek.",
+   "bolumler": [
+    {
+     "kod": "E-TM0",
+     "baslik": "Giriş: Maarif Modeli alan haritası, Ortak Metin, 24 soru",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-TM1",
+     "baslik": "Temel yaklaşım ve genel amaçlar",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-TM2",
+     "baslik": "Öğrenci profili: yetkin ve erdemli insan",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-TM3",
+     "baslik": "Erdem-Değer-Eylem I: kavramlar, çatı değerler, 20 değer, gruplar",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-TM4",
+     "baslik": "Erdem-Değer-Eylem II: programa yansıma, tablolar, gün-haftalar, değer eğitimi köprüsü",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-TM5",
+     "baslik": "Beceriler çerçevesi ve kavramsal beceriler (KB1–KB3), fiziksel beceriler",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-TM6",
+     "baslik": "Eğilimler: benlik, sosyal, entelektüel",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-TM7",
+     "baslik": "Alan becerileri: on alan, SBAB 17, SAB tuzağı",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-TM8",
+     "baslik": "Sosyal-duygusal öğrenme becerileri",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-TM9",
+     "baslik": "Sistem düşüncesi ve okuryazarlık becerileri",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-TM10",
+     "baslik": "Program tasarımı: öğrenme çıktısı, içerik çerçevesi, sarmal, programın yapısı",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-TM11",
+     "baslik": "Öğrenme-öğretme yaşantıları: temel kabul, ön değerlendirme, köprü kurma",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-TM12",
+     "baslik": "Farklılaştırma, okul temelli planlama, program dışı etkinlikler, rehberlik, yansıtma",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-TM13",
+     "baslik": "Öğrenme kanıtları: süreç odaklı ölçme, performans görevi",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-TM14",
+     "baslik": "Ölçme araçları: yapılandırılmış grid ve akrabaları",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-TM15",
+     "baslik": "Genel tekrar: \"Aynı kelime, farklı çerçeve\" ve karma soru turu",
+     "yt": null,
+     "durum": "yakinda"
+    }
+   ]
+  },
+  {
+   "slug": "mevzuat",
+   "ad": "Mevzuat",
+   "kisa": "Mevzuat",
+   "agirlik": 20,
+   "soru": 16,
+   "renk": "#2563EB",
+   "durum": "yayinda",
+   "liste_url": "https://www.youtube.com/@cgakademi/playlists",
+   "tanitim": "Anayasa, 657, 1739, 222, MEB teşkilatı, 5018, 5442, 4688, 3071 ve 4483. Kanun dili yerine sade anlatım; her bölümde ÖSYM tarzı bir soru ve kısa özet.",
+   "bolumler": [
+    {
+     "kod": "E-G0",
+     "baslik": "Mevzuat haritası: 16 soru, 10 düzenleme, ÖSYM'nin soru tarzı",
+     "grup": "Giriş",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-A1",
+     "baslik": "Anayasa 1: Başlangıç, Kuvvetler Ayrımı ve Değiştirilemez İlk Dört Madde",
+     "grup": "Anayasa",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-A2",
+     "baslik": "Anayasa 2: Egemenlik, Kuvvetler ve Kanun Önünde Eşitlik (md. 5–11)",
+     "grup": "Anayasa",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-A3",
+     "baslik": "Anayasa 3: Temel Hakların Niteliği, Sınırlanması, Durdurulması (md. 12–16)",
+     "grup": "Anayasa",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-A4",
+     "baslik": "Anayasa 4: Hak Kategorileri, Din Kültürü (md. 24) ve Çocuk Hakları (md. 41)",
+     "grup": "Anayasa",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-A5",
+     "baslik": "Anayasa 5: Eğitim ve Öğrenim Hakkı ve Ödevi (md. 42) Fıkra Fıkra",
+     "grup": "Anayasa",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-A6",
+     "baslik": "Anayasa 6: Kamu Görevlisi – Disiplin Güvencesi, Kanunsuz Emir, Sendika",
+     "grup": "Anayasa",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-A7",
+     "baslik": "Anayasa 7: Yasama I – TBMM, Seçimler, YSK, Milletvekilliği (md. 75–85)",
+     "grup": "Anayasa",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-A8",
+     "baslik": "Anayasa 8: Yasama II – TBMM'nin Görevleri, Kanun, Denetim (md. 87–98)",
+     "grup": "Anayasa",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-A9",
+     "baslik": "Anayasa 9: Yürütme – Cumhurbaşkanı, CBK, DDK, MGK, OHAL (md. 101–119)",
+     "grup": "Anayasa",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-A9B",
+     "baslik": "Anayasa 9B: Cumhurbaşkanının Görev ve Yetkileri, Bakanlar, OHAL Kararnameleri",
+     "grup": "Anayasa",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-A10",
+     "baslik": "Anayasa 10: İdare ve Anayasada Düzenlenen Kurumlar (2025 EKYS'de çıktı)",
+     "grup": "Anayasa",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-A11",
+     "baslik": "Anayasa 11: Yargı, Bütçe ve Anayasa Değişikliği – Sayılar ve Çoğunluklar",
+     "grup": "Anayasa",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-A12",
+     "baslik": "Anayasa Sayılar ve Çoğunluklar Tekrarı – 120, 200, 301, 360, 400",
+     "grup": "Anayasa",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-D1",
+     "baslik": "657 Devlet Memurları Kanunu 1: İlkeler, İstihdam, Ödevler, Kanunsuz Emir",
+     "grup": "657 Devlet Memurları Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-D2",
+     "baslik": "657 Devlet Memurları Kanunu 2: Haklar ve Yasaklar (2022'de çıktı)",
+     "grup": "657 Devlet Memurları Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-D3",
+     "baslik": "657 Devlet Memurları Kanunu 3: Adaylık (7573), İkinci Görev, Çekilme",
+     "grup": "657 Devlet Memurları Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-D4",
+     "baslik": "657 Devlet Memurları Kanunu 4: İzinler (2026 güncel: analık 24 hafta)",
+     "grup": "657 Devlet Memurları Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-D5",
+     "baslik": "657 Memurlar Kanunu 5: Disiplin Cezaları ve Devamsızlık (2025'te çıktı)",
+     "grup": "657 Devlet Memurları Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-D6",
+     "baslik": "657 Memurlar Kanunu 6: Disiplin Usulü, İtiraz, Zamanaşımı, Uzaklaştırma",
+     "grup": "657 Devlet Memurları Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-D7",
+     "baslik": "657 Ek Bölüm: Çalışma Saatleri, Kademe-Derece, Atanma Yasakları, Babaya İzin",
+     "grup": "657 Devlet Memurları Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-M1",
+     "baslik": "1739 Millî Eğitim Temel Kanunu – Kapsam, Genel ve Özel Amaçlar",
+     "grup": "1739 Millî Eğitim Temel Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-M2",
+     "baslik": "1739 Temel İlkeler I (md. 4–10) – Okul Olaylarıyla, Kodsuz",
+     "grup": "1739 Millî Eğitim Temel Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-M3",
+     "baslik": "1739 Temel İlkeler II (md. 11–17) ve Olay → İlke Eşleştirme",
+     "grup": "1739 Millî Eğitim Temel Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-M4",
+     "baslik": "1739 Sistemin Yapısı – Örgün ve Yaygın Eğitim (md. 18–42)",
+     "grup": "1739 Millî Eğitim Temel Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-M5",
+     "baslik": "1739 Öğretmenlik, Yaz İzni (50/A) ve Devletin Görevi (md. 43–59)",
+     "grup": "1739 Millî Eğitim Temel Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-I1",
+     "baslik": "222 Kanunu 1: Mecburi İlköğretim, 6–14 Yaş, 72 Ay, Kurumlar",
+     "grup": "222 İlköğretim ve Eğitim Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-I2",
+     "baslik": "222 Kanunu 2: Aile Başkanı, Muhtar Listesi, 15 Gün İzin, 3 Gün Tebliğ",
+     "grup": "222 İlköğretim ve Eğitim Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-I3",
+     "baslik": "222 Kanunu 3: İdari Para Cezası, Çalıştırma Yasağı, 100 Metre, Öğretmen",
+     "grup": "222 İlköğretim ve Eğitim Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-T1",
+     "baslik": "MEB Teşkilatı 1: Görevler ve Merkez Birimleri (2024 ve 2026'da çıktı)",
+     "grup": "MEB Teşkilatı (1 sayılı CBK)",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-T2",
+     "baslik": "MEB Teşkilatı 2: Talim ve Terbiye, Şûra, Teftiş, Taşra ve Yurt Dışı",
+     "grup": "MEB Teşkilatı (1 sayılı CBK)",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-B1",
+     "baslik": "5018 Kamu Malî Yönetimi 1: Bütçe Cetvelleri, İlkeler ve Bütçe Takvimi",
+     "grup": "5018 Kamu Malî Yönetimi",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-B2",
+     "baslik": "5018 Kamu Malî Yönetimi 2: Harcama Yetkilisi, Muhasebe, Denetim, Sayıştay",
+     "grup": "5018 Kamu Malî Yönetimi",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-V1",
+     "baslik": "5442 İl İdaresi Kanunu 1: İl, İlçe, Bucak ve Valinin Yetkileri",
+     "grup": "5442 İl İdaresi Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-V2",
+     "baslik": "5442 İl İdaresi Kanunu 2: Kaymakam, Bucak Müdürü, Vali–Kaymakam Farkı",
+     "grup": "5442 İl İdaresi Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-V3",
+     "baslik": "5442 İl İdaresi Kanunu 3: İl ve İlçe İdare Kurulları, Valilerin Atanması",
+     "grup": "5442 İl İdaresi Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-S1",
+     "baslik": "4688 Sendika Kanunu 1: Kavramlar, Kuruluş, Organlar ve Üyelik",
+     "grup": "4688 Sendikalar Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-S2",
+     "baslik": "4688 Sendika Kanunu 2: Güvenceler, İşyeri Temsilcisi ve Toplu Sözleşme",
+     "grup": "4688 Sendikalar Kanunu",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-H1",
+     "baslik": "3071 Dilekçe Hakkı Kanunu – Şartlar, İncelenmeyen Dilekçeler, 30 ve 60 Gün",
+     "grup": "3071 Dilekçe ve 4483 Memur Yargılanması",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-H2",
+     "baslik": "4483 Memurların Yargılanması – Soruşturma İzni, Kaymakam mı Vali mi?",
+     "grup": "3071 Dilekçe ve 4483 Memur Yargılanması",
+     "yt": null,
+     "durum": "yayinda"
+    },
+    {
+     "kod": "E-Y1",
+     "baslik": "Yönetici Görevlendirme Yönetmeliği 2026: Sınavdan Göreve Süreç",
+     "grup": "Ek bölüm",
+     "yt": null,
+     "durum": "yayinda"
+    }
+   ]
+  },
+  {
+   "slug": "genel-kultur",
+   "ad": "Genel Kültür",
+   "kisa": "Genel Kültür",
+   "agirlik": 20,
+   "soru": 16,
+   "renk": "#F59E0B",
+   "durum": "yakinda",
+   "liste_url": null,
+   "tanitim": "Türk tarihi ve kültürü, edebiyat, coğrafya, devlet kurumları, sanat ve güncel gelişmeler. Coğrafya üç bölüm; gündem bölümleri sınava yakın güncellenir.",
+   "bolumler": [
+    {
+     "kod": "E-GK0",
+     "baslik": "Alan haritası: 16 soru nereden gelir?",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-GK1",
+     "baslik": "İslamiyet öncesi Türk devletleri, yazıtlar, destanlar",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-GK2",
+     "baslik": "Eski Türk kavramları: kut, töre, oğuş–uruk–boy–bodun–il",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-GK3",
+     "baslik": "Türk-İslam devletleri: hilat, Karahanlı eserleri, bilginler",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-GK4",
+     "baslik": "Osmanlı kurumları ve eğitim kurumları",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-GK5",
+     "baslik": "Halk, tekke ve divan edebiyatı: lebdeğmez, Yunus Emre",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-GK6",
+     "baslik": "Tanzimat'tan bugüne edebiyat: Mehmet Âkif, Millî Mücadele romanları",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-GK7",
+     "baslik": "Kültür, düşünce, şahsiyetler: Ali Emîrî, içtihat, UNESCO mirası",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-GK8",
+     "baslik": "Coğrafya 1: konum, yer şekilleri, karst, göller, kıyılar",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-GK9",
+     "baslik": "Coğrafya 2: akarsular, iklim, topraklar",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-GK10",
+     "baslik": "Coğrafya 3: madenler ve enerji",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-GK11",
+     "baslik": "Devlet kurumları, Türk dünyası, uluslararası kuruluşlar",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-GK12",
+     "baslik": "Sanat, müzik, tiyatro, sinema",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-GK13",
+     "baslik": "Unvanlar, kültür başkentleri, anma yılları",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-GK14",
+     "baslik": "Spor",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-GK15",
+     "baslik": "2025–2027 gündemi",
+     "yt": null,
+     "durum": "yakinda"
+    }
+   ]
+  },
+  {
+   "slug": "inkilap-tarihi",
+   "ad": "İnkılap Tarihi ve Atatürkçülük",
+   "kisa": "İnkılap Tarihi",
+   "agirlik": 15,
+   "soru": 12,
+   "renk": "#102A43",
+   "durum": "yakinda",
+   "liste_url": null,
+   "tanitim": "1911'den 1939'a kronolojik akış: Millî Mücadele, kongreler, cepheler, Lozan, inkılaplar, ilkeler ve dış politika. Neden-sonuç ve tarih sıralaması üzerinden.",
+   "bolumler": [
+    {
+     "kod": "E-IT0",
+     "baslik": "Giriş: Kronoloji haritası ve soru kalıpları",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-IT1",
+     "baslik": "Mustafa Kemal'in yetişmesi ve askerlik hayatı (1881–1919)",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-IT2",
+     "baslik": "Tanzimat zemini, fikir akımları, Trablusgarp, Balkan Savaşları",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-IT3",
+     "baslik": "I. Dünya Savaşı: nedenler, cepheler, gizli antlaşmalar, Wilson",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-IT4",
+     "baslik": "Mondros ve Millî Mücadele'nin altyapısı: cemiyetler, Kuvâ-yı Milliye, nasihat heyetleri, Mehmet Âkif",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-IT5",
+     "baslik": "Samsun'dan Sivas'a: Havza, Amasya, Erzurum, Sivas",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-IT6",
+     "baslik": "Amasya Görüşmeleri, Misak-ı Millî, TBMM, isyanlar, Sevr",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-IT7",
+     "baslik": "Doğu ve Güney cepheleri; Sovyet Rusya ve Fransa ile ilişkiler",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-IT8",
+     "baslik": "Batı Cephesi I: Gediz, düzenli ordu, İnönüler, Londra Konferansı",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-IT9",
+     "baslik": "Batı Cephesi II: Kütahya-Eskişehir, Başkomutanlık, Tekâlif, Sakarya, Büyük Taarruz",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-IT10",
+     "baslik": "Mudanya, Lozan ve nüfus mübadelesi",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-IT11",
+     "baslik": "Saltanattan Cumhuriyete: saltanat, Dokuz Umde, Cumhuriyet, 3 Mart, çok partili denemeler",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-IT12",
+     "baslik": "Atatürk inkılapları: hukuk, eğitim-kültür, toplumsal yaşam, kadın hakları, ekonomi",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-IT13",
+     "baslik": "Atatürk ilkeleri, Atatürkçülük ve Atatürk'ün eserleri",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-IT14",
+     "baslik": "Atatürk dönemi dış politika (1923–1939)",
+     "yt": null,
+     "durum": "yakinda"
+    }
+   ]
+  },
+  {
+   "slug": "egitim-bilimleri",
+   "ad": "Eğitim Bilimleri",
+   "kisa": "Eğitim Bilimleri",
+   "agirlik": 15,
+   "soru": 12,
+   "renk": "#64748B",
+   "durum": "yakinda",
+   "liste_url": null,
+   "tanitim": "Ağırlık yönetimde: yönetim ve liderlik kuramları, güç, örgüt kültürü, yönetim etiği, denetim. Ardından ölçme ve tablo yorumu, program geliştirme ve değer eğitimi.",
+   "bolumler": [
+    {
+     "kod": "E-EB0",
+     "baslik": "Giriş: Eğitim Bilimleri alan haritası, 12 soru, ÖSYM nasıl soruyor",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-EB1",
+     "baslik": "Yönetim kuramları I: klasik ve neoklasik (Taylor, Fayol, Weber, Mayo, X-Y, Likert, Z)",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-EB2",
+     "baslik": "Yönetim kuramları II: açık sistem, eş sonluluk, durumsallık, öğrenen örgüt; yönetim süreçleri",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-EB3",
+     "baslik": "Liderlik kuramları: özellik, davranış, durumsallık",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-EB4",
+     "baslik": "Çağdaş liderlik türleri I: dönüşümcü, etkileşimci, öğretimsel",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-EB5",
+     "baslik": "Çağdaş liderlik türleri II: sembolik, kültürel, ilke merkezli, hizmetkâr, dağıtılmış, güçlendirici",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-EB6",
+     "baslik": "Güç kaynakları ve örgütsel davranış: French-Raven, yıldırma, sessizlik",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-EB7",
+     "baslik": "Örgüt kültürü, iklim ve motivasyon",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-EB8",
+     "baslik": "Yönetim etiği I: etik kuramlar, etik karar verme, etik programı",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-EB9",
+     "baslik": "Yönetim etiği II: irtikâp ve etik dışı davranışlar, öğretmenlik meslek etiği",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-EB10",
+     "baslik": "Karar verme, iletişim, çatışma ve değişim",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-EB11",
+     "baslik": "Eğitim denetimi ve mentorluk",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-EB12",
+     "baslik": "Ölçme I: ortalama, standart sapma, dağılım, kutu grafiği, tablo okuma",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-EB13",
+     "baslik": "Ölçme II: korelasyon; program geliştirme: içerik düzenleme",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-EB14",
+     "baslik": "Değer eğitimi yaklaşımları",
+     "yt": null,
+     "durum": "yakinda"
+    },
+    {
+     "kod": "E-EB15",
+     "baslik": "Eğitim teknolojisi, rehberlik yürütme komisyonu, kriz yönetimi",
+     "yt": null,
+     "durum": "yakinda"
+    }
+   ]
+  }
+ ]
+}

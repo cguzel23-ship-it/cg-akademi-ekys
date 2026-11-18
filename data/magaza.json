@@ -1,0 +1,66 @@
+{
+ "guncelleme": "2026-11-18",
+ "not": "durum: 'yakinda' | 'satista'. 'satista' olan ve fiyat ile shopier_url dolu ürünlerde satın alma düğmesi görünür.",
+ "urunler": [
+  {
+   "id": "mevzuat-hizli-tekrar",
+   "ad": "EKYS Mevzuat Hızlı Tekrar",
+   "aciklama": "Mevzuatın sık sorulan sayıları, süreleri ve karıştırılan kavramları; tablolar ve kısa notlarla.",
+   "alan": "mevzuat",
+   "bicim": "PDF",
+   "durum": "yakinda",
+   "fiyat": null,
+   "shopier_url": null
+  },
+  {
+   "id": "maarif-ozet-sorular",
+   "ad": "Maarif Modeli Özet ve Sorular",
+   "aciklama": "Ortak Metin'in çerçeveleri sade özetler ve ÖSYM tarzı sorularla.",
+   "alan": "maarif-modeli",
+   "bicim": "PDF",
+   "durum": "yakinda",
+   "fiyat": null,
+   "shopier_url": null
+  },
+  {
+   "id": "egitim-bilimleri-ozet-sorular",
+   "ad": "Eğitim Bilimleri Özet ve Sorular",
+   "aciklama": "Yönetim, liderlik, etik ve ölçme konuları özet ve sorularla.",
+   "alan": "egitim-bilimleri",
+   "bicim": "PDF",
+   "durum": "yakinda",
+   "fiyat": null,
+   "shopier_url": null
+  },
+  {
+   "id": "inkilap-ozet-sorular",
+   "ad": "İnkılap Tarihi Özet ve Sorular",
+   "aciklama": "Kronoloji tabloları, neden-sonuç zincirleri ve sorular.",
+   "alan": "inkilap-tarihi",
+   "bicim": "PDF",
+   "durum": "yakinda",
+   "fiyat": null,
+   "shopier_url": null
+  },
+  {
+   "id": "genel-kultur-ozet-sorular",
+   "ad": "Genel Kültür Özet ve Sorular",
+   "aciklama": "Tarih, edebiyat, coğrafya ve güncel konular özet ve sorularla.",
+   "alan": "genel-kultur",
+   "bicim": "PDF",
+   "durum": "yakinda",
+   "fiyat": null,
+   "shopier_url": null
+  },
+  {
+   "id": "ekys-2027-tam-paket",
+   "ad": "2027 EKYS Tam Hazırlık Paketi",
+   "aciklama": "Beş alanın özetleri ve soruları tek pakette.",
+   "alan": "tum",
+   "bicim": "PDF",
+   "durum": "yakinda",
+   "fiyat": null,
+   "shopier_url": null
+  }
+ ]
+}
