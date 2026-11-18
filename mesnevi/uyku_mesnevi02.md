@@ -172,7 +172,36 @@ Bir göçmenin hayatı da böyle değil mi? Her yerde biraz yabancı. Ama aynı 
 Bugün de dünyada milyonlarca insan, Mevlânâ'nın ailesi gibi yollarda. Savaştan, felaketten kaçarak. Kitaplarını, hatıralarını, dualarını yanlarında taşıyarak.
 Belki bu gece, onları da biraz düşünebiliriz.
 
-## 17. Kapanış
+## 17. Arşivden: Bir defter ve bir kitabe
+
+Bu gecenin sonunda, seni iki belgeye götürmek istiyorum. Biri bir defter, öteki bir taş.
+Önce defter.
+Bahâeddin Veled'in Maârif adlı kitabından söz etmiştik. Ama bu, bildiğimiz anlamda bir kitap değil. Daha çok bir defter. Bir vaizin, kendi kendine tuttuğu notlar.
+İçinde vaazlar var. Sohbet meclislerinde sorulan sorulara verilen cevaplar var. Ama en çok da, bir insanın Allah'la baş başa kaldığı anlarda kendine söyledikleri.
+Bahâeddin bu notları, ders vermeye başladığı gençlik yıllarından itibaren tutmuş olmalı. Yani Belh'te, Mevlânâ daha doğmadan önce.
+Farsça yazılmış. Sade, bazen çok kişisel bir dille.
+Bir sayfada bir dua. Öbür sayfada bir rüya. Bir başka sayfada, bahçede gördüğü bir çiçeğin ona düşündürdükleri.
+Bu defter, aileyle birlikte bütün o yolu yürüdü. Belh'ten Nişabur'a, Bağdat'tan Mekke'ye, Şam'dan Larende'ye, oradan Konya'ya.
+Ve babası öldükten sonra, Mevlânâ'nın elinde kaldı.
+Eski menkıbe yazarlarının anlattığına göre, Mevlânâ bu defteri yıllarca okudu. Babasının sesini orada arıyordu belki.
+Bir rivayete göre, yıllar sonra Şems-i Tebrîzî onu bu defteri okurken gördü ve okumamasını söyledi. Artık başkasının sözleriyle değil, kendi yaşadıklarıyla konuşma zamanı gelmişti, demek istiyordu belki.
+Bu rivayet doğru mu, bilemeyiz. Ama Maârif'in izleri Mesnevî'de hâlâ duruyor. Bazı benzetmeler, bazı küçük hikâyeler, babadan oğula geçmiş gibi.
+Maârif yüzyıllarca el yazmalarında yaşadı. Ancak yirminci yüzyılda, İranlı âlim Bedîüzzaman Fürûzanfer onu yazmaları karşılaştırarak yayımladı.
+Bir babanın defteri, sekiz yüz yıl sonra hâlâ açık.
+
+Şimdi taşa geçelim.
+Karaman'da, Aktekke Camii'nin kapısının üstünde, küçük bir kitabe var. Altmışa elli santim kadar. Beş satır, Arapça.
+Üzerindeki tarih, hicrî yedi yüz yetmiş iki. Yani miladi bin üç yüz yetmiş, yetmiş bir.
+Mümine Hatun'un vefatından yaklaşık yüz elli yıl sonra.
+O sırada Karaman'ı Karamanoğulları yönetiyordu. Alâeddin Ali Bey, Mevlânâ'nın annesinin yattığı yerde bir zaviye yaptırdı. Bu kitabe, o yapının tamamlandığını haber veriyor.
+Ama yerin hikâyesi daha eski. Rivayete göre, Mevlânâ'nın torunu Ulu Ârif Çelebi'nin bir müridi, şeyhinin isteğiyle burada ilk tekkeyi kurmuştu.
+Yani bir annenin mezarı, yüz yıl boyunca unutulmadı. Önce bir küçük tekke oldu, sonra bir cami, sonra bir mevlevihane.
+Bugün içeri girdiğinde, sol tarafta, tahta bir parmaklığın arkasında sandukalar görürsün. Mümine Hatun orada. Yanında, Mevlânâ'nın ağabeyi Alâeddin.
+Gevher Hatun'un da burada yattığı söylenir. Ama yeri kesin olarak bilinmiyor.
+Bir defter ve bir taş. Biri bir babanın sesini, öteki bir annenin adını taşıyor.
+İkisi de bize aynı şeyi söylüyor: Bu aile yolda kaybettiklerini unutmadı.
+
+## 18. Kapanış
 
 Bu gece uzun bir yol yürüdük.
 Belh'ten başladık. İpek Yolu'nun üzerindeki şehirlerin anasından.
