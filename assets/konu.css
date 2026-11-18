@@ -20,6 +20,16 @@
 .k-code{margin-top:18px}.k-code label{display:block;font-weight:700;margin-bottom:8px;color:#102a43}
 .k-row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}.k-row input{flex:1;min-width:200px;max-width:280px;padding:12px 14px;border:1px solid #cbd5e1;border-radius:12px;font:inherit;text-transform:uppercase;letter-spacing:1px}
 .k-err{color:#a50d26;font-weight:600;margin-top:8px}.k-ok{color:#166534;font-weight:700;margin-top:8px}.k-note{font-size:.85rem;color:#64748b;margin-top:14px}
+.k-tests{display:flex;flex-direction:column;gap:8px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:12px 14px;margin:0 0 18px}.k-tests div{display:flex;gap:8px;flex-wrap:wrap}.k-tests a[aria-current]{background:#fdecef;border-color:#a50d26;color:#a50d26}
+.k-tc{float:right;color:#94a3b8;font-size:.8rem;margin-top:3px}
+.t-wrap{max-width:820px}.t-quiz{background:#fff;border:1px solid #dde7f3;border-radius:20px;padding:22px}
+.t-head{display:flex;justify-content:space-between;color:#64748b;font-weight:600;font-size:.9rem}.t-bar{height:6px;background:#eef2f7;border-radius:9px;margin:8px 0 16px;overflow:hidden}.t-bar i{display:block;height:100%;background:#a50d26}
+.t-q{font-size:1.08rem;line-height:1.6;font-weight:600;color:#102a43;margin:0 0 14px}.t-opts{display:flex;flex-direction:column;gap:8px}
+.t-o{text-align:left;font:inherit;padding:12px 14px;border:1.5px solid #dde3ec;border-radius:12px;background:#fff;cursor:pointer;line-height:1.45}.t-o:hover:not(:disabled){border-color:#a50d26;background:#fff7f8}
+.t-o.ok{border-color:#16a34a;background:#e9f9ef}.t-o.no{border-color:#dc2626;background:#fdecec}.t-o:disabled{cursor:default}
+.t-ex{margin-top:14px;padding:12px 14px;border-radius:12px;background:#f1f5f9;line-height:1.55}.t-nav{margin-top:14px;text-align:right}
+.t-end{text-align:center}.t-score{font-size:3rem;font-weight:900;color:#a50d26}.t-rev{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px;margin-top:18px;text-align:left;font-size:.88rem}
+.t-ri{padding:6px 10px;border-radius:8px}.t-ri.ok{background:#e9f9ef}.t-ri.no{background:#fdecec}
 .k-areas{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}.k-area ul{list-style:none;padding:0;margin:8px 0 0}.k-area li{padding:6px 0;border-bottom:1px solid #eef2f7}
 .k-area a{color:#1f2937;text-decoration:none}.k-area a:hover{color:#a50d26}
 @media(max-width:860px){.k-wrap{grid-template-columns:1fr}.k-side{position:static}}
