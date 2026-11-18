@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EKYS Hazırlık Planı · CG Akademi</title>
+<meta name="description" content="EKYS'ye 13 haftalık ücretsiz çalışma planı: Mevzuat, Maarif Modeli, İnkılap Tarihi, Eğitim Bilimleri ve Genel Kültür konu anlatımı videoları, günlük tuzak soruları ve uygulama.">
+<meta name="theme-color" content="#15181D">
+<link rel="icon" href="../favicon.png">
+<link rel="canonical" href="https://cgakademi.com/plan/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cgakademi.com/plan/">
+<meta property="og:title" content="EKYS Hazırlık Planı · CG Akademi">
+<meta property="og:description" content="13 haftalık ücretsiz EKYS çalışma planı, konu anlatımı videoları ve günlük tuzak soruları.">
+<meta property="og:image" content="https://cgakademi.com/img/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#15181D;--deep:#121418;--card:#1C2027;--hi:#232831;--border:rgba(255,255,255,.06);--border2:rgba(255,255,255,.12);
+    --heading:#E6E8EB;--text:#C8CCD2;--muted:#979CA5;--ink:#15181D;
+    --accent:#86B5C8;--accentSoft:rgba(134,181,200,.10);--accentLine:rgba(134,181,200,.30);
+    --violet:#9D97C4;--green:#8CC2A2;--amber:#D4B47A;--rose:#CF9E9E;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+  h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;color:var(--heading);letter-spacing:-.01em;margin:0}
+  .mono{font-family:"JetBrains Mono",monospace}
+  header{background:var(--deep);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:5}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px}
+  .logo{width:38px;height:38px;border-radius:11px;background:var(--accent);color:var(--ink);display:grid;place-items:center;font:700 16px "Space Grotesk",sans-serif}
+  .brand b{display:block;color:var(--heading);font:700 18px/1.1 "Space Grotesk",sans-serif}
+  .brand small{display:block;color:var(--accent);font:500 11px "JetBrains Mono",monospace;letter-spacing:1.6px}
+  .links a{padding:10px 12px;border-radius:12px;font-weight:500;font-size:15px}
+  .links a:hover{background:var(--card)}
+
+  .hero{padding:44px 0 24px}
+  .kicker{color:var(--accent);font:500 13px "JetBrains Mono",monospace;letter-spacing:1px}
+  .hero h1{font-size:clamp(30px,6vw,48px);line-height:1.1;margin-top:10px;max-width:760px}
+  .hero p{font-size:18px;color:var(--muted);max-width:640px;margin:14px 0 0}
+  .count{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .cbox{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px 18px;min-width:120px}
+  .cbox b{display:block;font:700 34px/1 "Space Grotesk",sans-serif;color:var(--heading)}
+  .cbox span{font-size:13px;color:var(--muted)}
+  .cbox.acc b{color:var(--accent)}
+  .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 20px;border-radius:14px;font-weight:600;font-size:16px;border:1px solid var(--border2);background:var(--card);color:var(--heading)}
+  .btn:hover{background:var(--hi)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--ink)}
+
+  section{padding:30px 0}
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+  .sec-head h2{font-size:26px}
+  .sec-head span{color:var(--muted);font-size:14px}
+
+  .areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+  .area{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:6px}
+  .area .pct{font:700 30px/1 "Space Grotesk",sans-serif}
+  .area h3{font-size:17px}
+  .area p{margin:0;font-size:14px;color:var(--muted)}
+  .area .st{margin-top:auto;font:500 12px "JetBrains Mono",monospace;letter-spacing:.5px}
+
+  .weeks{display:flex;flex-direction:column;gap:8px}
+  .wk{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px 16px}
+  .wk .n{font:700 13px "JetBrains Mono",monospace;color:var(--muted);padding-top:3px}
+  .wk h3{font-size:16px}
+  .wk .d{font-size:13px;color:var(--muted)}
+  .wk p{margin:4px 0 0;font-size:14px}
+  .wk.now{border-color:var(--accentLine);background:linear-gradient(0deg,var(--accentSoft),var(--accentSoft)),var(--card)}
+  .wk.now .n{color:var(--accent)}
+  .wk.past{opacity:.55}
+  .tag{display:inline-block;font:500 11px "JetBrains Mono",monospace;padding:2px 8px;border-radius:999px;border:1px solid var(--border2);margin-left:6px;vertical-align:2px}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:8px}
+  .card h3{font-size:18px}
+  .card p{margin:0;color:var(--muted);font-size:15px}
+  .card .btn{margin-top:auto;align-self:flex-start}
+  .soon{font:500 12px "JetBrains Mono",monospace;color:var(--amber)}
+
+  .note{font-size:13px;color:var(--muted);border-top:1px solid var(--border);padding:22px 0 40px;margin-top:20px}
+  .note a{text-decoration:underline}
+  @media (max-width:560px){.links .hide{display:none}.wk{grid-template-columns:1fr;gap:4px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="../" aria-label="CG Akademi ana sayfa">
+      <span class="logo">CG</span>
+      <span><b>CG Akademi</b><small>EKYS PLANI</small></span>
+    </a>
+    <nav class="links">
+      <a href="#plan">Plan</a>
+      <a class="hide" href="#videolar">Videolar</a>
+      <a href="#kaynaklar">Kaynaklar</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="kicker">EKYS 2027 · ÜCRETSİZ ÇALIŞMA PLANI</div>
+    <h1>Sınava kadar her hafta ne çalışacağın belli.</h1>
+    <p>Beş alanın tamamı konu anlatımı videolarıyla, haftalık plan halinde. Her gün yeni tuzak soruları YouTube ve Instagram'da.</p>
+    <div class="count" aria-live="polite">
+      <div class="cbox acc"><b id="cd-d">–</b><span>gün kaldı</span></div>
+      <div class="cbox"><b id="cd-w">–</b><span>hafta</span></div>
+      <div class="cbox"><b>21 Şubat</b><span>2027 · ÖSYM takvimi</span></div>
+    </div>
+    <div class="btns">
+      <a class="btn primary" href="#plan">Bu haftanın konusu ›</a>
+      <a class="btn" href="https://www.youtube.com/@cgakademi/playlists" target="_blank" rel="noopener">YouTube listeleri ›</a>
+    </div>
+  </section>
+
+  <section id="alanlar">
+    <div class="sec-head"><h2>Beş alan, 80 soru</h2><span>2026 kılavuzundaki ağırlıklar</span></div>
+    <div class="areas">
+      <div class="area"><span class="pct" style="color:var(--accent)">%30</span><h3>Maarif Modeli</h3><p>Yaklaşık 24 soru</p><span class="st" style="color:var(--amber)">VİDEOLAR YÜKLENİYOR</span></div>
+      <div class="area"><span class="pct" style="color:var(--amber)">%20</span><h3>Mevzuat</h3><p>Yaklaşık 16 soru</p><span class="st" style="color:var(--green)">41 BÖLÜM YAYINDA</span></div>
+      <div class="area"><span class="pct" style="color:var(--green)">%20</span><h3>Genel Kültür</h3><p>Yaklaşık 16 soru</p><span class="st" style="color:var(--amber)">VİDEOLAR YÜKLENİYOR</span></div>
+      <div class="area"><span class="pct" style="color:var(--rose)">%15</span><h3>İnkılap Tarihi</h3><p>Yaklaşık 12 soru</p><span class="st" style="color:var(--amber)">VİDEOLAR YÜKLENİYOR</span></div>
+      <div class="area"><span class="pct" style="color:var(--violet)">%15</span><h3>Eğitim Bilimleri</h3><p>Yaklaşık 12 soru</p><span class="st" style="color:var(--amber)">VİDEOLAR YÜKLENİYOR</span></div>
+    </div>
+  </section>
+
+  <section id="plan">
+    <div class="sec-head"><h2>13 haftalık plan</h2><span>Bulunduğun hafta vurgulu</span></div>
+    <div class="weeks" id="weeks"></div>
+  </section>
+
+  <section id="videolar">
+    <div class="sec-head"><h2>Videolar</h2><span>YouTube · CG Akademi</span></div>
+    <div class="cards">
+      <div class="card"><h3>Konu anlatımı</h3><p>Her bölüm 6–8 dakika. Haritayla nerede olduğunu görürsün, durak sorularıyla kendini yoklarsın.</p><a class="btn" href="https://www.youtube.com/@cgakademi/playlists" target="_blank" rel="noopener">Listeleri aç ›</a></div>
+      <div class="card"><h3>Tek video tekrar</h3><p>Bir alanı tek oturumda baştan sona tekrar etmek için birleşik uzun videolar.</p><a class="btn" href="https://www.youtube.com/@cgakademi/playlists" target="_blank" rel="noopener">Tekrar videoları ›</a></div>
+      <div class="card"><h3>Günde 2 tuzak sorusu</h3><p>ÖSYM'nin sevdiği karıştırmalar, bir dakikada. YouTube Shorts ve Instagram'da.</p><a class="btn" href="https://www.youtube.com/@cgakademi/shorts" target="_blank" rel="noopener">Shorts ›</a><a class="btn" href="https://www.instagram.com/cg_akademi_/" target="_blank" rel="noopener">Instagram ›</a></div>
+    </div>
+  </section>
+
+  <section id="kaynaklar">
+    <div class="sec-head"><h2>Kaynaklar</h2><span>Videoları tamamlayan araçlar</span></div>
+    <div class="cards">
+      <div class="card"><h3>CG Akademi EKYS uygulaması</h3><p>Konu anlatımı, testler ve denemeler. Reklamsız, internetsiz çalışır. Şimdilik tarayıcıda açılıyor; Android sürümü yakında.</p><a class="btn primary" href="../ekys/">Tarayıcıda aç ›</a></div>
+      <div class="card"><h3>Ücretsiz PDF: Mevzuat Tuzakları</h3><p>Sınavda en çok karıştırılan mevzuat bilgileri, tek dosyada.</p><span class="soon">YAKINDA</span></div>
+      <div class="card"><h3>EKYS özet ve soru paketi</h3><p>Beş alanın özetleri ve ÖSYM tarzı sorular, yazdırılabilir PDF.</p><span class="soon">YAKINDA</span></div>
+    </div>
+  </section>
+
+  <div class="note">
+    CG Akademi bağımsız bir hazırlık kaynağıdır; ÖSYM ya da Millî Eğitim Bakanlığı ile bağlantısı yoktur. Sınav tarihi ve başvuru bilgileri için resmî kaynak: <a href="https://www.osym.gov.tr" target="_blank" rel="noopener">osym.gov.tr</a>. Mevzuat metinleri için: <a href="https://www.mevzuat.gov.tr" target="_blank" rel="noopener">mevzuat.gov.tr</a>.
+    <br>© CG Akademi · <a href="../gizlilik.html">Gizlilik</a>
+  </div>
+</main>
+
+<script>
+(function(){
+  var exam = new Date('2027-02-21T10:00:00+03:00');
+  var now = new Date();
+  var days = Math.max(0, Math.ceil((exam - now) / 864e5));
+  document.getElementById('cd-d').textContent = days;
+  document.getElementById('cd-w').textContent = Math.ceil(days / 7);
+
+  var W = [
+    ['2026-11-18','2026-11-24','Mevzuat · Anayasa','Anayasa 1–12 bölümleri. Sayılar ve çoğunluklar tekrarıyla bitir.','Mevzuat'],
+    ['2026-11-25','2026-12-01','Mevzuat · 657, 1739, 222','Memurlar Kanunu (izinler, disiplin), Millî Eğitim Temel Kanunu, İlköğretim Kanunu.','Mevzuat'],
+    ['2026-12-02','2026-12-08','Mevzuat · Teşkilat ve diğer kanunlar','MEB teşkilatı, 5018, 5442, 4688, 3071 ve 4483. Haftanın sonunda Mevzuat tek video tekrarı.','Mevzuat'],
+    ['2026-12-09','2026-12-15','Maarif Modeli I','Alan haritası, temel yaklaşım, öğrenci profili, erdem-değer-eylem çerçevesi.','Maarif'],
+    ['2026-12-16','2026-12-22','Maarif Modeli II','Beceriler çerçevesi, eğilimler, alan becerileri, okuryazarlıklar, program tasarımı.','Maarif'],
+    ['2026-12-23','2026-12-29','Maarif Modeli III','Öğrenme-öğretme yaşantıları, farklılaştırma, öğrenme kanıtları, ölçme araçları, genel tekrar.','Maarif'],
+    ['2026-12-30','2027-01-05','İnkılap Tarihi I','Kronoloji haritası, Osmanlı son dönemi, Mondros, genelgeler ve kongreler, cepheler.','İnkılap'],
+    ['2027-01-06','2027-01-12','İnkılap Tarihi II','Batı Cephesi, Mudanya ve Lozan, Cumhuriyet, inkılaplar, ilkeler, dış politika. Başvuru dönemini kaçırma.','İnkılap'],
+    ['2027-01-13','2027-01-19','Eğitim Bilimleri I','Yönetim kuramları, liderlik, güç, örgüt kültürü ve iklim, etik kuramlar.','Eğitim'],
+    ['2027-01-20','2027-01-26','Eğitim Bilimleri II','Etik dışı davranışlar, karar ve çatışma, denetim, ölçme yorumu, değer eğitimi.','Eğitim'],
+    ['2027-01-27','2027-02-02','Genel Kültür I','Eski Türk ve Türk-İslam tarihi, Osmanlı kurumları, edebiyat, coğrafya.','Genel Kültür'],
+    ['2027-02-03','2027-02-09','Genel Kültür II','Devlet kurumları, sanat, unvanlar, spor ve güncel gündem (güncellenmiş bölümler).','Genel Kültür'],
+    ['2027-02-10','2027-02-20','Genel tekrar','Tek video tekrarları, yanlış defteri ve denemeler. Son günlerde yeni konu açma.','Tekrar']
+  ];
+  var box = document.getElementById('weeks');
+  var fmt = function(s){ var d=new Date(s+'T12:00:00+03:00'); return d.toLocaleDateString('tr-TR',{day:'numeric',month:'long'}); };
+  W.forEach(function(w,i){
+    var a=new Date(w[0]+'T00:00:00+03:00'), b=new Date(w[1]+'T23:59:59+03:00');
+    var el=document.createElement('div');
+    el.className='wk'+(now>=a&&now<=b?' now':(now>b?' past':''));
+    el.innerHTML='<div class="n">HAFTA '+(i+1)+'</div><div><h3>'+w[2]+'<span class="tag">'+w[4]+'</span></h3><div class="d">'+fmt(w[0])+' – '+fmt(w[1])+'</div><p>'+w[3]+'</p></div>';
+    box.appendChild(el);
+    if(now>=a&&now<=b) el.id='bu-hafta';
+  });
+  var btn=document.querySelector('a[href="#plan"].btn'); if(btn&&document.getElementById('bu-hafta')) btn.setAttribute('href','#bu-hafta');
+})();
+</script>
+</body>
+</html>
