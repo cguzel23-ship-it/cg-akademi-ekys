@@ -244,3 +244,5 @@ a.paper:hover{border-color:#f3c3cc}
 .app-list b{display:block;font-size:20px;color:#fff;letter-spacing:-.3px}
 .app-list span{font-size:13px;color:#d1e1f0}
 @media(max-width:420px){.app-list{grid-template-columns:1fr}}
+
+.promo-bar{background:var(--navy);color:#fff;font-size:14.5px;text-align:center;padding:9px 14px;line-height:1.4}.promo-bar a{color:#fff;font-weight:750;text-decoration:underline;text-underline-offset:3px}.promo-bar .sep{opacity:.5;margin:0 8px}@media(max-width:640px){.promo-bar{font-size:13px}.promo-bar .sep{display:block;height:0;overflow:hidden}}

@@ -152,3 +152,6 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
+
+/* Üst duyuru şeridi: ücretsiz örnek paket + Tam Paket */
+(function(){try{if(/^\/(paket|ekys)\//.test(location.pathname))return;var b=document.createElement('div');b.className='promo-bar';b.innerHTML='🎁 <a href="/paket/">EKYS çıkmış sorulardan örnekler: ücretsiz PDF indir</a><span class="sep">·</span>📦 <a href="https://www.shopier.com/cgokulu/53098978" target="_blank" rel="noopener">Tam Paket (245 soru + 10 deneme) 599 TL</a>';document.body.insertBefore(b,document.body.firstChild);}catch(e){}})();
