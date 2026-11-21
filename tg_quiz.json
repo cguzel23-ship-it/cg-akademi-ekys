@@ -1,0 +1,562 @@
+[
+ {
+  "n": 1,
+  "at": "2026-11-22T09:00",
+  "question": "📐 DGS · Soru 1 (Sayılar · Kalan)\na ve b pozitif tam sayılardır. a'nın 7 ile bölümünden kalan 5, b'nin 7 ile bölümünden kalan 4'tür. Buna göre a²·b sayısının 7 ile bölümünden kalan kaçtır?",
+  "options": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5"
+  ],
+  "correct_option_id": 1,
+  "explanation": "Kalanlarla işlem yapılabilir: a → 5, b → 4 · 5² · 4 = 100 · 100 = 7 · 14 + 2  →  kalan 2"
+ },
+ {
+  "n": 2,
+  "at": "2026-11-22T17:00",
+  "question": "📐 DGS · Soru 2 (Problemler · Kesir)\nBir kitabın önce 1/3'ü, sonra kalanın 2/5'i okunuyor. Geriye 72 sayfa kaldığına göre kitap kaç sayfadır?",
+  "options": [
+   "150",
+   "160",
+   "200",
+   "180",
+   "240"
+  ],
+  "correct_option_id": 3,
+  "explanation": "Kitap 15x sayfa olsun  (3 ve 5'e bölünsün) · 1/3'ü = 5x  →  kalan 10x · Kalanın 2/5'i = 4x  →  geriye 6x · 6x = 72  →  x = 12  →  15x = 180"
+ },
+ {
+  "n": 3,
+  "at": "2026-11-23T09:00",
+  "question": "📐 DGS · Soru 3 (Problemler · Yaş)\nBir annenin yaşı, iki çocuğunun yaşları toplamının 3 katıdır. 6 yıl sonra annenin yaşı, çocuklarının yaşları toplamının 2 katı olacaktır. Annenin bugünkü yaşı kaçtır?",
+  "options": [
+   "48",
+   "54",
+   "42",
+   "60",
+   "66"
+  ],
+  "correct_option_id": 1,
+  "explanation": "Çocukların yaş toplamı x  →  anne 3x · Dikkat: 6 yılda İKİ çocuk 12 yaş büyür · 3x + 6 = 2(x + 12)  →  x = 18 · Anne = 3 · 18 = 54"
+ },
+ {
+  "n": 4,
+  "at": "2026-11-23T17:00",
+  "question": "📐 DGS · Soru 4 (Problemler · İşçi)\nAli bir işi tek başına 12 günde, Berk aynı işi 18 günde bitirebilmektedir. İkisi birlikte çalışmaya başlıyor; 3 gün sonra Ali işi bırakıyor. Kalan işi Berk tek başına kaç günde bitirir?",
+  "options": [
+   "9",
+   "9,5",
+   "10",
+   "11",
+   "10,5"
+  ],
+  "correct_option_id": 4,
+  "explanation": "İşin tamamı 36 birim olsun (12 ve 18'in EKOK'u) · Ali günde 3, Berk günde 2 birim yapar · 3 günde birlikte: 3 · 5 = 15 birim  →  kalan 21 · 21 ÷ 2 = 10,5 gün"
+ },
+ {
+  "n": 5,
+  "at": "2026-11-24T09:00",
+  "question": "📐 DGS · Soru 5 (Problemler · Hareket)\nAralarında 300 km bulunan A ve B kentlerinden saatteki hızları 60 km ve 40 km olan iki araç aynı anda birbirine doğru hareket ediyor. Hızlı araç B'ye vardığında yavaş araç A'ya kaç km uzaklıktadır?",
+  "options": [
+   "100",
+   "60",
+   "80",
+   "120",
+   "140"
+  ],
+  "correct_option_id": 0,
+  "explanation": "Hızlı aracın B'ye varma süresi: 300 ÷ 60 = 5 saat · 5 saatte yavaş araç: 40 · 5 = 200 km · A'ya uzaklığı: 300 − 200 = 100 km"
+ },
+ {
+  "n": 6,
+  "at": "2026-11-24T17:00",
+  "question": "📐 DGS · Soru 6 (Problemler · Kâr-Zarar)\nBir satıcı bir ürünü %50 kârla satmaktadır. Ürünün maliyeti %25 artarsa ve satıcı satış fiyatını değiştirmezse kâr oranı yüzde kaç olur?",
+  "options": [
+   "15",
+   "25",
+   "20",
+   "30",
+   "35"
+  ],
+  "correct_option_id": 2,
+  "explanation": "Maliyet 100 olsun  →  satış 150 · Yeni maliyet 125  →  kâr 150 − 125 = 25 · Kâr oranı = 25 ÷ 125 = %20"
+ },
+ {
+  "n": 7,
+  "at": "2026-11-25T09:00",
+  "question": "📐 DGS · Soru 7 (Problemler · Karışım)\nTuz oranı %20 olan 60 gram tuzlu suya kaç gram su eklenirse tuz oranı %15 olur?",
+  "options": [
+   "10",
+   "15",
+   "25",
+   "20",
+   "30"
+  ],
+  "correct_option_id": 3,
+  "explanation": "Tuz miktarı değişmez: 60 · 0,20 = 12 g · 12 ÷ 0,15 = 80 g yeni karışım · 80 − 60 = 20 g su eklenir"
+ },
+ {
+  "n": 8,
+  "at": "2026-11-25T17:00",
+  "question": "📐 DGS · Soru 8 (Sayılar · Oran-Orantı)\na/b = 2/3,  b/c = 4/5  ve  a + b + c = 105 olduğuna göre c kaçtır?",
+  "options": [
+   "30",
+   "45",
+   "36",
+   "40",
+   "50"
+  ],
+  "correct_option_id": 1,
+  "explanation": "Ortak terim b: 3 ile 4'ün EKOK'u 12 · a : b : c = 8 : 12 : 15 · 8k + 12k + 15k = 35k = 105  →  k = 3 · c = 15 · 3 = 45"
+ },
+ {
+  "n": 9,
+  "at": "2026-11-26T09:00",
+  "question": "📐 DGS · Soru 9 (Sayılar · Üslü İfadeler)\n2ˣ = 5 olduğuna göre  4ˣ⁺¹ − 2ˣ⁺³  ifadesinin değeri kaçtır?",
+  "options": [
+   "40",
+   "50",
+   "70",
+   "80",
+   "60"
+  ],
+  "correct_option_id": 4,
+  "explanation": "4ˣ⁺¹ = 4 · (2ˣ)² = 4 · 25 = 100 · 2ˣ⁺³ = 8 · 2ˣ = 8 · 5 = 40 · 100 − 40 = 60"
+ },
+ {
+  "n": 10,
+  "at": "2026-11-26T17:00",
+  "question": "📐 DGS · Soru 10 (Sayılar · Basamak)\nİki basamaklı AB ve BA sayıları için AB + BA = 132  ve  AB − BA = 36 olduğuna göre A · B kaçtır?",
+  "options": [
+   "32",
+   "24",
+   "27",
+   "35",
+   "36"
+  ],
+  "correct_option_id": 0,
+  "explanation": "AB + BA = 11(A + B) = 132  →  A + B = 12 · AB − BA = 9(A − B) = 36  →  A − B = 4 · A = 8, B = 4  →  A · B = 32"
+ },
+ {
+  "n": 11,
+  "at": "2026-11-27T09:00",
+  "question": "📐 DGS · Soru 11 (Sayılar · EBOB)\nKenarları 24 m ve 36 m olan dikdörtgen bir bahçenin çevresine, her köşede bir fidan olmak şartıyla eşit aralıklarla fidan dikilecektir. En az kaç fidan gerekir?",
+  "options": [
+   "8",
+   "12",
+   "10",
+   "15",
+   "20"
+  ],
+  "correct_option_id": 2,
+  "explanation": "En az fidan → aralık en büyük → EBOB(24, 36) = 12 · Çevre = 2 · (24 + 36) = 120 m · Kapalı şekilde fidan sayısı = 120 ÷ 12 = 10"
+ },
+ {
+  "n": 12,
+  "at": "2026-11-27T17:00",
+  "question": "📐 DGS · Soru 12 (Sayılar · Denklem)\nx ve y pozitif tam sayılar olmak üzere 3x + 5y = 64 olduğuna göre x + y toplamının alabileceği en büyük değer kaçtır?",
+  "options": [
+   "14",
+   "16",
+   "18",
+   "22",
+   "20"
+  ],
+  "correct_option_id": 4,
+  "explanation": "x + y büyük olsun → küçük katsayılı x büyük, y küçük olmalı · y = 1 → 3x = 59 ✗     y = 2 → 3x = 54 → x = 18 · x + y = 18 + 2 = 20"
+ },
+ {
+  "n": 13,
+  "at": "2026-11-28T09:00",
+  "question": "📐 DGS · Soru 13 (Sayısal Mantık · Kümeler)\n30 kişilik bir sınıfta 18 öğrenci futbol, 14 öğrenci basketbol oynamaktadır. 5 öğrenci bu sporların hiçbirini oynamadığına göre her ikisini de oynayan kaç öğrenci vardır?",
+  "options": [
+   "5",
+   "6",
+   "8",
+   "7",
+   "9"
+  ],
+  "correct_option_id": 3,
+  "explanation": "En az birini oynayan: 30 − 5 = 25 · 18 + 14 = 32  →  32 − 25 = 7"
+ },
+ {
+  "n": 14,
+  "at": "2026-11-28T17:00",
+  "question": "📐 DGS · Soru 14 (Sayısal Mantık · Sıralama)\nA, B, C, D ve E bir yarışı farklı sıralarda bitirmiştir. • A, C'den önce bitirmiştir. • D, B'den hemen sonra bitirmiştir. • E üçüncü olmuştur. • C son sırada değildir. Buna göre ikinci sırada kim bitirmiştir?",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "correct_option_id": 2,
+  "explanation": "E 3. → B–D ikilisi yan yana: 1–2 ya da 4–5 · B–D 1–2 olursa A ve C 4–5'e kalır → C son olur ✗ · B–D: 4–5 →  A, C, E, B, D"
+ },
+ {
+  "n": 15,
+  "at": "2026-11-29T09:00",
+  "question": "📐 DGS · Soru 15 (Sayısal Mantık · Tanımlı İşlem)\na ∆ b = a·b − a − b biçiminde tanımlanıyor. Buna göre (3 ∆ 4) ∆ 2 işleminin sonucu kaçtır?",
+  "options": [
+   "1",
+   "2",
+   "4",
+   "3",
+   "5"
+  ],
+  "correct_option_id": 3,
+  "explanation": "3 ∆ 4 = 12 − 3 − 4 = 5 · 5 ∆ 2 = 10 − 5 − 2 = 3"
+ },
+ {
+  "n": 16,
+  "at": "2026-11-29T17:00",
+  "question": "📐 DGS · Soru 16 (Sayısal Mantık · Takvim)\nBir yılın 1 Mart'ı salı gününe denk gelmektedir. Buna göre aynı yılın 1 Haziran'ı hangi gündür?",
+  "options": [
+   "Çarşamba",
+   "Pazartesi",
+   "Salı",
+   "Perşembe",
+   "Cuma"
+  ],
+  "correct_option_id": 0,
+  "explanation": "Mart 31 + Nisan 30 + Mayıs 31 = 92 gün · 92 = 7 · 13 + 1  →  1 gün ileri · Salı + 1 = Çarşamba"
+ },
+ {
+  "n": 17,
+  "at": "2026-11-30T09:00",
+  "question": "📐 DGS · Soru 17 (Sayısal Mantık · Sayma)\n1'den 100'e kadar olan tam sayılardan kaç tanesi 3 ile ya da 5 ile tam bölünür?",
+  "options": [
+   "45",
+   "46",
+   "48",
+   "47",
+   "50"
+  ],
+  "correct_option_id": 3,
+  "explanation": "3'e bölünen: 33     5'e bölünen: 20 · İkisine birden (15'e) bölünen: 6 · 33 + 20 − 6 = 47"
+ },
+ {
+  "n": 18,
+  "at": "2026-11-30T17:00",
+  "question": "📐 DGS · Soru 18 (Sayısal Mantık · Örüntü)\n2, 5, 11, 23, 47, … örüntüsünde bir sonraki terim kaçtır?",
+  "options": [
+   "94",
+   "93",
+   "95",
+   "96",
+   "97"
+  ],
+  "correct_option_id": 2,
+  "explanation": "5 = 2·2 + 1    11 = 5·2 + 1    23 = 11·2 + 1 · 47 · 2 + 1 = 95"
+ },
+ {
+  "n": 19,
+  "at": "2026-12-01T09:00",
+  "question": "📐 DGS · Soru 19 (Sayısal Mantık · Eşleştirme)\nAyşe, Banu ve Cem; Ankara, Bursa ve İzmir'de yaşar. Meslekleri öğretmen, doktor ve mühendistir. • Ayşe İzmir'de yaşamıyor. • Öğretmen Bursa'da yaşıyor. • Cem doktordur. • Banu Ankara'da yaşıyor. • Mühendis İzmir'de yaşamıyor. Buna göre mühendis kimdir…",
+  "options": [
+   "Ayşe – Bursa",
+   "Cem – İzmir",
+   "Ayşe – Ankara",
+   "Banu – Bursa",
+   "Banu – Ankara"
+  ],
+  "correct_option_id": 4,
+  "explanation": "Banu Ankara'da → Ayşe İzmir'de değil → Ayşe Bursa, Cem İzmir · Öğretmen Bursa'da → Ayşe öğretmen · Cem doktor → Banu mühendis (Ankara)"
+ },
+ {
+  "n": 20,
+  "at": "2026-12-01T17:00",
+  "question": "📐 DGS · Soru 20 (Sayısal Mantık · Tablo)\nBir mağazanın aylık satış adetleri: Ocak 120 · Şubat 150 · Mart 135 · Nisan 180 Satışların bir önceki aya göre en fazla arttığı ay ve artış oranı aşağıdakilerden hangisidir?",
+  "options": [
+   "Şubat, %25",
+   "Nisan, %33,3",
+   "Nisan, %45",
+   "Mart, %12,5",
+   "Şubat, %30"
+  ],
+  "correct_option_id": 1,
+  "explanation": "Şubat: 30/120 = %25 Mart: düşüş · Nisan: 45/135 = 1/3 ≈ %33,3 · Dikkat: oran ÖNCEKİ aya göre hesaplanır"
+ },
+ {
+  "n": 21,
+  "at": "2026-12-02T09:00",
+  "question": "📐 DGS · Soru 21 (Sayılar · Ardışık)\na < b < c olmak üzere a, b ve c ardışık tek sayılardır. a + 2b + 3c = 106 olduğuna göre c kaçtır?",
+  "options": [
+   "15",
+   "17",
+   "21",
+   "19",
+   "23"
+  ],
+  "correct_option_id": 3,
+  "explanation": "b = a + 2,   c = a + 4 · a + 2a + 4 + 3a + 12 = 6a + 16 = 106  →  a = 15 · c = 15 + 4 = 19"
+ },
+ {
+  "n": 22,
+  "at": "2026-12-02T17:00",
+  "question": "📐 DGS · Soru 22 (Sayılar · Faktöriyel)\n30! sayısı 10ⁿ ile tam bölünebildiğine göre n en çok kaçtır?",
+  "options": [
+   "6",
+   "7",
+   "8",
+   "5",
+   "10"
+  ],
+  "correct_option_id": 1,
+  "explanation": "10 = 2 · 5  →  5 çarpanlarını saymak yeter · 30 ÷ 5 = 6     30 ÷ 25 = 1 · 6 + 1 = 7"
+ },
+ {
+  "n": 23,
+  "at": "2026-12-03T09:00",
+  "question": "📐 DGS · Soru 23 (Sayılar · Mutlak Değer)\nx bir gerçek sayı olmak üzere  |x − 3| + |x + 2|  ifadesinin alabileceği en küçük değer kaçtır?",
+  "options": [
+   "5",
+   "1",
+   "3",
+   "6",
+   "0"
+  ],
+  "correct_option_id": 0,
+  "explanation": "Sayı doğrusunda x'in 3'e ve −2'ye uzaklıkları toplamı · x, −2 ile 3 arasındaysa toplam = 3 − (−2) = 5"
+ },
+ {
+  "n": 24,
+  "at": "2026-12-03T17:00",
+  "question": "📐 DGS · Soru 24 (Sayılar · Eşitsizlik)\n−2 < x < 5 ve 1 < y < 4 olduğuna göre x − y ifadesinin alabileceği kaç farklı tam sayı değeri vardır?",
+  "options": [
+   "9",
+   "7",
+   "8",
+   "10",
+   "11"
+  ],
+  "correct_option_id": 0,
+  "explanation": "En küçük: x küçük, y büyük  →  −2 − 4 = −6 · En büyük: x büyük, y küçük  →  5 − 1 = 4 · −6 < x − y < 4  →  −5, −4, …, 3  →  9 tane"
+ },
+ {
+  "n": 25,
+  "at": "2026-12-04T09:00",
+  "question": "📐 DGS · Soru 25 (Problemler · Ortalama)\n5 sayının aritmetik ortalaması 18'dir. Bu sayılardan biri çıkarıldığında kalanların ortalaması 16 olduğuna göre çıkarılan sayı kaçtır?",
+  "options": [
+   "20",
+   "22",
+   "26",
+   "24",
+   "28"
+  ],
+  "correct_option_id": 2,
+  "explanation": "Toplam = 5 · 18 = 90 · Kalan 4 sayının toplamı = 4 · 16 = 64 · 90 − 64 = 26"
+ },
+ {
+  "n": 26,
+  "at": "2026-12-04T17:00",
+  "question": "📐 DGS · Soru 26 (Problemler · Yüzde)\nBir ürünün fiyatı önce %20 artırılıyor, sonra yeni fiyat üzerinden %20 indirim yapılıyor. Son fiyat ilk fiyata göre nasıl değişmiştir?",
+  "options": [
+   "Değişmemiştir",
+   "%4 artmıştır",
+   "%2 azalmıştır",
+   "%4 azalmıştır",
+   "%8 azalmıştır"
+  ],
+  "correct_option_id": 3,
+  "explanation": "İlk fiyat 100 olsun  →  %20 artış: 120 · 120'nin %20'si = 24 →  120 − 24 = 96 · 100 → 96: %4 azalma"
+ },
+ {
+  "n": 27,
+  "at": "2026-12-05T09:00",
+  "question": "📐 DGS · Soru 27 (Problemler · Ortalama Hız)\nBir araç yolun ilk yarısını saatte 60 km, ikinci yarısını saatte 40 km hızla gidiyor. Aracın bütün yol boyunca ortalama hızı saatte kaç km'dir?",
+  "options": [
+   "50",
+   "45",
+   "52",
+   "55",
+   "48"
+  ],
+  "correct_option_id": 4,
+  "explanation": "Yol 240 km olsun (60 ve 40'a bölünsün) · 120 ÷ 60 = 2 saat     120 ÷ 40 = 3 saat · Ortalama = 240 ÷ 5 = 48"
+ },
+ {
+  "n": 28,
+  "at": "2026-12-05T17:00",
+  "question": "📐 DGS · Soru 28 (Problemler · Havuz)\nBoş bir havuzu A musluğu 6 saatte dolduruyor; dipteki B musluğu dolu havuzu 9 saatte boşaltıyor. İki musluk birlikte açılırsa boş havuz kaç saatte dolar?",
+  "options": [
+   "12",
+   "18",
+   "15",
+   "21",
+   "24"
+  ],
+  "correct_option_id": 1,
+  "explanation": "Havuz 18 birim olsun · A saatte +3, B saatte −2  →  net +1 · 18 ÷ 1 = 18 saat"
+ },
+ {
+  "n": 29,
+  "at": "2026-12-06T09:00",
+  "question": "📐 DGS · Soru 29 (Problemler · İşçi)\n8 işçi bir işi 15 günde bitirebilmektedir. 5 gün çalıştıktan sonra ekibe 2 işçi daha katılıyor. İş başlangıçtan itibaren toplam kaç günde biter?",
+  "options": [
+   "12",
+   "14",
+   "15",
+   "11",
+   "13"
+  ],
+  "correct_option_id": 4,
+  "explanation": "İş = 8 · 15 = 120 işçi-gün · 5 günde: 8 · 5 = 40  →  kalan 80 · 80 ÷ 10 = 8 gün  →  toplam 5 + 8 = 13"
+ },
+ {
+  "n": 30,
+  "at": "2026-12-06T17:00",
+  "question": "📐 DGS · Soru 30 (Problemler · Sıra-Öğrenci)\nBir sınıfta öğrenciler sıralara ikişer oturursa 7 öğrenci ayakta kalıyor; üçer oturursa 2 sıra boş kalıyor. Sınıfta kaç öğrenci vardır?",
+  "options": [
+   "31",
+   "35",
+   "33",
+   "29",
+   "37"
+  ],
+  "correct_option_id": 2,
+  "explanation": "Sıra sayısı s olsun · 2s + 7 = 3(s − 2) · s = 13  →  öğrenci = 2 · 13 + 7 = 33"
+ },
+ {
+  "n": 31,
+  "at": "2026-12-07T09:00",
+  "question": "📐 DGS · Soru 31 (Sayılar · Sıralama)\na = 3/4,  b = 5/7,  c = 7/9  sayılarının doğru sıralanışı hangisidir?",
+  "options": [
+   "b < a < c",
+   "a < b < c",
+   "b < c < a",
+   "c < a < b",
+   "a < c < b"
+  ],
+  "correct_option_id": 0,
+  "explanation": "Payla payda farkı 1, 2, 2 → bire tamamlayalım · 1 − a = 1/4     1 − b = 2/7     1 − c = 2/9 · 2/9 < 1/4 < 2/7  →  b < a < c"
+ },
+ {
+  "n": 32,
+  "at": "2026-12-07T17:00",
+  "question": "📐 DGS · Soru 32 (Sayılar · Çarpanlara Ayırma)\nx ≠ −2, x ≠ −3, x ≠ 3 olmak üzere (x² − 9) / (x² + 5x + 6) ·  (x + 2) / (x − 3) ifadesinin sadeleşmiş hâli nedir?",
+  "options": [
+   "x + 3",
+   "1",
+   "x − 3",
+   "x + 2",
+   "(x + 3)/(x + 2)"
+  ],
+  "correct_option_id": 1,
+  "explanation": "x² − 9 = (x − 3)(x + 3) · x² + 5x + 6 = (x + 2)(x + 3) · Bütün çarpanlar sadeleşir  →  1"
+ },
+ {
+  "n": 33,
+  "at": "2026-12-08T09:00",
+  "question": "📐 DGS · Soru 33 (Sayılar · Denklem Kökleri)\nx² − 7x + 10 = 0 denkleminin köklerinin küpleri toplamı kaçtır?",
+  "options": [
+   "117",
+   "125",
+   "133",
+   "143",
+   "127"
+  ],
+  "correct_option_id": 2,
+  "explanation": "(x − 2)(x − 5) = 0  →  kökler 2 ve 5 · 2³ + 5³ = 8 + 125 = 133"
+ },
+ {
+  "n": 34,
+  "at": "2026-12-08T17:00",
+  "question": "📐 DGS · Soru 34 (Problemler · Oran)\nBir sınıfta kızların sayısının erkeklerin sayısına oranı 3/5'tir. Sınıfa 4 kız öğrenci katıldığında kız ve erkek sayısı eşit oluyor. Sınıfın ilk mevcudu kaçtır?",
+  "options": [
+   "16",
+   "24",
+   "20",
+   "32",
+   "12"
+  ],
+  "correct_option_id": 0,
+  "explanation": "Kız 3k, erkek 5k · 3k + 4 = 5k  →  k = 2 · İlk mevcut 8k = 16"
+ },
+ {
+  "n": 35,
+  "at": "2026-12-09T09:00",
+  "question": "📐 DGS · Soru 35 (Sayısal Mantık · Saat)\nBir duvar saati her saatte 2 dakika geri kalmaktadır. Pazartesi saat 12.00'de doğru olarak ayarlanan bu saat, ilk kez kaç gün sonra yeniden doğru saati gösterir?",
+  "options": [
+   "10",
+   "12",
+   "15",
+   "18",
+   "30"
+  ],
+  "correct_option_id": 2,
+  "explanation": "Duvar saati 12 saatte bir aynı görünür  →  720 dk geri kalmalı · 720 ÷ 2 = 360 saat · 360 ÷ 24 = 15 gün"
+ },
+ {
+  "n": 36,
+  "at": "2026-12-09T17:00",
+  "question": "📐 DGS · Soru 36 (Sayısal Mantık · Saat Açısı)\nSaat 3.40'ı gösterirken akrep ile yelkovan arasındaki dar açı kaç derecedir?",
+  "options": [
+   "120",
+   "130",
+   "140",
+   "110",
+   "150"
+  ],
+  "correct_option_id": 1,
+  "explanation": "Yelkovan: dakikada 6°   Akrep: dakikada 0,5° · Yelkovan: 40 · 6 = 240°     Akrep: 3 · 30 + 40 · 0,5 = 110° · 240 − 110 = 130°"
+ },
+ {
+  "n": 37,
+  "at": "2026-12-10T09:00",
+  "question": "📐 DGS · Soru 37 (Sayısal Mantık · En Kötü Durum)\nBir torbada 5 kırmızı, 7 mavi ve 9 yeşil top vardır. Gözü kapalı en az kaç top çekilirse her renkten en az bir top çekilmiş olacağı kesinleşir?",
+  "options": [
+   "15",
+   "16",
+   "17",
+   "18",
+   "21"
+  ],
+  "correct_option_id": 2,
+  "explanation": "\"Kesin\" → en şanssız durumu düşün · Önce en kalabalık iki renk: 9 yeşil + 7 mavi = 16 top · Bir top daha  →  16 + 1 = 17"
+ },
+ {
+  "n": 38,
+  "at": "2026-12-10T17:00",
+  "question": "📐 DGS · Soru 38 (Sayısal Mantık · Olasılık)\nBir zar iki kez atılıyor. Gelen sayıların toplamının 8 olma olasılığı kaçtır?",
+  "options": [
+   "1/6",
+   "5/36",
+   "1/9",
+   "7/36",
+   "1/12"
+  ],
+  "correct_option_id": 1,
+  "explanation": "Tüm durumlar: 6 · 6 = 36 · (2,6) (3,5) (4,4) (5,3) (6,2)  →  5 durum · 5/36"
+ },
+ {
+  "n": 39,
+  "at": "2026-12-11T09:00",
+  "question": "📐 DGS · Soru 39 (Sayısal Mantık · Permütasyon)\nKİTAP kelimesinin harfleri, sesli harfler yan yana olacak şekilde kaç farklı biçimde sıralanabilir?",
+  "options": [
+   "24",
+   "36",
+   "120",
+   "60",
+   "48"
+  ],
+  "correct_option_id": 4,
+  "explanation": "Sesliler İ ve A → tek blok gibi düşün · Blok + K, T, P  →  4! = 24 · Blok içinde İA, Aİ  →  24 · 2 = 48"
+ },
+ {
+  "n": 40,
+  "at": "2026-12-11T17:00",
+  "question": "📐 DGS · Soru 40 (Problemler · Denklem Sistemi)\n3 kalem ile 2 defter 41 TL, 2 kalem ile 3 defter 44 TL'dir. Buna göre 1 kalem ile 1 defter toplam kaç TL'dir?",
+  "options": [
+   "15",
+   "16",
+   "18",
+   "17",
+   "19"
+  ],
+  "correct_option_id": 3,
+  "explanation": "İki denklemi taraf tarafa toplayalım · 5 kalem + 5 defter = 85 · 1 kalem + 1 defter = 85 ÷ 5 = 17"
+ }
+]
