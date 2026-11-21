@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DGS puan hesaplama: net, ÖBP, SAY, SÖZ ve EA puanı | CG Akademi</title>
+<meta name="description" content="DGS puan hesaplama aracı: 4 yanlış 1 doğru net hesabı, ÖBP (not ortalaması × 0,8, önceki yıl yerleşenler için × 0,45) ve ÖSYM katsayılarıyla tahmini SAY, SÖZ, EA puanı.">
+<link rel="canonical" href="https://cgakademi.com/dgs/puan-hesaplama/">
+<meta name="theme-color" content="#102a43">
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CG Akademi">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:url" content="https://cgakademi.com/dgs/puan-hesaplama/">
+<meta property="og:title" content="DGS puan hesaplama: net, ÖBP, SAY, SÖZ ve EA puanı | CG Akademi">
+<meta property="og:description" content="DGS puan hesaplama aracı: 4 yanlış 1 doğru net hesabı, ÖBP (not ortalaması × 0,8, önceki yıl yerleşenler için × 0,45) ve ÖSYM katsayılarıyla tahmini SAY, SÖZ, EA puanı.">
+<meta property="og:image" content="https://cgakademi.com/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer></script>
+<style>.dgs-nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.dgs-nav a{border:1px solid #cdd9e7;background:#fff;color:#2b405a;border-radius:99px;padding:9px 15px;font-size:14px;font-weight:650;min-height:44px;display:inline-flex;align-items:center}.dgs-nav a:hover{border-color:#f3c3cc}.dgs-nav a[aria-current=page]{background:var(--navy);border-color:var(--navy);color:#fff}.cards>.card{min-width:0}.tbl-wrap{width:100%;max-width:100%;overflow-x:auto;background:#fff;border:1px solid #e0e9f5;border-radius:18px;margin:14px 0 8px}.dtable{width:100%;border-collapse:collapse;font-size:14px;min-width:520px}.dtable th,.dtable td{padding:10px 14px;border-top:1px solid #eef2f7;text-align:left;vertical-align:top}.dtable thead th{border-top:0;background:#f8f9fb;color:#3a516b;font-size:13px;font-weight:800}.dtable td.n,.dtable th.n{text-align:center;white-space:nowrap}.dtable tr.sum td{font-weight:800;color:var(--navy);background:#fbfbfc}.note{font-size:13px;color:var(--muted);margin:6px 0 0}.callout{background:#fff8e8;border:1px solid #f4dfae;border-radius:16px;padding:14px 18px;color:#5b4410;font-size:14px;margin:18px 0}.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}.steps li{counter-increment:s;background:#fff;border:1px solid #e0e9f5;border-radius:16px;padding:16px 18px 16px 64px;position:relative}.steps li:before{content:counter(s);position:absolute;left:18px;top:16px;width:32px;height:32px;border-radius:10px;background:#fdecef;color:#a50d26;font-weight:900;display:grid;place-items:center}.steps strong{display:block;color:var(--navy);margin-bottom:2px}.steps p{margin:0;color:#33465c;font-size:14.5px}.steps a{color:var(--blue);text-decoration:underline}.calc{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:start}.calc-box{background:#fff;border:1px solid #e0e9f5;border-radius:20px;padding:24px}.calc-box h2,.calc-box h3{margin:0 0 14px;color:var(--navy);font-size:20px;letter-spacing:-.3px}.frow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}.frow.two{grid-template-columns:repeat(2,1fr)}.fld label{display:block;font-size:13px;font-weight:700;color:#3a516b;margin-bottom:5px}.fld input[type=number]{width:100%;font:inherit;font-size:16px;padding:11px 12px;border:1px solid #cdd9e7;border-radius:12px;min-height:46px;background:#fff;color:var(--ink)}.fld input:focus{outline:3px solid #c8102e33;border-color:var(--blue)}.fld .net{font-size:22px;font-weight:900;color:var(--navy);padding:8px 0}.sec-t{font-size:14px;font-weight:800;color:var(--blue);margin:4px 0 8px}.chk-row{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#33465c;margin:4px 0 6px}.chk-row input{width:20px;height:20px;margin-top:2px;flex-shrink:0}.err{color:#a50d26;font-size:13px;font-weight:650;min-height:18px;margin:2px 0 0}.res{display:grid;gap:12px}.res .r{border:1px solid #e0e9f5;border-radius:16px;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px}.res .r span{font-size:14px;font-weight:700;color:#3a516b}.res .r b{font-size:28px;color:var(--navy);letter-spacing:-.6px}.res .r.best{border-color:#f3c3cc;background:#fff7f8}.mini-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px;font-size:12.5px;color:var(--muted)}.mini-facts div{background:#f8f9fb;border-radius:12px;padding:8px 10px}.mini-facts b{display:block;font-size:16px;color:var(--navy)}details.adv{margin-top:10px;border-top:1px solid #eef2f7;padding-top:12px}details.adv summary{cursor:pointer;font-weight:750;color:var(--navy);font-size:14px;min-height:36px;display:flex;align-items:center}@media(max-width:1000px){.calc{grid-template-columns:1fr}}@media(max-width:520px){.frow{grid-template-columns:1fr 1fr}.frow .fld.netf{grid-column:1/-1}.mini-facts{grid-template-columns:1fr 1fr 1fr}}</style></head>
+<body>
+<a href="#main" class="skip">İçeriğe geç</a>
+<header class="nav-shell"><div class="wrap nav">
+<a class="logo" href="/" aria-label="CG Akademi ana sayfa"><img class="mark" src="/apple-touch-icon.png" width="42" height="42" alt=""><span>CG Akademi</span></a>
+<nav class="menu" aria-label="Ana menü"><a href="/ekys-merkezi/">EKYS</a><a href="/ags/">AGS</a><a href="/dgs/" aria-current=page>DGS</a><a href="/uygulamalar/#yks">YKS</a><a href="/video-dersler/">Video Dersler</a><a href="/ucretsiz-kaynaklar/">Ücretsiz Kaynaklar</a><a href="/magaza/">Mağaza</a><a href="/uygulamalar/">Uygulamalar</a></nav>
+<a class="btn primary sm nav-cta" href="/plan/">EKYS'ye Hazırlanmaya Başla</a>
+<details class="mnav"><summary aria-label="Menü"><span class="bars" aria-hidden="true">☰</span>Menü</summary>
+<nav class="mnav-panel" aria-label="Mobil menü"><a href="/ekys-merkezi/">EKYS</a><a href="/ags/">AGS</a><a href="/dgs/" aria-current=page>DGS</a><a href="/uygulamalar/#yks">YKS</a><a href="/video-dersler/">Video Dersler</a><a href="/ucretsiz-kaynaklar/">Ücretsiz Kaynaklar</a><a href="/magaza/">Mağaza</a><a href="/uygulamalar/">Uygulamalar</a><a class="btn primary" href="/plan/">EKYS'ye Hazırlanmaya Başla</a></nav></details>
+</div></header>
+<main id="main">
+<section class="page-hero"><div class="wrap"><div class="crumbs"><a href="/">Ana sayfa</a> / <a href="/dgs/">DGS</a></div><span class="pill">DGS · Puan hesaplama</span><h1>DGS puan hesaplama</h1><p class="lead">Sayısal ve sözel doğru-yanlış sayını, ön lisans not ortalamanı gir; netini, ÖBP'ni ve SAY, SÖZ, EA puanlarını tahmini olarak gör. Hesap tamamen tarayıcında yapılır, hiçbir veri gönderilmez.</p><nav class="dgs-nav" aria-label="DGS sayfaları"><a href="/dgs/">Genel bakış</a><a href="/dgs/puan-hesaplama/" aria-current=page>Puan hesaplama</a><a href="/dgs/konular/">Konular ve dağılım</a><a href="/dgs/denemeler/">Denemeler</a><a href="/dgs/tercih-rehberi/">Tercih rehberi</a></nav></div></section>
+
+<section class="section"><div class="wrap"><div class="calc">
+<form class="calc-box" id="dgsCalc" novalidate onsubmit="return false">
+<h2>Bilgilerini gir</h2>
+<p class="sec-t">Sayısal bölüm (50 soru)</p>
+<div class="frow"><div class="fld"><label for="sd">Doğru</label><input id="sd" type="number" inputmode="numeric" min="0" max="50" step="1" value="0"></div><div class="fld"><label for="sy">Yanlış</label><input id="sy" type="number" inputmode="numeric" min="0" max="50" step="1" value="0"></div><div class="fld netf"><label>Net</label><div class="net" id="sn">0</div></div></div>
+<p class="err" id="se" role="alert"></p>
+<p class="sec-t">Sözel bölüm (50 soru)</p>
+<div class="frow"><div class="fld"><label for="vd">Doğru</label><input id="vd" type="number" inputmode="numeric" min="0" max="50" step="1" value="0"></div><div class="fld"><label for="vy">Yanlış</label><input id="vy" type="number" inputmode="numeric" min="0" max="50" step="1" value="0"></div><div class="fld netf"><label>Net</label><div class="net" id="vn">0</div></div></div>
+<p class="err" id="ve" role="alert"></p>
+<p class="sec-t">Ön lisans başarı puanı (ÖBP)</p>
+<div class="frow two"><div class="fld"><label for="dn">Not ortalaması (100'lük)</label><input id="dn" type="number" inputmode="decimal" min="0" max="100" step="0.01" value="70"></div><div class="fld"><label>ÖBP</label><div class="net" id="obp">56</div></div></div>
+<label class="chk-row"><input type="checkbox" id="prev"><span>Bir önceki yılın DGS'siyle bir lisans programına yerleştim (ÖBP 0,45 ile çarpılır).</span></label>
+<p class="note">4'lük sistemdeki ortalamanın 100'lük karşılığı için YÖK dönüşüm tablosunu ve okulunun transkriptini esas al.</p>
+<details class="adv"><summary>Hesap varsayımları (ortalama ve standart sapma)</summary>
+<p class="note" style="margin-bottom:10px">Ham puanı standart puana çevirmek için o yılki adayların ortalaması ve standart sapması gerekir. Bu değerler sınavdan sonra belli olur ve her yıl değişir; aşağıdakiler yaklaşık varsayımlardır. İstersen değiştirebilirsin.</p>
+<div class="frow two"><div class="fld"><label for="ms">Sayısal ortalama net</label><input id="ms" type="number" step="0.1" value="13"></div><div class="fld"><label for="ss">Sayısal standart sapma</label><input id="ss" type="number" step="0.1" min="0.1" value="10"></div></div>
+<div class="frow two"><div class="fld"><label for="mv">Sözel ortalama net</label><input id="mv" type="number" step="0.1" value="22"></div><div class="fld"><label for="sv">Sözel standart sapma</label><input id="sv" type="number" step="0.1" min="0.1" value="9"></div></div>
+</details>
+</form>
+<div><div class="calc-box" aria-live="polite"><h3>Tahmini DGS puanların</h3>
+<div class="res"><div class="r" id="rSAY"><span>DGS Sayısal (SAY)</span><b id="pSAY">–</b></div><div class="r" id="rSOZ"><span>DGS Sözel (SÖZ)</span><b id="pSOZ">–</b></div><div class="r" id="rEA"><span>DGS Eşit Ağırlık (EA)</span><b id="pEA">–</b></div></div>
+<div class="mini-facts"><div><b id="stS">–</b>Sayısal standart puan</div><div><b id="stV">–</b>Sözel standart puan</div><div><b id="obpU">–</b>Hesaba giren ÖBP</div></div>
+<p class="err" id="ge" role="status"></p>
+<div class="callout"><strong>Tahminidir, resmî değildir.</strong> Gerçek puan, sınava giren tüm adayların sonuçlarına göre ÖSYM tarafından hesaplanır. Aynı net farklı yıllarda farklı puana karşılık gelebilir.</div></div>
+<div class="side-card" style="margin-top:14px"><h3>Netini artırmak için</h3><p>Hangi konudan kaç soru geldiğine bak, çalışmanı ona göre planla.</p><a class="btn ghost" href="/dgs/konular/">Konular ve dağılım</a></div></div>
+</div></div></section>
+
+<section class="section alt"><div class="wrap"><div class="section-head"><span class="eyebrow">Nasıl hesaplanıyor?</span><h2>DGS puanı adım adım</h2><p>Aşağıdaki kurallar ÖSYM'nin 2026-DGS kılavuzundan alınmıştır.</p></div>
+<ol class="steps">
+<li><strong>Ham puan (net)</strong><p>Her bölümde doğru sayısından yanlış sayısının dörtte biri çıkarılır. Yani 4 yanlış 1 doğruyu götürür. Boş bırakılan soru puanı etkilemez.</p></li>
+<li><strong>Standart puan</strong><p>Sayısal ve sözel ham puanlar ayrı ayrı, ortalaması 50 ve standart sapması 10 olan standart puanlara dönüştürülür. Bu yüzden aynı net, adayların genel başarısına göre farklı puan getirebilir.</p></li>
+<li><strong>Ön lisans başarı puanı (ÖBP)</strong><p>Ön lisans not ortalaması (100'lük sistemde, en düşük 50 kabul edilerek) 0,8 ile çarpılır. Böylece ÖBP 40 ile 80 arasında olur. Bir önceki yılın DGS'siyle bir programa yerleşen adayların ÖBP'si ayrıca 0,45 ile çarpılır.</p></li>
+<li><strong>Puan türleri</strong><p>Standart puanlar ve ÖBP aşağıdaki katsayılarla çarpılıp toplanır. Puan hesaplanması için her iki testten de en az 1 ham puan almak gerekir.</p></li>
+</ol>
+<div class="tbl-wrap"><table class="dtable"><thead><tr><th>Puan türü</th><th class="n">Sayısal standart puan</th><th class="n">Sözel standart puan</th><th class="n">ÖBP</th></tr></thead><tbody><tr><td>DGS Sayısal (SAY)</td><td class="n">3</td><td class="n">0,6</td><td class="n">0,6</td></tr><tr><td>DGS Sözel (SÖZ)</td><td class="n">0,6</td><td class="n">3</td><td class="n">0,6</td></tr><tr><td>DGS Eşit Ağırlık (EA)</td><td class="n">1,8</td><td class="n">1,8</td><td class="n">0,6</td></tr></tbody></table></div>
+<p class="note">Kaynak: <a href="https://dokuman.osym.gov.tr/pdfdokuman/2026/DGS/kilavuz_dgsd15052026.pdf" target="_blank" rel="noopener" style="color:var(--blue);text-decoration:underline">ÖSYM 2026-DGS Kılavuzu</a> (Tablo-A ve 4. bölüm). Yeni yılın kılavuzu yayımlandığında katsayıları ondan kontrol et.</p>
+</div></section>
+<section class="section alt"><div class="wrap"><div class="section-head"><span class="eyebrow">DGS rehberi</span><h2>Diğer DGS sayfaları</h2></div><div class="cards"><div class="card"><div class="em">📚</div><h3>Konular ve dağılım</h3><p>DGS konu listesi, son yıllarda konulardan gelen yaklaşık soru sayıları ve soru düzeni.</p><a class="text-link" href="/dgs/konular/">Sayfaya git →</a></div><div class="card"><div class="em">📝</div><h3>Denemeler</h3><p>Ücretsiz Deneme 1, çözüm videoları ve konu testleri.</p><a class="text-link" href="/dgs/denemeler/">Sayfaya git →</a></div><div class="card"><div class="em">🎯</div><h3>Tercih rehberi</h3><p>Ön lisans alanına göre tercih, ÖSYM tabloları ve yerleştirme adımları.</p><a class="text-link" href="/dgs/tercih-rehberi/">Sayfaya git →</a></div></div></div></section>
+<section class="section" style="padding-top:0"><div class="wrap"><p class="muted" style="font-size:13px">CG Akademi DGS, ÖSYM'nin veya herhangi bir kamu kurumunun resmî kaynağı değildir; bağımsız bir hazırlık kaynağıdır. Sınav, puan ve tercihle ilgili her konuda ÖSYM'nin yayımladığı kılavuz ve duyurular esastır.</p></div></section>
+</main>
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  function num(i,d){var v=parseFloat(String($(i).value).replace(',','.'));return isNaN(v)?d:v}
+  function f(x,d){return x.toLocaleString('tr-TR',{minimumFractionDigits:d,maximumFractionDigits:d})}
+  function sec(d,y,netEl,errEl){
+    var D=Math.max(0,Math.floor(num(d,0))),Y=Math.max(0,Math.floor(num(y,0)));
+    var ok=D+Y<=50;$(errEl).textContent=ok?'':'Doğru ve yanlış toplamı 50\'yi geçemez.';
+    var n=D-Y/4;$(netEl).textContent=f(n,2);return ok?n:null;
+  }
+  function calc(){
+    var sn=sec('sd','sy','sn','se'),vn=sec('vd','vy','vn','ve');
+    var dn=num('dn',50);dn=Math.min(100,Math.max(50,dn));
+    var obp=dn*0.8;if($('prev').checked)obp=obp*0.45;
+    $('obp').textContent=f(dn*0.8,2);$('obpU').textContent=f(obp,2);
+    var ms=num('ms',13),ss=Math.max(0.1,num('ss',10)),mv=num('mv',22),sv=Math.max(0.1,num('sv',9));
+    var ids=['pSAY','pSOZ','pEA'];
+    function clear(msg){ids.forEach(function(i){$(i).textContent='–'});$('stS').textContent='–';$('stV').textContent='–';$('ge').textContent=msg;
+      ['rSAY','rSOZ','rEA'].forEach(function(i){$(i).classList.remove('best')})}
+    if(sn===null||vn===null){clear('Girdiğin sayıları kontrol et.');return}
+    if(sn<1||vn<1){clear('Puan hesaplanması için her iki testten de en az 1 net (ham puan) gerekir.');return}
+    $('ge').textContent='';
+    var S=50+10*(sn-ms)/ss,V=50+10*(vn-mv)/sv;
+    $('stS').textContent=f(S,2);$('stV').textContent=f(V,2);
+    var p={SAY:3*S+0.6*V+0.6*obp,SOZ:0.6*S+3*V+0.6*obp,EA:1.8*S+1.8*V+0.6*obp};
+    var best=null;Object.keys(p).forEach(function(k){$('p'+k).textContent=f(p[k],3);if(best===null||p[k]>p[best])best=k});
+    ['SAY','SOZ','EA'].forEach(function(k){$('r'+k).classList.toggle('best',k===best)});
+  }
+  var form=$('dgsCalc');form.addEventListener('input',calc);form.addEventListener('change',calc);calc();
+})();
+</script>
+<footer class="footer"><div class="wrap"><div class="footergrid">
+<div><a class="logo" href="/"><img class="mark" src="/apple-touch-icon.png" width="42" height="42" alt=""><span>CG Akademi</span></a>
+<p>EKYS, AGS ve YKS adayları için ücretsiz video dersler, çalışma planları ve dijital kaynaklar. Hedefine planlı hazırlan.</p></div>
+<div><h4>Keşfet</h4><a href="/ekys-merkezi/">EKYS Hazırlık Merkezi</a><a href="/plan/">13 haftalık plan</a><a href="/video-dersler/">Video dersler</a><a href="/ucretsiz-kaynaklar/">Ücretsiz kaynaklar</a><a href="/magaza/">Mağaza</a></div>
+<div><h4>Sınavlar</h4><a href="/ekys-merkezi/">EKYS</a><a href="/konu-anlatimi/">Konu Anlatımı</a><a href="/ags/">AGS</a><a href="/dgs/">DGS</a><a href="/uygulamalar/#yks">YKS (TYT-AYT)</a><a href="/uygulamalar/">Uygulamalar</a></div>
+<div><h4>CG Akademi</h4><a href="https://www.youtube.com/@cgakademi" target="_blank" rel="noopener">YouTube (EKYS)</a><a href="https://www.youtube.com/@CGAkademiDGS" target="_blank" rel="noopener">YouTube (DGS)</a><a href="https://www.instagram.com/cg_akademi_/" target="_blank" rel="noopener">Instagram</a><a href="https://t.me/cgakademi_ekys" target="_blank" rel="noopener">Telegram</a><a href="/hakkimizda/">Hakkımızda</a><a href="/iletisim/">İletişim</a><a href="/gizlilik.html">Gizlilik</a></div>
+</div>
+<div class="fine">© <span data-year>2026</span> CG Akademi. CG Akademi bağımsız bir hazırlık kaynağıdır; ÖSYM veya MEB ile bağlantısı yoktur.</div>
+</div></footer>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "93b854bfc5604802a038ee3346469f2a"}'></script></body>
+</html>
