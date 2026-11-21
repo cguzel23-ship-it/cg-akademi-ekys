@@ -1,4 +1,53 @@
-/* CG Akademi ortak küçük betik: geri sayım, haftanın konusu, bölüm listeleri, filtre, mağaza, örnek soru */
+/* CG Akademi ortak küçük betik: tema, geri sayım, haftanın konusu, bölüm listeleri, filtre, mağaza, örnek soru, net hesaplama */
+
+/* Tema: kayıtlı tercih > sistem tercihi (açık) > koyu */
+(function () {
+  'use strict';
+  var KEY = 'cg-tema', root = document.documentElement;
+  function stored() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function save(v) { try { localStorage.setItem(KEY, v); } catch (e) { /* gizli mod vb. */ } }
+  function initial() {
+    var s = stored();
+    if (s === 'light' || s === 'dark') return s;
+    try { if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) return 'light'; } catch (e) {}
+    return 'dark';
+  }
+  function apply(t) {
+    root.setAttribute('data-theme', t);
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', t === 'light' ? '#ffffff' : '#0e1116');
+    var btn = document.querySelector('.theme-toggle');
+    if (btn) {
+      btn.setAttribute('aria-pressed', t === 'dark' ? 'true' : 'false');
+      btn.setAttribute('aria-label', t === 'dark' ? 'Açık temaya geç' : 'Koyu temaya geç');
+      btn.title = btn.getAttribute('aria-label');
+    }
+  }
+  apply(initial());
+  function mount() {
+    var nav = document.querySelector('.nav');
+    if (!nav || nav.querySelector('.theme-toggle')) return;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'theme-toggle';
+    btn.innerHTML = '<svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>' +
+      '<svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+    btn.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      save(next); apply(next);
+    });
+    var end = document.createElement('div');
+    end.className = 'nav-end';
+    var cta = nav.querySelector('.nav-cta'), mnav = nav.querySelector('.mnav');
+    nav.appendChild(end);
+    if (cta) end.appendChild(cta);
+    end.appendChild(btn);
+    if (mnav) end.appendChild(mnav);
+    apply(root.getAttribute('data-theme') || 'dark');
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount); else mount();
+})();
+
 (function () {
   'use strict';
   var EXAM = '2027-02-21T10:00:00+03:00';
@@ -145,8 +194,124 @@
     });
   }
 
+  /* Canlı sınav geri sayımı: <div data-exam-cd="2027-07-18T00:00:00+03:00"> içinde [data-u=d|h|m|s] */
+  function examCountdowns() {
+    var boxes = document.querySelectorAll('[data-exam-cd]');
+    if (!boxes.length) return;
+    function pad(n) { return n < 10 ? '0' + n : String(n); }
+    function tick() {
+      var now = Date.now();
+      for (var i = 0; i < boxes.length; i++) {
+        var end = Date.parse(boxes[i].getAttribute('data-exam-cd'));
+        if (isNaN(end)) continue;
+        var ms = Math.max(0, end - now), s = Math.floor(ms / 1000);
+        var v = { d: Math.floor(s / 86400), h: pad(Math.floor(s % 86400 / 3600)), m: pad(Math.floor(s % 3600 / 60)), s: pad(s % 60) };
+        var us = boxes[i].querySelectorAll('[data-u]');
+        for (var j = 0; j < us.length; j++) us[j].textContent = String(v[us[j].getAttribute('data-u')]);
+        var done = boxes[i].querySelector('[data-cd-done]');
+        if (done) done.hidden = ms > 0;
+      }
+    }
+    tick();
+    setInterval(tick, 1000);
+  }
+
+  /* Telefon önizlemesi: sekmeler ve günlük hedef listesi (cihazda saklanır) */
+  function phone() {
+    document.querySelectorAll('[data-phone]').forEach(function (ph) {
+      var tabs = ph.querySelectorAll('[role=tab]');
+      function select(tab) {
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+          t.tabIndex = on ? 0 : -1;
+          var p = document.getElementById(t.getAttribute('aria-controls'));
+          if (p) p.hidden = !on;
+        });
+      }
+      tabs.forEach(function (t, i) {
+        t.addEventListener('click', function () { select(t); });
+        t.addEventListener('keydown', function (e) {
+          var k = e.key, n = null;
+          if (k === 'ArrowRight') n = tabs[(i + 1) % tabs.length];
+          if (k === 'ArrowLeft') n = tabs[(i - 1 + tabs.length) % tabs.length];
+          if (n) { e.preventDefault(); select(n); n.focus(); }
+        });
+      });
+      var day = new Date().toISOString().slice(0, 10);
+      ph.querySelectorAll('[data-goals]').forEach(function (g) {
+        var key = 'cg-hedef-' + g.getAttribute('data-goals') + '-' + day;
+        var boxes = g.querySelectorAll('input[type=checkbox]');
+        var state = [];
+        try { state = JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) { state = []; }
+        function upd() {
+          var done = 0, arr = [];
+          boxes.forEach(function (b, i) { if (b.checked) { done++; arr.push(i); } });
+          var c = g.querySelector('[data-goal-count]');
+          if (c) c.textContent = done + '/' + boxes.length;
+          var bar = g.querySelector('[data-goal-bar]');
+          if (bar) bar.style.width = Math.round(done / boxes.length * 100) + '%';
+          try { localStorage.setItem(key, JSON.stringify(arr)); } catch (e) {}
+        }
+        boxes.forEach(function (b, i) { if (state.indexOf(i) > -1) b.checked = true; b.addEventListener('change', upd); });
+        upd();
+      });
+    });
+  }
+
+  /* Hızlı net hesaplama: DGS ve TYT (4 yanlış 1 doğruyu götürür) */
+  var NET_SETS = {
+    dgs: { title: 'DGS', parts: [['Sayısal', 50, 'Matematik, geometri, sayısal mantık'], ['Sözel', 50, 'Türkçe, sözel mantık']] },
+    tyt: { title: 'TYT', parts: [['Türkçe', 40, ''], ['Sosyal Bilimler', 20, ''], ['Temel Matematik', 40, ''], ['Fen Bilimleri', 20, '']] }
+  };
+  function fmt(n) { return (Math.round(n * 100) / 100).toLocaleString('tr-TR', { minimumFractionDigits: 0, maximumFractionDigits: 2 }); }
+  function netcalc() {
+    document.querySelectorAll('[data-netcalc]').forEach(function (box) {
+      var rows = box.querySelector('[data-nc-rows]'), total = box.querySelector('[data-nc-total]'), totalQ = box.querySelector('[data-nc-max]');
+      var tabs = box.querySelectorAll('[data-nc-tab]'), uid = 0;
+      function build(kind) {
+        var set = NET_SETS[kind];
+        rows.innerHTML = set.parts.map(function (p) {
+          var id = 'nc' + (++uid);
+          return '<div class="nc-row" data-max="' + p[1] + '"><div class="lab">' + esc(p[0]) + '<small>' + p[1] + ' soru' + (p[2] ? ' · ' + esc(p[2]) : '') + '</small></div>' +
+            '<div><label for="' + id + 'd">Doğru</label><input id="' + id + 'd" type="number" inputmode="numeric" min="0" max="' + p[1] + '" step="1" placeholder="0" data-k="d"></div>' +
+            '<div><label for="' + id + 'y">Yanlış</label><input id="' + id + 'y" type="number" inputmode="numeric" min="0" max="' + p[1] + '" step="1" placeholder="0" data-k="y"></div>' +
+            '<div class="net" aria-live="polite"><b data-net>0</b><span>net</span></div><p class="nc-err" role="alert" hidden></p></div>';
+        }).join('');
+        if (totalQ) totalQ.textContent = String(set.parts.reduce(function (a, p) { return a + p[1]; }, 0));
+        calc();
+      }
+      function calc() {
+        var sum = 0;
+        rows.querySelectorAll('.nc-row').forEach(function (r) {
+          var max = +r.getAttribute('data-max');
+          var di = r.querySelector('[data-k=d]'), yi = r.querySelector('[data-k=y]'), err = r.querySelector('.nc-err');
+          var d = di.value === '' ? 0 : Number(di.value), y = yi.value === '' ? 0 : Number(yi.value), msg = '';
+          if (!isFinite(d) || !isFinite(y) || d < 0 || y < 0 || d % 1 || y % 1) msg = 'Doğru ve yanlış sayısı 0 ya da pozitif tam sayı olmalı.';
+          else if (d + y > max) msg = 'Doğru + yanlış en fazla ' + max + ' olabilir (şu an ' + (d + y) + ').';
+          di.setAttribute('aria-invalid', msg ? 'true' : 'false');
+          yi.setAttribute('aria-invalid', msg ? 'true' : 'false');
+          err.hidden = !msg; err.textContent = msg;
+          var net = msg ? 0 : d - y / 4;
+          r.querySelector('[data-net]').textContent = msg ? '–' : fmt(net);
+          sum += net;
+        });
+        total.textContent = fmt(sum);
+      }
+      rows.addEventListener('input', calc);
+      tabs.forEach(function (t) {
+        t.addEventListener('click', function () {
+          tabs.forEach(function (x) { x.setAttribute('aria-selected', x === t ? 'true' : 'false'); });
+          build(t.getAttribute('data-nc-tab'));
+        });
+      });
+      var first = box.querySelector('[data-nc-tab][aria-selected=true]') || tabs[0];
+      build(first ? first.getAttribute('data-nc-tab') : 'dgs');
+    });
+  }
+
   function init() {
-    countdown(); thisWeek(); areas(); filters(); shop(); quiz();
+    countdown(); thisWeek(); areas(); filters(); shop(); quiz(); examCountdowns(); phone(); netcalc();
     var y = document.querySelector('[data-year]');
     if (y) y.textContent = String(new Date().getFullYear());
   }
