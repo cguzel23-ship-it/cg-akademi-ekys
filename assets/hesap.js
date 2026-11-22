@@ -48,6 +48,17 @@ function mergeValue(a, b) {
       }
       return JSON.stringify([...new Set([...x, ...y])]);
     }
+    if (x && y && typeof x === "object" && typeof y === "object") {
+      const o = { ...y };
+      for (const [k, v] of Object.entries(x)) {
+        const r = o[k];
+        if (r == null) o[k] = v;
+        else if (typeof v === "number" && typeof r === "number") o[k] = Math.max(v, r);
+        else if (v && r && typeof v === "object" && typeof r === "object") o[k] = (v.t || 0) >= (r.t || 0) ? v : r;
+        else o[k] = v;
+      }
+      return JSON.stringify(o);
+    }
   } catch (e) {}
   return a;
 }
@@ -215,9 +226,9 @@ Storage.prototype.setItem = function (k, v) {
 document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") pushWeb(false); });
 
 // Uygulama ilerlemesi (salt okunur)
-export async function uygulamaIlerlemesi() {
+export async function uygulamaIlerlemesi(belge = "main") {
   if (!user) return null;
-  const s = await getDoc(doc(db, "users", user.uid, "progress", "main"));
+  const s = await getDoc(doc(db, "users", user.uid, "progress", belge));
   if (!s.exists()) return null;
   const d = s.data();
   let data = {};

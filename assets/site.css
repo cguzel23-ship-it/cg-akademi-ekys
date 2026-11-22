@@ -615,3 +615,8 @@ html[data-theme=dark] .promo-bar{background:#0F0B08}
 
 @media (max-width:640px){.hesap-btn .hb-ad{display:none}.hesap-btn{width:38px;padding:0;justify-content:center}}
 @media (min-width:700px){.sinav-degis-bar{padding-left:22px}}
+.ilr-sekmeler{display:inline-flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:14px;background:var(--surface);margin:6px 0 6px}
+.ilr-sekmeler button{border:0;background:none;padding:8px 22px;border-radius:10px;font:700 .95rem var(--f-sans);color:var(--muted);cursor:pointer}
+.ilr-sekmeler button[aria-selected=true]{background:var(--ink-brown);color:var(--paper)}
+.ilr-panel .ilr-bos,#ilr-panel .ilr-bos{margin:14px 0}
+#ilr-panel .ilr-kartlar{margin-top:16px}

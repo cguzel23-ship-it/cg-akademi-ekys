@@ -41,20 +41,11 @@
 <div id="ilr-durum" class="ilr-bos"><p>Yükleniyor…</p></div>
 <div id="ilr-icerik" hidden>
   <p class="ilr-kim"></p>
-  <div class="ilr-kartlar">
-    <div class="ilr-kart"><b data-k="cozulen">0</b><span>çözülen soru</span></div>
-    <div class="ilr-kart"><b data-k="dogruluk">%0</b><span>doğruluk</span></div>
-    <div class="ilr-kart"><b data-k="seri">0</b><span>gün üst üste</span></div>
-    <div class="ilr-kart"><b data-k="tekrar">0</b><span>bugün tekrar bekleyen</span></div>
+  <div class="ilr-sekmeler" role="tablist">
+    <button type="button" role="tab" data-sek="ekys" aria-selected="true">EKYS</button>
+    <button type="button" role="tab" data-sek="dgs" aria-selected="false">DGS</button>
   </div>
-  <h2>Son 14 gün</h2>
-  <div class="ilr-gunler" id="ilr-gunler"></div>
-  <h2>Denemeler</h2>
-  <div id="ilr-denemeler"></div>
-  <h2>Konulara göre</h2>
-  <p class="ilr-not">Doğruluğu en düşük konular üstte. Uygulamada bu konuların testlerine yönelmen önerilir.</p>
-  <div id="ilr-konular"></div>
-  <p class="ilr-not" id="ilr-guncel"></p>
+  <div id="ilr-panel"></div>
   <p><button type="button" class="btn ghost" id="ilr-cikis">Çıkış yap</button></p>
 </div>
 </div></section>
@@ -63,9 +54,62 @@ import { onUser, girisAc, uygulamaIlerlemesi, cikis } from "/assets/hesap.js";
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 let konular = {};
-fetch("/assets/konular.json").then(r => r.json()).then(j => konular = j).catch(() => {});
+const konularHazir = fetch("/assets/konular.json").then(r => r.json()).then(j => konular = j).catch(() => {});
 const gun = d => d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
+const SINAV = {
+  ekys: { belge: "ekys", ad: "EKYS", uyg: "CG Akademi EKYS", puan: (D, Y) => ({ etiket: "Puan", deger: (D * 1.25).toLocaleString("tr-TR", { maximumFractionDigits: 2 }) }) },
+  dgs: { belge: "main", ad: "DGS", uyg: "CG Akademi DGS", puan: (D, Y) => ({ etiket: "Net", deger: (D - Y / 4).toLocaleString("tr-TR", { maximumFractionDigits: 2 }) }) }
+};
+let veri = {}, aktif = "ekys";
+try { if (localStorage.getItem("cg-sinav") === "dgs") aktif = "dgs"; } catch (e) {}
 $("#ilr-cikis").onclick = () => cikis();
+document.querySelectorAll("[data-sek]").forEach(b => b.onclick = () => { aktif = b.dataset.sek; ciz(); });
+
+function siteTestleri() {
+  try { return JSON.parse(localStorage.getItem("cg-ekys-testler") || "{}"); } catch (e) { return {}; }
+}
+
+function ciz() {
+  document.querySelectorAll("[data-sek]").forEach(b => b.setAttribute("aria-selected", b.dataset.sek === aktif ? "true" : "false"));
+  const cf = SINAV[aktif], r = veri[aktif], panel = $("#ilr-panel");
+  const d = (r && r.data) || {};
+  const a = d.a || {}, e = d.e || [], gunler = d.d || {}, ts = d.ts || {}, lt = d.lt || {};
+  const cevaplar = Object.values(a), dogru = cevaplar.filter(x => x.ok).length;
+  let seri = 0, t = new Date();
+  if (!gunler[gun(t)]) t.setDate(t.getDate() - 1);
+  while (gunler[gun(t)] > 0) { seri++; t.setDate(t.getDate() - 1); }
+  const bugun = gun(new Date());
+  const tekrar = Object.values(lt).filter(c => (c.b || 0) >= 1 && c.due && c.due <= bugun).length;
+  const g14 = [];
+  for (let i = 13; i >= 0; i--) { const x = new Date(); x.setDate(x.getDate() - i); g14.push([x, gunler[gun(x)] || 0]); }
+  const mx = Math.max(10, ...g14.map(x => x[1]));
+  const den = e.slice().sort((p, q) => q.ts - p.ts);
+  const kl = Object.entries(ts).map(([k, v]) => ({ k, d: v[0]||0, y: v[1]||0 })).filter(x => x.d + x.y > 0)
+    .map(x => ({ ...x, n: x.d + x.y, o: x.d / (x.d + x.y) })).sort((p, q) => p.o - q.o || q.n - p.n);
+  let h = "";
+  if (!r) h += `<div class="ilr-bos"><p>Bu hesapta henüz ${cf.uyg} uygulamasından gelen ilerleme yok. Uygulamada aynı hesapla giriş yapınca burada görünür.</p></div>`;
+  h += `<div class="ilr-kartlar">
+    <div class="ilr-kart"><b>${cevaplar.length.toLocaleString("tr-TR")}</b><span>çözülen soru</span></div>
+    <div class="ilr-kart"><b>%${cevaplar.length ? Math.round(100 * dogru / cevaplar.length) : 0}</b><span>doğruluk</span></div>
+    <div class="ilr-kart"><b>${seri}</b><span>gün üst üste</span></div>
+    <div class="ilr-kart"><b>${tekrar}</b><span>bugün tekrar bekleyen</span></div></div>`;
+  h += `<h2>Son 14 gün</h2><div class="ilr-gunler">` + g14.map(([x, n]) =>
+    `<div class="ilr-gun" title="${x.toLocaleDateString("tr-TR")}: ${n} soru"><i style="height:${Math.round(100*n/mx)}%"></i><b>${n||""}</b><span>${x.getDate()}</span></div>`).join("") + `</div>`;
+  h += `<h2>Denemeler</h2>` + (den.length ? `<div class="ilr-tablo"><div class="ilr-sat ilr-bas"><span>Deneme</span><span>Tarih</span><span>D</span><span>Y</span><span>B</span><span>${cf.puan(0,0).etiket}</span></div>` +
+    den.map(x => { let D=0,Y=0,B=0; Object.values(x.s || {}).forEach(v => { D+=v[0]||0; Y+=v[1]||0; B+=v[2]||0; });
+      return `<div class="ilr-sat"><span>${esc(x.title)}</span><span>${new Date(x.ts).toLocaleDateString("tr-TR")}</span><span>${D}</span><span>${Y}</span><span>${B}</span><b>${cf.puan(D, Y).deger}</b></div>`; }).join("") + `</div>`
+    : `<p class="ilr-not">Henüz deneme çözülmemiş.</p>`);
+  h += `<h2>Konulara göre</h2><p class="ilr-not">Doğruluğu en düşük konular üstte; uygulamada önce bunların testlerine dön.</p>` + (kl.length ? kl.map(x =>
+    `<div class="ilr-konu"><span class="ik-ad">${esc(konular[x.k] || x.k)}</span><span class="ik-bar"><i style="width:${Math.round(x.o*100)}%" class="${x.o<0.5?"dusuk":x.o<0.75?"orta":"iyi"}"></i></span><span class="ik-say">%${Math.round(x.o*100)} · ${x.n} soru</span></div>`).join("")
+    : `<p class="ilr-not">Henüz konu testi çözülmemiş.</p>`);
+  if (aktif === "ekys") {
+    const st = Object.entries(siteTestleri()).sort((p, q) => (q[1].t||0) - (p[1].t||0));
+    if (st.length) h += `<h2>Sitede çözülen testler</h2>` + st.map(([k, v]) =>
+      `<div class="ilr-konu"><span class="ik-ad"><a href="/konu-anlatimi/${esc(k)}/">${esc(v.ad || k)}</a></span><span class="ik-bar"><i style="width:${Math.round(100*(v.son||0)/(v.top||20))}%" class="${(v.son||0)/(v.top||20)<0.5?"dusuk":(v.son||0)/(v.top||20)<0.75?"orta":"iyi"}"></i></span><span class="ik-say">son ${v.son}/${v.top} · en iyi ${v.best} · ${v.n} kez</span></div>`).join("");
+  }
+  if (r && r.updatedAt) h += `<p class="ilr-not">Uygulamadan son eşitleme: ${r.updatedAt.toLocaleString("tr-TR")}</p>`;
+  panel.innerHTML = h;
+}
 
 onUser(async u => {
   const durum = $("#ilr-durum"), ic = $("#ilr-icerik");
@@ -76,42 +120,14 @@ onUser(async u => {
     return;
   }
   durum.hidden = false; durum.innerHTML = "<p>İlerleme yükleniyor…</p>";
-  let r = null;
-  try { r = await uygulamaIlerlemesi(); } catch (e) { durum.innerHTML = "<p>İlerleme okunamadı. Sayfayı yenileyip tekrar dene.</p>"; return; }
-  await new Promise(res => setTimeout(res, 50));
-  const d = (r && r.data) || {};
-  const a = d.a || {}, e = d.e || [], gunler = d.d || {}, ts = d.ts || {}, lt = d.lt || {};
+  try {
+    const [ek, dg] = await Promise.all([uygulamaIlerlemesi("ekys"), uygulamaIlerlemesi("main"), konularHazir]);
+    veri = { ekys: ek, dgs: dg };
+  } catch (e) { durum.innerHTML = "<p>İlerleme okunamadı. Sayfayı yenileyip tekrar dene.</p>"; return; }
+  if (!veri.ekys && veri.dgs && aktif === "ekys" && !Object.keys(siteTestleri()).length) aktif = "dgs";
   $(".ilr-kim").textContent = (u.displayName || u.email || "") + (u.displayName && u.email ? " · " + u.email : "");
-  const cevaplar = Object.values(a), dogru = cevaplar.filter(x => x.ok).length;
-  $('[data-k="cozulen"]').textContent = cevaplar.length.toLocaleString("tr-TR");
-  $('[data-k="dogruluk"]').textContent = "%" + (cevaplar.length ? Math.round(100 * dogru / cevaplar.length) : 0);
-  let seri = 0, t = new Date();
-  if (!gunler[gun(t)]) t.setDate(t.getDate() - 1);
-  while (gunler[gun(t)] > 0) { seri++; t.setDate(t.getDate() - 1); }
-  $('[data-k="seri"]').textContent = seri;
-  const bugun = gun(new Date());
-  $('[data-k="tekrar"]').textContent = Object.values(lt).filter(c => (c.b || 0) >= 1 && c.due && c.due <= bugun).length;
-
-  const g14 = [];
-  for (let i = 13; i >= 0; i--) { const x = new Date(); x.setDate(x.getDate() - i); g14.push([x, gunler[gun(x)] || 0]); }
-  const mx = Math.max(10, ...g14.map(x => x[1]));
-  $("#ilr-gunler").innerHTML = g14.map(([x, n]) =>
-    `<div class="ilr-gun" title="${x.toLocaleDateString("tr-TR")}: ${n} soru"><i style="height:${Math.round(100*n/mx)}%"></i><b>${n||""}</b><span>${x.getDate()}</span></div>`).join("");
-
-  const den = e.slice().sort((p, q) => q.ts - p.ts);
-  $("#ilr-denemeler").innerHTML = den.length ? '<div class="ilr-tablo"><div class="ilr-sat ilr-bas"><span>Deneme</span><span>Tarih</span><span>D</span><span>Y</span><span>B</span><span>Net</span></div>' +
-    den.map(x => { let D=0,Y=0,B=0; Object.values(x.s || {}).forEach(v => { D+=v[0]||0; Y+=v[1]||0; B+=v[2]||0; });
-      return `<div class="ilr-sat"><span>${esc(x.title)}</span><span>${new Date(x.ts).toLocaleDateString("tr-TR")}</span><span>${D}</span><span>${Y}</span><span>${B}</span><b>${(D - Y/4).toLocaleString("tr-TR",{maximumFractionDigits:2})}</b></div>`; }).join("") + "</div>"
-    : '<p class="ilr-not">Henüz deneme çözülmemiş.</p>';
-
-  const kl = Object.entries(ts).map(([k, v]) => ({ k, d: v[0]||0, y: v[1]||0 })).filter(x => x.d + x.y > 0)
-    .map(x => ({ ...x, n: x.d + x.y, o: x.d / (x.d + x.y) })).sort((p, q) => p.o - q.o || q.n - p.n);
-  $("#ilr-konular").innerHTML = kl.length ? kl.map(x =>
-    `<div class="ilr-konu"><span class="ik-ad">${esc(konular[x.k] || x.k)}</span><span class="ik-bar"><i style="width:${Math.round(x.o*100)}%" class="${x.o<0.5?"dusuk":x.o<0.75?"orta":"iyi"}"></i></span><span class="ik-say">%${Math.round(x.o*100)} · ${x.n} soru</span></div>`).join("")
-    : '<p class="ilr-not">Henüz konu testi çözülmemiş.</p>';
-
-  $("#ilr-guncel").textContent = r && r.updatedAt ? "Uygulamadan son eşitleme: " + r.updatedAt.toLocaleString("tr-TR") : (r ? "" : "Bu hesapta henüz uygulama ilerlemesi yok. Uygulamada aynı hesapla giriş yapınca burada görünür.");
   durum.hidden = true; ic.hidden = false;
+  ciz();
 });
 </script>
 </main>
