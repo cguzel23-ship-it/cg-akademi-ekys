@@ -459,3 +459,25 @@
 
 /* Sınav seçimi: tıklananı hatırla */
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("[data-sinav]");if(!a)return;try{localStorage.setItem("cg-sinav",a.getAttribute("data-sinav"))}catch(_){}});
+
+/* Hesap: Giriş yap / İlerlemem düğmesi; Firebase yalnızca gerektiğinde yüklenir */
+(function () {
+  function yukle() { return import('/assets/hesap.js'); }
+  function mount() {
+    var end = document.querySelector('.nav-end') || document.querySelector('.nav');
+    if (!end || end.querySelector('.hesap-btn')) return;
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'hesap-btn';
+    var girisli = false;
+    try { girisli = localStorage.getItem('cg-giris') === '1'; } catch (e) {}
+    b.innerHTML = '<svg class="hb-ikon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><span class="hb-ad">' + (girisli ? 'İlerlemem' : 'Giriş yap') + '</span>'; b.setAttribute('aria-label', girisli ? 'İlerlemem' : 'Giriş yap');
+    b.addEventListener('click', function () {
+      if (girisli) { location.href = '/ilerleme/'; return; }
+      yukle().then(function (m) { m.girisAc(); });
+    });
+    var tema = end.querySelector('.theme-toggle');
+    end.insertBefore(b, tema || null);
+    if (girisli || document.querySelector('[data-hesap-sayfa]')) yukle();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { setTimeout(mount, 0); }); else setTimeout(mount, 0);
+})();
