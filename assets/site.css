@@ -554,3 +554,10 @@ html[data-theme=dark] .promo-bar{background:#0F0B08}
 .sinav-degis{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:var(--surface)}
 .sinav-degis:hover{color:var(--ink);border-color:var(--gold)}
 .sinav-degis-bar{padding:10px 0 0}
+
+.sinav-btn.sb-yakinda{opacity:.78;border-style:dashed}
+.sinav-btn.sb-yakinda .sb-ad{color:var(--sage)}
+.sinav-btn.sb-yakinda b{color:var(--gold-t);font-weight:600}
+.yakinda{padding:72px 0 90px;text-align:center}
+.yakinda h1{font-family:var(--f-serif);font-size:clamp(2rem,4vw,3rem);margin:16px 0 12px;color:var(--ink)}
+.yakinda p{max-width:560px;margin:0 auto 18px;color:var(--muted)}
