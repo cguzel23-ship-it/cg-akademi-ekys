@@ -75,7 +75,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,[
 
 /* Marka: CG monogram */
 .logo{display:flex;align-items:center;gap:12px;color:var(--ink);flex-shrink:0;font-family:var(--f-serif);font-weight:700;font-size:1.25rem;letter-spacing:-.01em;line-height:1}
-.brand-mark{width:42px;height:42px;border-radius:11px;background:#15181D;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(198,156,71,.75);box-shadow:0 4px 12px rgba(21,24,29,.22);flex-shrink:0;overflow:hidden}
+.brand-mark{width:42px;height:42px;border-radius:11px;background:#FCF6E9;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(198,156,71,.75);box-shadow:0 4px 12px rgba(59,42,30,.14);flex-shrink:0;overflow:hidden}
 .brand-mark img{width:100%;height:100%;display:block}
 .brand-text{white-space:nowrap}
 .brand-text em{font-style:normal;color:var(--gold)}
@@ -536,3 +536,4 @@ html[data-theme=dark] .promo-bar{background:#0F0B08}
 @media(max-width:560px){.hx h1{font-size:2.1rem;margin:16px 0 14px}.hx .hero-cta{flex-direction:column;gap:10px;margin-bottom:26px}.hx .hero-cta .btn{width:100%}.hero-meta{gap:10px}.hero-meta strong{font-size:.98rem}.hero-meta span{font-size:.72rem;line-height:1.35}.book-cover{padding:22px 16px 20px 20px}.book-top-bar{padding-right:36px;flex-wrap:wrap}.book-title{font-size:1.05rem}.timer-row,.cd-units{gap:6px}.calendar-plate,.cd{padding:20px 16px}.quote-strip p{font-size:.92rem}.quote-strip span{display:block;height:0;overflow:hidden;margin:4px 0}.calc-row-top{flex-wrap:wrap}.total-net-display{font-size:2.4rem}}
 @media(max-width:420px){.hero-cta .btn{width:100%}.trust{gap:10px}.btn{white-space:normal;text-align:center}.logo{font-size:1.12rem;gap:10px}.brand-mark{width:38px;height:38px}.nav{gap:10px}.mnav summary{padding:8px 10px}.footergrid{grid-template-columns:1fr}.app-list{grid-template-columns:1fr}.mode-tab{padding:5px 9px}}
 @media(max-width:360px){.logo .brand-text{display:none}}
+.logo-ana{display:inline-block;border-radius:14px;overflow:hidden;box-shadow:0 6px 18px rgba(59,42,30,.10);margin-bottom:8px}.logo-ana img{display:block;width:200px;height:auto}
