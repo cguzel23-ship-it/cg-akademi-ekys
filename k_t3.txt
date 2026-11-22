@@ -1,10 +1,14 @@
-Deney başlıyor.
-İlk şoklarda köpek sadece irkiliyor. Sonra havlamaya başlıyor. Sonra ızgaranın üstünde sıçrıyor. Sonra uluyor.
-Katılımcıların tepkileri kayda geçiyor. Bazıları yerinde duramıyor, bir o yana bir bu yana yürüyor. Bazıları hızlı hızlı soluyor. Bazıları köpeğe el işaretiyle doğru tarafı göstermeye çalışıyor, sanki ona yardım edebilecekmiş gibi.
-Ve pek çoğu ağlıyor.
-Duraksadıklarında araştırmacı, Milgram'daki gibi sakin cümlelerle devam etmelerini istiyor.
-Peki sonuç?
-Yirmi altı kişiden yirmisi, en yüksek seviyeye kadar düğmeye basmaya devam ediyor.
-Erkeklerde on üç kişiden yedisi sonuna kadar gidiyor. Yaklaşık yüzde elli dört. Bu, Milgram'ın kendi deneyindeki sonuca çok yakın.
 Kadınlarda ise sonuç daha da çarpıcı. On üç kadının on üçü de sonuna kadar gidiyor. Hiçbiri durmuyor.
 Ağlayanlar da düğmeye basmaya devam ediyor. Gözyaşı ile itaat aynı anda yaşanıyor.
+Peki neden?
+Milgram buna "aracı olma hali" demişti. İnsan bir otoritenin emrine girdiğinde, kendini olayların sahibi olarak değil, başkasının iradesini uygulayan bir araç olarak görmeye başlar. Sorumluluk, düğmeye basan elden, talimatı veren ağza geçer.
+Köpek deneyinde de katılımcılar kendilerini böyle savunuyordu. Bir kısmı köpeği kurtarmak için düğmeye daha kısa basmaya çalışıyordu, ama şokun süresi bir zamanlayıcıyla ayarlanmıştı. Yani vicdanlarını rahatlatacak küçük bir yol arıyorlardı. Ama araştırmacıya "hayır, devam etmiyorum" demek, çoğu için o küçük yoldan çok daha zordu.
+Söylentiye dönelim: "İnsanlar acıyı gerçekten görse dururdu."
+Hüküm: Yanlış.
+Bu deneyde acı sahte değildi. Katılımcılar onu görüyor, duyuyor ve üzülüyordu. Yine de büyük çoğunluk devam etti. Yani Milgram'a yöneltilen "herkes şokun sahte olduğunu biliyordu" itirazı, bu deneyle ciddi biçimde zayıfladı.
+Ama dosyayı kapatmadan iki uyarı.
+Birincisi, örneklem çok küçük. Yirmi altı kişi. Kadınlarla erkekler arasındaki fark ilginç, ama bu kadar az kişiyle kesin bir sonuç çıkarmak doğru olmaz. "Kadınlar daha itaatkârdır" demek, bu deneyin söylemediği bir şeyi söylemek olur.
+İkincisi, bu deney bugün yapılamaz. Bir hayvana bilerek acı çektirmek, günümüzün etik kurallarına göre kabul edilemez. Bu dosyayı açmamızın sebebi deneyi övmek değil, ondan ders çıkarmak.
+Peki ders ne?
+Katılımcılar kötü insanlar değildi. Ağladılar, köpeğe yardım etmeye çalıştılar. Vicdanları çalışıyordu.
+Ama vicdan ile itaat çatıştığında, çoğu zaman itaat kazandı.
