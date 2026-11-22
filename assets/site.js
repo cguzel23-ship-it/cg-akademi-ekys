@@ -1,6 +1,6 @@
 /* CG Akademi ortak küçük betik: tema, geri sayım, haftanın konusu, bölüm listeleri, filtre, mağaza, örnek soru, net hesaplama */
 
-/* Tema: kayıtlı tercih > sistem tercihi (açık) > koyu */
+/* Tema: varsayılan açık kitap teması; koyu tema yalnız kullanıcı seçerse */
 (function () {
   'use strict';
   var KEY = 'cg-tema', root = document.documentElement;
@@ -8,14 +8,12 @@
   function save(v) { try { localStorage.setItem(KEY, v); } catch (e) { /* gizli mod vb. */ } }
   function initial() {
     var s = stored();
-    if (s === 'light' || s === 'dark') return s;
-    try { if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) return 'light'; } catch (e) {}
-    return 'dark';
+    return s === 'dark' ? 'dark' : 'light';
   }
   function apply(t) {
     root.setAttribute('data-theme', t);
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', t === 'light' ? '#ffffff' : '#0e1116');
+    if (meta) meta.setAttribute('content', t === 'dark' ? '#17110C' : '#F7F3EB');
     var btn = document.querySelector('.theme-toggle');
     if (btn) {
       btn.setAttribute('aria-pressed', t === 'dark' ? 'true' : 'false');
@@ -43,7 +41,7 @@
     if (cta) end.appendChild(cta);
     end.appendChild(btn);
     if (mnav) end.appendChild(mnav);
-    apply(root.getAttribute('data-theme') || 'dark');
+    apply(root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount); else mount();
 })();
@@ -310,8 +308,146 @@
     });
   }
 
+  /* Kitap defteri: sekmeler, işaretlenebilir günlük görevler (cihazda saklanır), ilerleme halkası */
+  function today() { var d = new Date(); return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); }
+  function notebook() {
+    document.querySelectorAll('[data-notebook]').forEach(function (nb) {
+      var tabs = nb.querySelectorAll('[role=tab]'), lists = nb.querySelectorAll('[data-nb-list]');
+      var title = nb.querySelector('[data-nb-title]'), sum = nb.querySelector('[data-nb-summary]');
+      var ring = nb.querySelector('[data-nb-ring]'), pct = nb.querySelector('[data-nb-pct]');
+      var C = 150.8, day = today(), tabKey = 'cg-defter-sekme-' + (nb.getAttribute('data-notebook') || 'ana');
+      function stats(list) {
+        var boxes = list.querySelectorAll('input[type=checkbox]'), done = 0;
+        boxes.forEach(function (b) { if (b.checked) done++; });
+        var p = boxes.length ? Math.round(done / boxes.length * 100) : 0;
+        if (sum) sum.textContent = done + ' / ' + boxes.length + ' görev tamamlandı';
+        if (pct) pct.textContent = '%' + p;
+        if (ring) ring.style.strokeDashoffset = String(C - C * p / 100);
+      }
+      lists.forEach(function (list) {
+        var key = 'cg-defter-' + list.getAttribute('data-nb-list') + '-' + day, state = [];
+        try { state = JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) { state = []; }
+        var boxes = list.querySelectorAll('input[type=checkbox]');
+        boxes.forEach(function (b, i) {
+          var item = b.closest('.notebook-item');
+          if (state.indexOf(i) > -1) { b.checked = true; if (item) item.classList.add('done'); }
+          b.addEventListener('change', function () {
+            if (item) item.classList.toggle('done', b.checked);
+            var arr = []; boxes.forEach(function (x, j) { if (x.checked) arr.push(j); });
+            try { localStorage.setItem(key, JSON.stringify(arr)); } catch (e) {}
+            stats(list);
+          });
+        });
+      });
+      function select(tab, focus) {
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+          t.tabIndex = on ? 0 : -1;
+          var l = document.getElementById(t.getAttribute('aria-controls'));
+          if (l) { l.hidden = !on; if (on) { if (title) title.textContent = l.getAttribute('data-title') || ''; stats(l); } }
+        });
+        if (focus) tab.focus();
+        try { localStorage.setItem(tabKey, tab.id); } catch (e) {}
+      }
+      tabs.forEach(function (t, i) {
+        t.addEventListener('click', function () { select(t); });
+        t.addEventListener('keydown', function (e) {
+          var n = null;
+          if (e.key === 'ArrowRight') n = tabs[(i + 1) % tabs.length];
+          if (e.key === 'ArrowLeft') n = tabs[(i - 1 + tabs.length) % tabs.length];
+          if (n) { e.preventDefault(); select(n, true); }
+        });
+      });
+      var first = null;
+      try { var sid = localStorage.getItem(tabKey); if (sid) first = nb.querySelector('#' + sid); } catch (e) {}
+      if (tabs.length) select(first || nb.querySelector('[role=tab][aria-selected=true]') || tabs[0]);
+      else if (lists.length) stats(lists[0]);
+    });
+  }
+
+  /* Pomodoro etüt sayacı (yalnız bu sayfadaki defter aracı) */
+  function pomodoro() {
+    document.querySelectorAll('[data-pomo]').forEach(function (box) {
+      var disp = box.querySelector('[data-pomo-time]'), tg = box.querySelector('[data-pomo-toggle]'), rs = box.querySelector('[data-pomo-reset]');
+      var st = box.querySelector('[data-pomo-status]');
+      var total = (+box.getAttribute('data-pomo') || 25) * 60, left = total, end = 0, iv = null;
+      function two(n) { return n < 10 ? '0' + n : String(n); }
+      function render() { disp.textContent = two(Math.floor(left / 60)) + ':' + two(left % 60); }
+      function stop() { clearInterval(iv); iv = null; }
+      function tick() {
+        left = Math.max(0, Math.ceil((end - Date.now()) / 1000));
+        render();
+        if (left === 0) { stop(); tg.textContent = 'Bitti'; tg.setAttribute('aria-pressed', 'false'); if (st) st.textContent = 'Etüt bitti. Kısa bir mola ver.'; }
+      }
+      tg.addEventListener('click', function () {
+        if (iv) { stop(); left = Math.max(0, Math.ceil((end - Date.now()) / 1000)); render(); tg.textContent = 'Devam'; tg.setAttribute('aria-pressed', 'false'); if (st) st.textContent = 'Sayaç duraklatıldı.'; return; }
+        if (left === 0) left = total;
+        end = Date.now() + left * 1000; iv = setInterval(tick, 250);
+        tg.textContent = 'Duraklat'; tg.setAttribute('aria-pressed', 'true'); if (st) st.textContent = 'Etüt başladı.';
+      });
+      rs.addEventListener('click', function () { stop(); left = total; render(); tg.textContent = 'Başlat'; tg.setAttribute('aria-pressed', 'false'); if (st) st.textContent = 'Sayaç sıfırlandı.'; });
+      render();
+    });
+  }
+
+  /* Net defteri: kaydırıcı + sayı girişi, koyu özet kutu. 4 yanlış 1 doğruyu götürür. */
+  var LEDGER = {
+    dgs: { sub: 'DGS · 100 soru üzerinden', parts: [['Sayısal Bölüm', 50, 'Matematik, geometri, sayısal mantık'], ['Sözel Bölüm', 50, 'Türkçe, sözel mantık']] },
+    tyt: { sub: 'TYT · 120 soru üzerinden', parts: [['Türkçe', 40, ''], ['Sosyal Bilimler', 20, ''], ['Temel Matematik', 40, ''], ['Fen Bilimleri', 20, '']] }
+  };
+  function f2(n) { return n.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+  function ledger() {
+    document.querySelectorAll('[data-ledger]').forEach(function (box) {
+      var rows = box.querySelector('[data-lg-rows]'), tabs = box.querySelectorAll('[data-lg-tab]');
+      var out = { net: box.querySelector('[data-lg-net]'), d: box.querySelector('[data-lg-d]'), y: box.querySelector('[data-lg-y]'), b: box.querySelector('[data-lg-b]'), sub: box.querySelector('[data-lg-sub]') };
+      var state = {}, kind = 'dgs', uid = 0;
+      Object.keys(LEDGER).forEach(function (k) { state[k] = LEDGER[k].parts.map(function () { return { d: 0, y: 0 }; }); });
+      function totals() {
+        var set = LEDGER[kind], D = 0, Y = 0, M = 0;
+        set.parts.forEach(function (p, i) { D += state[kind][i].d; Y += state[kind][i].y; M += p[1]; });
+        out.net.textContent = f2(D - Y / 4); out.d.textContent = D; out.y.textContent = Y; out.b.textContent = M - D - Y;
+      }
+      function build() {
+        var set = LEDGER[kind];
+        if (out.sub) out.sub.textContent = set.sub + ' · 4 yanlış 1 doğruyu götürür';
+        rows.innerHTML = set.parts.map(function (p, i) {
+          var v = state[kind][i], id = 'lg' + (++uid);
+          function ctl(k, lab) {
+            return '<div class="input-group"><label for="' + id + k + 'n"><span>' + lab + '</span><span>En çok ' + p[1] + '</span></label><div class="input-controls">' +
+              '<input type="range" min="0" max="' + p[1] + '" step="1" value="' + v[k] + '" data-i="' + i + '" data-k="' + k + '" aria-label="' + esc(p[0]) + ' ' + lab.toLowerCase() + ' kaydırıcısı">' +
+              '<input id="' + id + k + 'n" type="number" inputmode="numeric" min="0" max="' + p[1] + '" step="1" value="' + v[k] + '" data-i="' + i + '" data-k="' + k + '"></div></div>';
+          }
+          return '<div class="calc-row" data-row="' + i + '"><div class="calc-row-top"><strong>' + esc(p[0]) + ' <small>(' + p[1] + ' soru' + (p[2] ? ' · ' + esc(p[2]) : '') + ')</small></strong><span class="calc-net-pill" data-row-net>' + f2(v.d - v.y / 4) + ' net</span></div>' +
+            '<div class="slider-grid">' + ctl('d', 'Doğru') + ctl('y', 'Yanlış') + '</div></div>';
+        }).join('');
+        totals();
+      }
+      function update(el, commit) {
+        var i = +el.getAttribute('data-i'), k = el.getAttribute('data-k'), max = LEDGER[kind].parts[i][1];
+        if (el.value === '' && !commit) return;
+        var v = parseInt(el.value, 10); if (isNaN(v) || v < 0) v = 0; if (v > max) v = max;
+        var s = state[kind][i]; s[k] = v;
+        var o = k === 'd' ? 'y' : 'd'; if (s.d + s.y > max) s[o] = max - v;
+        var row = rows.querySelector('[data-row="' + i + '"]');
+        row.querySelectorAll('input').forEach(function (inp) { if (inp !== el || commit || inp.type === 'range') inp.value = s[inp.getAttribute('data-k')]; });
+        row.querySelector('[data-row-net]').textContent = f2(s.d - s.y / 4) + ' net';
+        totals();
+      }
+      rows.addEventListener('input', function (e) { if (e.target.matches('input')) update(e.target, e.target.type === 'range'); });
+      rows.addEventListener('change', function (e) { if (e.target.matches('input')) update(e.target, true); });
+      tabs.forEach(function (t) {
+        t.addEventListener('click', function () {
+          tabs.forEach(function (x) { x.setAttribute('aria-selected', x === t ? 'true' : 'false'); });
+          kind = t.getAttribute('data-lg-tab'); build();
+        });
+      });
+      build();
+    });
+  }
+
   function init() {
-    countdown(); thisWeek(); areas(); filters(); shop(); quiz(); examCountdowns(); phone(); netcalc();
+    countdown(); thisWeek(); areas(); filters(); shop(); quiz(); examCountdowns(); phone(); netcalc(); notebook(); pomodoro(); ledger();
     var y = document.querySelector('[data-year]');
     if (y) y.textContent = String(new Date().getFullYear());
   }
