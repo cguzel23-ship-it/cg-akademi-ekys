@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EKYS Ücretsiz Deneme Sınavı: 3 Deneme, 240 Soru | CG Akademi</title>
+<meta name="description" content="EKYS 2027 için ücretsiz 3 deneme: 80 soru, 150 dakika, ÖSYM üslubunda özgün sorular. Sitede çöz, sonucunu ve açıklamaları gör; PDF indir.">
+<link rel="canonical" href="https://cgakademi.com/denemeler/">
+<meta name="theme-color" content="#F7F3EB">
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CG Akademi">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:url" content="https://cgakademi.com/denemeler/">
+<meta property="og:title" content="EKYS Ücretsiz Denemeler | CG Akademi">
+<meta property="og:description" content="EKYS, AGS ve YKS için ücretsiz kaynaklar: 13 haftalık çalışma planı, video dersler, Mevzuat Tuzakları PDF ve örnek sorular.">
+<meta property="og:image" content="https://cgakademi.com/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Lora:ital,wght@0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem("cg-tema");document.documentElement.setAttribute("data-theme",t==="dark"?"dark":"light")}catch(e){document.documentElement.setAttribute("data-theme","light")}</script>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a href="#main" class="skip">İçeriğe geç</a>
+<header class="nav-shell"><div class="wrap nav">
+<a class="logo" href="/" aria-label="CG Akademi ana sayfa"><span class="brand-mark" aria-hidden="true"><img src="/assets/cg-logo.svg" width="40" height="40" alt=""></span><span class="brand-text">CG <em>Akademi</em></span></a>
+<nav class="menu" aria-label="Ana menü"><a href="/ekys-merkezi/">EKYS</a><a href="/konu-anlatimi/">Konu Anlatımı</a><a href="/ags/">AGS</a><a href="/dgs/">DGS</a><a href="/uygulamalar/#yks">YKS</a><a href="/video-dersler/">Video Dersler</a><a href="/ucretsiz-kaynaklar/">Ücretsiz Kaynaklar</a><a href="/magaza/">Mağaza</a><a href="/uygulamalar/">Uygulamalar</a></nav>
+<a class="btn primary sm nav-cta" href="/plan/">EKYS'ye Hazırlanmaya Başla</a>
+<details class="mnav"><summary aria-label="Menü"><span class="bars" aria-hidden="true">☰</span>Menü</summary>
+<nav class="mnav-panel" aria-label="Mobil menü"><a href="/ekys-merkezi/">EKYS</a><a href="/konu-anlatimi/">Konu Anlatımı</a><a href="/ags/">AGS</a><a href="/dgs/">DGS</a><a href="/uygulamalar/#yks">YKS</a><a href="/video-dersler/">Video Dersler</a><a href="/ucretsiz-kaynaklar/">Ücretsiz Kaynaklar</a><a href="/magaza/">Mağaza</a><a href="/uygulamalar/">Uygulamalar</a><a class="btn primary" href="/plan/">EKYS'ye Hazırlanmaya Başla</a></nav></details>
+</div></header>
+<main id="main">
+<section class="page-hero"><div class="wrap"><div class="crumbs"><a href="/">Ana sayfa</a> › <a href="/ekys-merkezi/">EKYS</a></div><span class="pill">Ücretsiz</span><h1>EKYS Ücretsiz Denemeler</h1><p class="lead">3 deneme, her biri 80 soru ve 150 dakika. Sitede süre tutarak çöz, bitirince alan alan sonucunu ve her sorunun açıklamasını gör. İstersen PDF'i indirip kâğıtta çöz.</p>
+<div class="dn-cards" id="dnCards"></div>
+<p class="muted" style="font-size:.9rem;margin-top:10px">Sorular CG Akademi tarafından ÖSYM soru üslubuyla özgün olarak hazırlanmıştır. Yanlış doğruyu götürmez.</p></div></section>
+<section class="section" id="dnSinav" hidden><div class="wrap">
+<div class="dn-bar"><strong id="dnBaslik"></strong><span id="dnSure" class="dn-sure">150:00</span><span id="dnSay" class="muted"></span><button class="btn primary sm" id="dnBitir" type="button">Bitir ve sonucu gör</button></div>
+<div id="dnSonuc"></div><div id="dnList"></div>
+<div style="text-align:center;margin:18px 0"><button class="btn primary" id="dnBitir2" type="button">Bitir ve sonucu gör</button></div>
+</div></section>
+</main>
+<style>
+.dn-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:20px}
+.dn-card{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--card,#fff)}
+.dn-card h3{margin:0 0 6px}.dn-card .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.dn-bar{position:sticky;top:0;z-index:6;display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:14px}
+.dn-sure{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1.1rem}
+.dn-h{font-family:'Playfair Display',serif;font-size:1.3rem;margin:22px 0 10px;color:var(--accent-t)}
+.dn-q{border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 12px;background:var(--card,#fff)}
+.dn-q .t{font-weight:600;line-height:1.55;white-space:pre-line;margin:0 0 10px}
+.dn-o{display:block;width:100%;text-align:left;border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin:5px 0;background:transparent;font:inherit;color:inherit;cursor:pointer}
+.dn-o b{display:inline-block;width:26px}.dn-o.sel{border-color:var(--blue);background:rgba(60,90,140,.08)}
+.dn-o.ok{background:#e6f3ea;border-color:#2e8b57;color:#1d4d32}.dn-o.no{background:#fbe9e9;border-color:#c0392b;color:#6b1d16}
+.dn-e{margin-top:10px;padding:12px 14px;border-left:3px solid var(--blue);background:rgba(0,0,0,.03);border-radius:6px;line-height:1.55}
+.dn-res{border:2px solid var(--blue);border-radius:14px;padding:18px;margin-bottom:18px}
+.dn-res table{width:100%;border-collapse:collapse;margin-top:10px}.dn-res td,.dn-res th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}
+</style>
+<script>
+(function(){
+var DATA=null,cur=null,ans={},bitti=false,t0=0,tmr=null;
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+function kaydet(){try{localStorage.setItem('cg-dn-'+cur,JSON.stringify({ans:ans,t0:t0,bitti:bitti}))}catch(e){}}
+function kart(){var h='';[1,2,3].forEach(function(n){var st=null;try{st=JSON.parse(localStorage.getItem('cg-dn-'+n)||'null')}catch(e){}
+ var dur=st?(st.bitti?'Tamamlandı':'Devam ediyor'):'';
+ h+='<div class="dn-card"><h3>Deneme '+n+'</h3><div class="muted">80 soru · 150 dk'+(dur?' · <b>'+dur+'</b>':'')+'</div><div class="row"><button class="btn primary sm" data-n="'+n+'" type="button">'+(st&&!st.bitti?'Devam et':(st?'Sonucu gör':'Sitede çöz'))+'</button><a class="btn ghost sm" href="/indir/ekys-ucretsiz-deneme-'+n+'.pdf" download>PDF indir</a>'+(st?'<button class="btn ghost sm" data-r="'+n+'" type="button">Sıfırla</button>':'')+'</div></div>'});
+ var c=document.getElementById('dnCards');c.innerHTML=h;
+ c.querySelectorAll('[data-n]').forEach(function(b){b.onclick=function(){ac(+b.dataset.n)}});
+ c.querySelectorAll('[data-r]').forEach(function(b){b.onclick=function(){if(confirmReset(b))return}});}
+function confirmReset(b){if(b.dataset.ok){try{localStorage.removeItem('cg-dn-'+b.dataset.r)}catch(e){}kart();return}b.dataset.ok=1;b.textContent='Emin misin? Tekrar bas';return true}
+function ac(n){cur=n;ans={};bitti=false;t0=Date.now();var st=null;try{st=JSON.parse(localStorage.getItem('cg-dn-'+n)||'null')}catch(e){}
+ if(st){ans=st.ans||{};bitti=!!st.bitti;t0=st.t0||Date.now()}
+ document.getElementById('dnSinav').hidden=false;document.getElementById('dnBaslik').textContent='Deneme '+n;ciz();
+ clearInterval(tmr);tmr=setInterval(sure,1000);sure();kaydet();document.getElementById('dnSinav').scrollIntoView({behavior:'smooth'})}
+function sure(){var el=document.getElementById('dnSure');if(bitti){el.textContent='Bitti';return}var k=150*60-Math.floor((Date.now()-t0)/1000);if(k<=0){bitir();return}el.textContent=Math.floor(k/60)+':'+('0'+k%60).slice(-2)}
+function ciz(){var Q=DATA.denemeler[cur],h='',al=-1;
+ Q.forEach(function(q,i){if(q.al!=al){al=q.al;h+='<div class="dn-h">'+esc(DATA.alanlar[al])+'</div>'}
+  var s=ans[i];h+='<article class="dn-q" data-i="'+i+'"><p class="t">'+(i+1)+'. '+esc(q.t)+'</p>'+q.o.map(function(o,j){var c='dn-o';if(bitti){if(j==q.c)c+=' ok';else if(s===j)c+=' no'}else if(s===j)c+=' sel';return '<button type="button" class="'+c+'" data-j="'+j+'"><b>'+'ABCDE'[j]+')</b>'+esc(o)+'</button>'}).join('')+(bitti?'<div class="dn-e"><strong>Doğru cevap: '+'ABCDE'[q.c]+'</strong> · '+esc(q.e)+'</div>':'')+'</article>'});
+ document.getElementById('dnList').innerHTML=h;say();if(bitti)sonuc();else document.getElementById('dnSonuc').innerHTML=''}
+function say(){document.getElementById('dnSay').textContent=Object.keys(ans).length+' / 80 işaretli';['dnBitir','dnBitir2'].forEach(function(id){document.getElementById(id).style.display=bitti?'none':''})}
+function sonuc(){var Q=DATA.denemeler[cur],r=DATA.alanlar.map(function(){return[0,0,0]});Q.forEach(function(q,i){var a=ans[i];if(a===undefined)r[q.al][2]++;else if(a==q.c)r[q.al][0]++;else r[q.al][1]++});
+ var d=0,y=0,b=0;r.forEach(function(x){d+=x[0];y+=x[1];b+=x[2]});
+ document.getElementById('dnSonuc').innerHTML='<div class="dn-res"><h3 style="margin:0">Sonucun: '+d+' doğru / 80</h3><div class="muted">'+y+' yanlış · '+b+' boş · EKYS\'de yanlış doğruyu götürmez; puan yüzde '+Math.round(d/80*100)+' başarıya karşılık gelir.</div><table><tr><th>Alan</th><th>Doğru</th><th>Yanlış</th><th>Boş</th></tr>'+r.map(function(x,i){return '<tr><td>'+DATA.alanlar[i]+'</td><td>'+x[0]+'</td><td>'+x[1]+'</td><td>'+x[2]+'</td></tr>'}).join('')+'</table><p class="muted" style="margin:10px 0 0">Aşağıda her sorunun doğru cevabı ve açıklaması var.</p></div>'}
+function bitir(){bitti=true;kaydet();clearInterval(tmr);sure();ciz();kart();document.getElementById('dnSonuc').scrollIntoView({behavior:'smooth'})}
+document.getElementById('dnList').addEventListener('click',function(e){if(bitti)return;var b=e.target.closest('.dn-o');if(!b)return;var a=b.closest('.dn-q'),i=+a.dataset.i,j=+b.dataset.j;
+ if(ans[i]===j)delete ans[i];else ans[i]=j;a.querySelectorAll('.dn-o').forEach(function(x){x.classList.toggle('sel',ans[i]===+x.dataset.j)});say();kaydet()});
+['dnBitir','dnBitir2'].forEach(function(id){var b=document.getElementById(id);b.onclick=function(){var bos=80-Object.keys(ans).length;if(bos>0&&!b.dataset.ok){b.dataset.ok=1;b.textContent=bos+' boş soru var. Yine de bitirmek için tekrar bas';return}bitir()}});
+fetch('/data/denemeler.json').then(function(r){return r.json()}).then(function(d){DATA=d;kart()});
+})();
+</script>
+
+<footer class="footer"><div class="wrap"><div class="footergrid">
+<div><a class="logo-ana" href="/" aria-label="CG Akademi ana sayfa"><img src="/assets/cg-logo-ana.svg" width="200" height="160" alt="CG Akademi logosu"></a>
+<p>EKYS, AGS, DGS ve YKS adayları için ücretsiz konu anlatımı, video dersler, çalışma planları ve dijital kaynaklar. Hedefine planlı hazırlan.</p>
+<a class="f-mail" href="mailto:destek@cgakademi.com">destek@cgakademi.com</a></div>
+<div><h4>Keşfet</h4><a href="/ekys-merkezi/">EKYS Hazırlık Merkezi</a><a href="/plan/">13 haftalık plan</a><a href="/video-dersler/">Video dersler</a><a href="/ucretsiz-kaynaklar/">Ücretsiz kaynaklar</a><a href="/magaza/">Mağaza</a></div>
+<div><h4>Sınavlar</h4><a href="/ekys-merkezi/">EKYS</a><a href="/konu-anlatimi/">Konu Anlatımı</a><a href="/ags/">AGS</a><a href="/dgs/">DGS</a><a href="/uygulamalar/#yks">YKS (TYT-AYT)</a><a href="/uygulamalar/">Uygulamalar</a></div>
+<div><h4>CG Akademi</h4><a href="https://www.youtube.com/@cgakademi" target="_blank" rel="noopener">YouTube (EKYS)</a><a href="https://www.youtube.com/@CGAkademiDGS" target="_blank" rel="noopener">YouTube (DGS)</a><a href="https://www.instagram.com/cg_akademi_/" target="_blank" rel="noopener">Instagram</a><a href="https://t.me/cgakademi_ekys" target="_blank" rel="noopener">Telegram</a><a href="/hakkimizda/">Hakkımızda</a><a href="/iletisim/">İletişim</a><a href="/gizlilik.html">Gizlilik</a></div>
+</div>
+<div class="fine"><span>© <span data-year>2026</span> CG Akademi · cgakademi.com. Bağımsız bir hazırlık kaynağıdır; ÖSYM veya MEB ile bağlantısı yoktur.</span><nav class="legal-links" aria-label="Yasal bağlantılar"><a href="/gizlilik.html">Gizlilik</a><a href="/kullanim-kosullari/">Kullanım Koşulları</a><a href="https://cg-akademi-dgs.web.app/gizlilik/" target="_blank" rel="noopener">Uygulama Gizlilik Politikası</a><a href="https://cg-akademi-dgs.web.app/hesap-silme/" target="_blank" rel="noopener">Hesap Silme</a></nav></div>
+</div></footer>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "93b854bfc5604802a038ee3346469f2a"}'></script></body>
+</html>
