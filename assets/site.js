@@ -455,7 +455,7 @@
 })();
 
 /* Üst duyuru şeridi: ücretsiz örnek paket + Tam Paket */
-(function(){try{if(/^\/(paket|ekys)\//.test(location.pathname))return;var b=document.createElement('div');b.className='promo-bar';b.innerHTML='🎁 <a href="/paket/">EKYS çıkmış sorulardan örnekler: ücretsiz PDF indir</a>';document.body.insertBefore(b,document.body.firstChild);}catch(e){}})();
+(function(){try{if(/^\/(paket|ekys|cikmis-sorular)\//.test(location.pathname))return;var b=document.createElement('div');b.className='promo-bar';b.innerHTML='🎁 <a href="/cikmis-sorular/">EKYS çıkmış soruların tamamı (245 soru) artık ücretsiz: çöz ya da PDF indir</a>';document.body.insertBefore(b,document.body.firstChild);}catch(e){}})();
 
 /* Sınav seçimi: tıklananı hatırla */
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("[data-sinav]");if(!a)return;try{localStorage.setItem("cg-sinav",a.getAttribute("data-sinav"))}catch(_){}});
