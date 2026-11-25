@@ -34,13 +34,13 @@
 <nav class="mnav-panel" aria-label="Mobil menü"><a href="/ekys-merkezi/">EKYS</a><a href="/konu-anlatimi/">Konu Anlatımı</a><a href="/ags/">AGS</a><a href="/dgs/">DGS</a><a href="/uygulamalar/#yks">YKS</a><a href="/video-dersler/">Video Dersler</a><a href="/ucretsiz-kaynaklar/">Ücretsiz Kaynaklar</a><a href="/magaza/">Mağaza</a><a href="/uygulamalar/">Uygulamalar</a><a class="btn primary" href="/plan/">EKYS'ye Hazırlanmaya Başla</a></nav></details>
 </div></header>
 <main id="main">
-<section class="page-hero"><div class="wrap"><div class="crumbs"><a href="/">Ana sayfa</a> › <a href="/ekys-merkezi/">EKYS</a></div><span class="pill">Ücretsiz</span><h1>EKYS Çıkmış Sorular 2021–2026</h1><p class="lead">245 sorunun tamamı: 5 alan, 6 sınav. Şıkkı seç, doğrusunu ve açıklamasını hemen gör. Alanların video çözümleri aşağıda.</p><div class="hero-cta"><a class="btn primary" href="/indir/ekys-cikmis-sorular-2021-2026.pdf" download>245 soruluk PDF'i indir</a><a class="btn ghost" href="#videolar">Video çözümler</a></div><p class="muted" style="font-size:.9rem;margin-top:12px">Sorular aday bildirimleri ve ÖSYM'nin açık yayımladığı sorulardan yeniden yazılmıştır. Mevzuat cevapları güncel mevzuata göredir.</p></div></section>
+<section class="page-hero"><div class="wrap"><div class="crumbs"><a href="/">Ana sayfa</a> › <a href="/ekys-merkezi/">EKYS</a></div><span class="pill">Ücretsiz</span><h1>EKYS Çıkmış Sorular 2021–2026</h1><p class="lead">245 sorunun tamamı: 5 alan, 6 sınav. Şıkkı seç, doğrusunu ve açıklamasını hemen gör. Yıllara göre video çözümleri aşağıda.</p><div class="hero-cta"><a class="btn primary" href="/indir/ekys-cikmis-sorular-2021-2026.pdf" download>245 soruluk PDF'i indir</a><a class="btn ghost" href="#videolar">Video çözümler</a></div><p class="muted" style="font-size:.9rem;margin-top:12px">Sorular aday bildirimleri ve ÖSYM'nin açık yayımladığı sorulardan yeniden yazılmıştır. Mevzuat cevapları güncel mevzuata göredir.</p></div></section>
 <section class="section"><div class="wrap">
 <div class="cs-filters"><div class="cs-row" id="csAlan"></div><div class="cs-row" id="csYil"></div><p class="muted" id="csSay" style="margin:6px 0 0"></p></div>
 <div id="csList"></div>
 <div style="text-align:center;margin-top:18px"><button class="btn ghost" id="csMore" type="button">Daha fazla göster</button></div>
 </div></section>
-<section class="section alt" id="videolar"><div class="wrap"><div class="section-head"><span class="eyebrow">Video çözümler</span><h2>Alan alan, sorunun tamamı çözümlü</h2><p>Her video bir alanın 2021–2026 sorularını yıl yıl çözer.</p></div><div class="cs-videos" id="csVid"></div></div></section>
+<section class="section alt" id="videolar"><div class="wrap"><div class="section-head"><span class="eyebrow">Video çözümler</span><h2>Yıl yıl, sorunun tamamı çözümlü</h2><p>Her video bir sınav yılının sorularının tamamını çözer. Yeni yıllar sırayla eklenir.</p></div><div class="cs-videos" id="csVid"></div></div></section>
 </main>
 <style>
 @media(min-width:900px){.cs-filters{position:sticky;top:64px;z-index:5}}
@@ -64,7 +64,7 @@
 (function(){
 var AL=[['all','Tümü'],['mevzuat','Mevzuat'],['maarif','Maarif Modeli'],['egitim','Eğitim Bilimleri'],['inkilap','İnkılap Tarihi'],['gk','Genel Kültür']];
 var YL=['all',2021,2022,2023,2024,2025,2026];
-var VID=[['Mevzuat',''],['Eğitim Bilimleri ve Maarif Modeli',''],['Genel Kültür',''],['İnkılap Tarihi ve Atatürkçülük','']];
+var VID=[['2021','gQGbuGyBeZY'],['2022',''],['2023',''],['2024',''],['2025',''],['2026','']];
 var D=[],fa='all',fy='all',shown=20,LN={};AL.forEach(function(x){LN[x[0]]=x[1]});
 function esc(s){return String(s).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
 function chips(el,arr,cur,lab,fn){el.innerHTML='';arr.forEach(function(v){var k=Array.isArray(v)?v[0]:v,b=document.createElement('button');b.type='button';b.className='cs-chip'+(k==cur?' on':'');b.textContent=Array.isArray(v)?v[1]:(v=='all'?'Tüm yıllar':v);b.onclick=function(){fn(k)};el.appendChild(b)})}
@@ -79,7 +79,7 @@ function draw(){
 }
 document.getElementById('csList').addEventListener('click',function(e){var b=e.target.closest('.cs-o');if(!b)return;var a=b.closest('.cs-q');if(a.classList.contains('done'))return;var c=+a.dataset.c;a.classList.add('done');a.querySelectorAll('.cs-o').forEach(function(x){var j=+x.dataset.j;if(j==c)x.classList.add('ok');else if(x==b)x.classList.add('no')})});
 document.getElementById('csMore').onclick=function(){shown+=20;draw()};
-document.getElementById('csVid').innerHTML=VID.map(function(v){return v[1]?'<div><iframe class="v" src="https://www.youtube-nocookie.com/embed/'+v[1]+'" title="'+v[0]+' çıkmış sorular çözümü" loading="lazy" allowfullscreen></iframe><p><strong>'+v[0]+'</strong></p></div>':'<div class="cs-wait"><strong>'+v[0]+'</strong><br>Video çözüm hazırlanıyor.</div>'}).join('');
+document.getElementById('csVid').innerHTML=VID.map(function(v){return v[1]?'<div><iframe class="v" src="https://www.youtube-nocookie.com/embed/'+v[1]+'" title="'+v[0]+' EKYS çıkmış soruları çözümü" loading="lazy" allowfullscreen></iframe><p><strong>'+v[0]+' EKYS</strong></p></div>':'<div class="cs-wait"><strong>'+v[0]+' EKYS</strong><br>Video çözüm hazırlanıyor.</div>'}).join('');
 fetch('/data/cikmis.json').then(function(r){return r.json()}).then(function(d){D=d;draw()});
 })();
 </script>
