@@ -64,7 +64,7 @@
 (function(){
 var AL=[['all','Tümü'],['mevzuat','Mevzuat'],['maarif','Maarif Modeli'],['egitim','Eğitim Bilimleri'],['inkilap','İnkılap Tarihi'],['gk','Genel Kültür']];
 var YL=['all',2021,2022,2023,2024,2025,2026];
-var VID=[['2021','gQGbuGyBeZY'],['2022',''],['2023',''],['2024',''],['2025',''],['2026','']];
+var VID=[['2021','cEp9sLWrmA4'],['2022',''],['2023',''],['2024',''],['2025',''],['2026','']];
 var D=[],fa='all',fy='all',shown=20,LN={};AL.forEach(function(x){LN[x[0]]=x[1]});
 function esc(s){return String(s).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
 function chips(el,arr,cur,lab,fn){el.innerHTML='';arr.forEach(function(v){var k=Array.isArray(v)?v[0]:v,b=document.createElement('button');b.type='button';b.className='cs-chip'+(k==cur?' on':'');b.textContent=Array.isArray(v)?v[1]:(v=='all'?'Tüm yıllar':v);b.onclick=function(){fn(k)};el.appendChild(b)})}
