@@ -1,0 +1,24 @@
+name: zd-tts
+on:
+  push:
+    branches: [zd-gorseller]
+    paths: ['tts.tsv']
+permissions:
+  contents: write
+concurrency: zdtts
+jobs:
+  tts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q edge-tts
+      - run: |
+          mkdir -p audio
+          while IFS=$'\t' read -r name voice rate file; do
+            [ -z "$name" ] && continue
+            [ -s "audio/$name.mp3" ] && continue
+            edge-tts --voice "$voice" --rate="$rate" -f "$file" --write-media "audio/$name.mp3" --write-subtitles "audio/$name.vtt" || echo "FAIL $name"
+          done < tts.tsv
+          ls -la audio | grep t120 || true
+          git config user.name zd-bot; git config user.email zd-bot@users.noreply.github.com
+          git add audio; git commit -m "tts" || exit 0; git pull --rebase -q; git push
